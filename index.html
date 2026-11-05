@@ -12,11 +12,11 @@
 
 <meta name="author" content="Kyle Dolby">
 
-<meta name="robots" content="index, follow">
+<meta name="robots" content="index, follow, max-image-preview:large">
 
-<meta name="description" content="Jeremy Blueprint by Kyle Dolby. An independent human-first AI companion ecosystem vision exploring safeguarding, wellbeing, accessibility, personal memory, learning and human independence.">
+<meta name="description" content="Jeremy Blueprint by Kyle Dolby. An independent human-first AI companion ecosystem vision exploring safeguarding, wellbeing, accessibility, personal memory, learning, decision support and human independence.">
 
-<title>Jeremy Blueprint | The Future of AI Should Be Human</title>
+<title>Jeremy Blueprint | Human-First AI Vision by Kyle Dolby</title>
 
 <link rel="canonical" href="https://jeremy26111.github.io/jeremy-blueprint/">
 
@@ -24,7 +24,7 @@
 
 <meta property="og:title" content="Jeremy Blueprint — The Future of AI Should Be Human">
 
-<meta property="og:description" content="An independent human-first AI companion ecosystem vision by Kyle Dolby.">
+<meta property="og:description" content="An independent human-first AI companion ecosystem vision created by Kyle Dolby in the United Kingdom.">
 
 <meta property="og:image" content="https://jeremy26111.github.io/jeremy-blueprint/jeremy-cover.jpg">
 
@@ -38,63 +38,63 @@
 
 :root {
 
-  --bg: #050914;
+  --bg:#050914;
 
-  --surface: #0b1426;
+  --surface:#0b1426;
 
-  --surface2: #101d32;
+  --surface2:#101d32;
 
-  --text: #edf5ff;
+  --text:#edf5ff;
 
-  --muted: #9bafc8;
+  --muted:#9bafc8;
 
-  --cyan: #54d8ff;
+  --cyan:#54d8ff;
 
-  --mint: #70f2cf;
+  --mint:#70f2cf;
 
-  --gold: #f4d38b;
+  --gold:#f4d38b;
 
-  --border: rgba(115,199,255,.19);
+  --border:rgba(115,199,255,.19);
 
 }
 
 * {
 
-  box-sizing: border-box;
+  box-sizing:border-box;
 
 }
 
 html {
 
-  scroll-behavior: smooth;
+  scroll-behavior:smooth;
 
 }
 
 body {
 
-  margin: 0;
+  margin:0;
 
-  background: var(--bg);
+  background:var(--bg);
 
-  color: var(--text);
+  color:var(--text);
 
-  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
 
-  line-height: 1.7;
+  line-height:1.7;
 
-  overflow-x: hidden;
+  overflow-x:hidden;
 
 }
 
 a {
 
-  color: inherit;
+  color:inherit;
 
 }
 
 button {
 
-  font: inherit;
+  font:inherit;
 
 }
 
@@ -102,45 +102,45 @@ button {
 
 canvas#network {
 
-  position: fixed;
+  position:fixed;
 
-  inset: 0;
+  inset:0;
 
-  width: 100%;
+  width:100%;
 
-  height: 100%;
+  height:100%;
 
-  z-index: -2;
+  z-index:-2;
 
-  pointer-events: none;
+  pointer-events:none;
 
 }
 
 body:before {
 
-  content: "";
+  content:"";
 
-  position: fixed;
+  position:fixed;
 
-  inset: 0;
+  inset:0;
 
   background:
 
-    radial-gradient(ellipse at 80% 12%, rgba(15,116,165,.17), transparent 45%),
+    radial-gradient(ellipse at 80% 12%,rgba(15,116,165,.17),transparent 45%),
 
-    radial-gradient(ellipse at 15% 85%, rgba(19,132,116,.10), transparent 48%);
+    radial-gradient(ellipse at 15% 85%,rgba(19,132,116,.10),transparent 48%);
 
-  pointer-events: none;
+  pointer-events:none;
 
-  z-index: -1;
+  z-index:-1;
 
 }
 
 .container {
 
-  width: min(1160px, 90%);
+  width:min(1160px,90%);
 
-  margin: auto;
+  margin:auto;
 
 }
 
@@ -148,115 +148,117 @@ body:before {
 
 header {
 
-  position: sticky;
+  position:sticky;
 
-  top: 0;
+  top:0;
 
-  z-index: 100;
+  z-index:100;
 
-  background: rgba(5,10,22,.83);
+  background:rgba(5,10,22,.83);
 
-  backdrop-filter: blur(24px);
+  backdrop-filter:blur(24px);
 
-  border-bottom: 1px solid var(--border);
+  border-bottom:1px solid var(--border);
 
 }
 
 .nav {
 
-  min-height: 80px;
+  min-height:80px;
 
-  display: flex;
+  display:flex;
 
-  align-items: center;
+  align-items:center;
 
-  justify-content: space-between;
+  justify-content:space-between;
 
-  gap: 20px;
+  gap:20px;
 
 }
 
 .brand {
 
-  display: flex;
+  display:flex;
 
-  align-items: center;
+  align-items:center;
 
-  gap: 12px;
+  gap:12px;
 
-  font-size: 13px;
+  font-size:13px;
 
-  font-weight: 850;
+  font-weight:850;
 
-  letter-spacing: .13em;
+  letter-spacing:.13em;
 
-  text-decoration: none;
+  text-decoration:none;
 
-  line-height: 1.4;
+  line-height:1.4;
 
 }
 
 .brand img {
 
-  width: 48px;
+  width:48px;
 
-  height: 48px;
+  height:48px;
 
-  object-fit: cover;
+  object-fit:cover;
 
-  border-radius: 14px;
+  border-radius:14px;
 
-  border: 1px solid var(--cyan);
+  border:1px solid var(--cyan);
 
-  box-shadow: 0 0 22px rgba(84,216,255,.2);
+  box-shadow:0 0 22px rgba(84,216,255,.2);
 
 }
 
 .links {
 
-  display: flex;
+  display:flex;
 
-  align-items: center;
+  align-items:center;
 
-  gap: 18px;
+  gap:15px;
 
-  flex-wrap: wrap;
+  flex-wrap:wrap;
 
 }
 
 .links a {
 
-  font-size: 12px;
+  font-size:12px;
 
-  color: #c2d3e8;
+  color:#c2d3e8;
 
-  text-decoration: none;
+  text-decoration:none;
 
-  transition: color .25s;
+  transition:color .25s;
 
 }
 
-.links a:hover {
+.links a:hover,
 
-  color: var(--mint);
+.links a:focus-visible {
+
+  color:var(--mint);
 
 }
 
 .menu {
 
-  display: none;
+  display:none;
 
-  background: rgba(84,216,255,.09);
+  background:rgba(84,216,255,.09);
 
-  border: 1px solid var(--border);
+  border:1px solid var(--border);
 
-  color: white;
+  color:white;
 
-  padding: 10px 15px;
+  padding:10px 15px;
 
-  border-radius: 12px;
+  border-radius:12px;
 
-  cursor: pointer;
+  cursor:pointer;
 
 }
 
@@ -264,189 +266,189 @@ header {
 
 .hero {
 
-  min-height: calc(100svh - 80px);
+  min-height:calc(100svh - 80px);
 
-  display: flex;
+  display:flex;
 
-  align-items: center;
+  align-items:center;
 
-  position: relative;
+  position:relative;
 
-  overflow: hidden;
+  overflow:hidden;
 
-  padding: 80px 0 100px;
+  padding:80px 0 100px;
 
 }
 
 .hero-grid {
 
-  display: grid;
+  display:grid;
 
-  grid-template-columns: 1.12fr .88fr;
+  grid-template-columns:1.12fr .88fr;
 
-  align-items: center;
+  align-items:center;
 
-  gap: 55px;
+  gap:55px;
 
 }
 
 .eyebrow {
 
-  display: inline-flex;
+  display:inline-flex;
 
-  align-items: center;
+  align-items:center;
 
-  gap: 10px;
+  gap:10px;
 
-  color: var(--mint);
+  color:var(--mint);
 
-  font-size: 11px;
+  font-size:11px;
 
-  font-weight: 850;
+  font-weight:850;
 
-  letter-spacing: .19em;
+  letter-spacing:.19em;
 
-  text-transform: uppercase;
+  text-transform:uppercase;
 
 }
 
 .eyebrow:before {
 
-  content: "";
+  content:"";
 
-  width: 7px;
+  width:7px;
 
-  height: 7px;
+  height:7px;
 
-  background: var(--mint);
+  background:var(--mint);
 
-  border-radius: 50%;
+  border-radius:50%;
 
-  box-shadow: 0 0 14px var(--mint);
+  box-shadow:0 0 14px var(--mint);
 
 }
 
 h1 {
 
-  font-size: clamp(46px, 6.4vw, 92px);
+  font-size:clamp(46px,6.4vw,92px);
 
-  line-height: 1.04;
+  line-height:1.04;
 
-  letter-spacing: -.075em;
+  letter-spacing:-.075em;
 
-  margin: 25px 0;
+  margin:25px 0;
 
-  font-weight: 850;
+  font-weight:850;
 
 }
 
 .gradient {
 
-  background: linear-gradient(110deg, #fff 5%, #61d7ff 50%, #70f2cf 95%);
+  background:linear-gradient(110deg,#fff 5%,#61d7ff 50%,#70f2cf 95%);
 
-  -webkit-background-clip: text;
+  -webkit-background-clip:text;
 
-  background-clip: text;
+  background-clip:text;
 
-  color: transparent;
+  color:transparent;
 
 }
 
 .hero p {
 
-  font-size: 17px;
+  font-size:17px;
 
-  max-width: 570px;
+  max-width:570px;
 
-  color: var(--muted);
+  color:var(--muted);
 
 }
 
 .actions {
 
-  display: flex;
+  display:flex;
 
-  gap: 13px;
+  gap:13px;
 
-  flex-wrap: wrap;
+  flex-wrap:wrap;
 
-  margin-top: 32px;
+  margin-top:32px;
 
 }
 
 .btn {
 
-  display: inline-flex;
+  display:inline-flex;
 
-  align-items: center;
+  align-items:center;
 
-  justify-content: center;
+  justify-content:center;
 
-  padding: 14px 22px;
+  padding:14px 22px;
 
-  border-radius: 12px;
+  border-radius:12px;
 
-  font-size: 13px;
+  font-size:13px;
 
-  font-weight: 800;
+  font-weight:800;
 
-  text-decoration: none;
+  text-decoration:none;
 
-  transition: transform .3s;
+  transition:transform .3s;
 
 }
 
 .btn:hover {
 
-  transform: translateY(-3px);
+  transform:translateY(-3px);
 
 }
 
 .btn-primary {
 
-  background: linear-gradient(110deg, var(--cyan), var(--mint));
+  background:linear-gradient(110deg,var(--cyan),var(--mint));
 
-  color: #061322;
+  color:#061322;
 
-  box-shadow: 0 8px 35px rgba(84,216,255,.17);
+  box-shadow:0 8px 35px rgba(84,216,255,.17);
 
 }
 
 .btn-outline {
 
-  border: 1px solid rgba(121,205,255,.35);
+  border:1px solid rgba(121,205,255,.35);
 
-  background: rgba(15,33,55,.6);
+  background:rgba(15,33,55,.6);
 
 }
 
-/* SINGLE SLOW ORBIT */
+/* SLOW ORBIT */
 
 .hero-visual {
 
-  position: relative;
+  position:relative;
 
-  display: grid;
+  display:grid;
 
-  place-items: center;
+  place-items:center;
 
-  min-height: 440px;
+  min-height:440px;
 
-  isolation: isolate;
+  isolation:isolate;
 
 }
 
 .orbit {
 
-  position: absolute;
+  position:absolute;
 
-  width: min(100%, 430px);
+  width:min(100%,430px);
 
-  aspect-ratio: 1;
+  aspect-ratio:1;
 
-  border: 1px solid rgba(84,216,255,.3);
+  border:1px solid rgba(84,216,255,.3);
 
-  border-radius: 50%;
+  border-radius:50%;
 
   box-shadow:
 
@@ -454,61 +456,59 @@ h1 {
 
     inset 0 0 70px rgba(38,170,221,.08);
 
-  animation: none !important;
+  animation:none !important;
 
 }
 
 .orbit:before {
 
-  content: "";
+  content:"";
 
-  position: absolute;
+  position:absolute;
 
-  inset: 38px;
+  inset:38px;
 
-  border: 1px dashed rgba(112,242,207,.3);
+  border:1px dashed rgba(112,242,207,.3);
 
-  border-radius: 50%;
+  border-radius:50%;
 
 }
 
-/* Only one ball moves */
-
 .orbit-ball {
 
-  position: absolute;
+  position:absolute;
 
-  inset: 0;
+  inset:0;
 
-  border-radius: 50%;
+  border-radius:50%;
 
-  animation: slowOrbit 600s linear infinite;
+  animation:slowOrbit 600s linear infinite;
 
-  transform-origin: center center;
+  transform-origin:center center;
 
-  will-change: transform;
+  will-change:transform;
 
 }
 
 .orbit-ball:after {
 
-  content: "";
+  content:"";
 
-  position: absolute;
+  position:absolute;
 
-  top: -6px;
+  top:-6px;
 
-  left: calc(50% - 6px);
+  left:calc(50% - 6px);
 
-  width: 12px;
+  width:12px;
 
-  height: 12px;
+  height:12px;
 
-  border-radius: 50%;
+  border-radius:50%;
 
-  background: var(--cyan);
+  background:var(--cyan);
 
-  box-shadow: 0 0 25px var(--cyan);
+  box-shadow:0 0 25px var(--cyan);
 
 }
 
@@ -516,27 +516,25 @@ h1 {
 
   from {
 
-    transform: rotate(0deg);
+    transform:rotate(0deg);
 
   }
 
   to {
 
-    transform: rotate(360deg);
+    transform:rotate(360deg);
 
   }
 
 }
 
-/* Logo stays completely still */
-
 .hero-logo {
 
-  width: min(78%, 305px);
+  width:min(78%,305px);
 
-  border-radius: 25px;
+  border-radius:25px;
 
-  border: 1px solid rgba(84,216,255,.5);
+  border:1px solid rgba(84,216,255,.5);
 
   box-shadow:
 
@@ -544,23 +542,23 @@ h1 {
 
     0 25px 75px #0009;
 
-  position: relative;
+  position:relative;
 
-  z-index: 2;
+  z-index:2;
 
-  animation: none !important;
+  animation:none !important;
 
-  transform: none !important;
+  transform:none !important;
 
 }
 
 .micro {
 
-  margin-top: 24px;
+  margin-top:24px;
 
-  font-size: 12px !important;
+  font-size:12px !important;
 
-  letter-spacing: .04em;
+  letter-spacing:.04em;
 
 }
 
@@ -568,253 +566,255 @@ h1 {
 
 section.content {
 
-  padding: 110px 0;
+  padding:110px 0;
 
-  border-top: 1px solid rgba(112,186,255,.09);
+  border-top:1px solid rgba(112,186,255,.09);
 
-  scroll-margin-top: 80px;
+  scroll-margin-top:80px;
 
 }
 
 .section-head {
 
-  max-width: 780px;
+  max-width:780px;
 
-  margin-bottom: 40px;
+  margin-bottom:40px;
 
 }
 
 .kicker {
 
-  color: var(--mint);
+  color:var(--mint);
 
-  font-size: 11px;
+  font-size:11px;
 
-  font-weight: 850;
+  font-weight:850;
 
-  letter-spacing: .22em;
+  letter-spacing:.22em;
 
-  text-transform: uppercase;
+  text-transform:uppercase;
 
 }
 
 h2 {
 
-  font-size: clamp(33px, 4.6vw, 59px);
+  font-size:clamp(33px,4.6vw,59px);
 
-  line-height: 1.13;
+  line-height:1.13;
 
-  letter-spacing: -.055em;
+  letter-spacing:-.055em;
 
-  margin: 14px 0 20px;
+  margin:14px 0 20px;
 
 }
 
 .lead {
 
-  font-size: 17px;
+  font-size:17px;
 
-  color: var(--muted);
+  color:var(--muted);
 
-  max-width: 780px;
+  max-width:780px;
 
 }
 
 .grid {
 
-  display: grid;
+  display:grid;
 
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns:repeat(3,1fr);
 
-  gap: 18px;
+  gap:18px;
 
 }
 
 .glass {
 
-  background: linear-gradient(145deg, rgba(20,39,65,.83), rgba(8,19,35,.78));
+  background:linear-gradient(145deg,rgba(20,39,65,.83),rgba(8,19,35,.78));
 
-  border: 1px solid var(--border);
+  border:1px solid var(--border);
 
-  border-radius: 20px;
+  border-radius:20px;
 
-  backdrop-filter: blur(15px);
+  backdrop-filter:blur(15px);
 
-  box-shadow: 0 15px 55px rgba(0,0,0,.15);
+  box-shadow:0 15px 55px rgba(0,0,0,.15);
 
-  transition: transform .3s, border-color .3s, box-shadow .3s;
+  transition:transform .3s,border-color .3s,box-shadow .3s;
 
 }
 
 .glass:hover {
 
-  transform: translateY(-6px);
+  transform:translateY(-6px);
 
-  border-color: rgba(112,242,207,.5);
+  border-color:rgba(112,242,207,.5);
 
-  box-shadow: 0 20px 65px rgba(26,142,186,.13);
+  box-shadow:0 20px 65px rgba(26,142,186,.13);
 
 }
 
 .card {
 
-  padding: 28px;
+  padding:28px;
 
 }
 
 .icon {
 
-  display: grid;
+  display:grid;
 
-  place-items: center;
+  place-items:center;
 
-  width: 52px;
+  width:52px;
 
-  height: 52px;
+  height:52px;
 
-  border-radius: 15px;
+  border-radius:15px;
 
-  background: rgba(84,216,255,.09);
+  background:rgba(84,216,255,.09);
 
-  border: 1px solid rgba(84,216,255,.2);
+  border:1px solid rgba(84,216,255,.2);
 
-  font-size: 23px;
+  font-size:23px;
 
-  margin-bottom: 22px;
+  margin-bottom:22px;
 
 }
 
 .card h3 {
 
-  font-size: 20px;
+  font-size:20px;
 
-  line-height: 1.3;
+  line-height:1.3;
 
-  margin: 0 0 12px;
+  margin:0 0 12px;
 
 }
 
 .card p {
 
-  font-size: 14px;
+  font-size:14px;
 
-  color: var(--muted);
+  color:var(--muted);
 
-  margin: 0;
+  margin:0;
 
 }
 
 .card .number {
 
-  font-size: 11px;
+  font-size:11px;
 
-  font-weight: 800;
+  font-weight:800;
 
-  color: var(--mint);
+  color:var(--mint);
 
-  letter-spacing: .15em;
+  letter-spacing:.15em;
 
-  margin-bottom: 12px;
+  margin-bottom:12px;
 
 }
 
 .vision-quote {
 
-  padding: 36px;
+  padding:36px;
 
-  border-left: 3px solid var(--mint);
+  border-left:3px solid var(--mint);
 
-  font-size: clamp(22px,3vw,34px);
+  font-size:clamp(22px,3vw,34px);
 
-  font-weight: 700;
+  font-weight:700;
 
-  line-height: 1.45;
+  line-height:1.45;
 
-  background: linear-gradient(90deg,rgba(40,164,152,.11),transparent);
+  background:linear-gradient(90deg,rgba(40,164,152,.11),transparent);
 
-  border-radius: 0 20px 20px 0;
+  border-radius:0 20px 20px 0;
 
 }
 
+/* EXPERIENCE */
+
 .tiers {
 
-  display: grid;
+  display:grid;
 
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns:repeat(3,1fr);
 
-  gap: 20px;
+  gap:20px;
 
 }
 
 .tier {
 
-  padding: 32px;
+  padding:32px;
 
-  position: relative;
+  position:relative;
 
-  overflow: hidden;
+  overflow:hidden;
 
 }
 
 .tier:before {
 
-  content: "";
+  content:"";
 
-  position: absolute;
+  position:absolute;
 
-  width: 180px;
+  width:180px;
 
-  height: 180px;
+  height:180px;
 
-  border-radius: 50%;
+  border-radius:50%;
 
-  background: rgba(84,216,255,.07);
+  background:rgba(84,216,255,.07);
 
-  filter: blur(40px);
+  filter:blur(40px);
 
-  top: -90px;
+  top:-90px;
 
-  right: -80px;
+  right:-80px;
 
 }
 
 .tier .symbol {
 
-  font-size: 34px;
+  font-size:34px;
 
-  margin-bottom: 20px;
+  margin-bottom:20px;
 
 }
 
 .tier h3 {
 
-  font-size: 27px;
+  font-size:27px;
 
-  margin: 0;
+  margin:0;
 
 }
 
 .tier .subtitle {
 
-  font-size: 11px;
+  font-size:11px;
 
-  font-weight: 800;
+  font-weight:800;
 
-  color: var(--mint);
+  color:var(--mint);
 
-  letter-spacing: .14em;
+  letter-spacing:.14em;
 
-  text-transform: uppercase;
+  text-transform:uppercase;
 
-  margin: 5px 0 20px;
+  margin:5px 0 20px;
 
 }
 
 .tier p {
 
-  color: var(--muted);
+  color:var(--muted);
 
-  font-size: 14px;
+  font-size:14px;
 
 }
 
@@ -822,35 +822,35 @@ h2 {
 
 .ecosystem {
 
-  position: relative;
+  position:relative;
 
-  padding: 45px;
+  padding:45px;
 
-  overflow: hidden;
+  overflow:hidden;
 
 }
 
 .eco-core {
 
-  width: 160px;
+  width:160px;
 
-  height: 160px;
+  height:160px;
 
-  border-radius: 50%;
+  border-radius:50%;
 
-  display: flex;
+  display:flex;
 
-  align-items: center;
+  align-items:center;
 
-  justify-content: center;
+  justify-content:center;
 
-  flex-direction: column;
+  flex-direction:column;
 
-  margin: 10px auto 38px;
+  margin:10px auto 38px;
 
-  background: radial-gradient(circle,rgba(42,167,205,.35),rgba(8,25,43,.9));
+  background:radial-gradient(circle,rgba(42,167,205,.35),rgba(8,25,43,.9));
 
-  border: 1px solid var(--cyan);
+  border:1px solid var(--cyan);
 
   box-shadow:
 
@@ -858,113 +858,115 @@ h2 {
 
     0 0 70px rgba(84,216,255,.22);
 
-  text-align: center;
+  text-align:center;
 
 }
 
 .eco-core strong {
 
-  font-size: 21px;
+  font-size:21px;
 
-  letter-spacing: -.04em;
+  letter-spacing:-.04em;
 
 }
 
 .eco-core span {
 
-  font-size: 10px;
+  font-size:10px;
 
-  color: var(--mint);
+  color:var(--mint);
 
-  letter-spacing: .13em;
+  letter-spacing:.13em;
 
 }
 
 .eco-grid {
 
-  display: grid;
+  display:grid;
 
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns:repeat(3,1fr);
 
-  gap: 12px;
+  gap:12px;
 
 }
 
 .eco-item {
 
-  background: rgba(11,31,51,.8);
+  background:rgba(11,31,51,.8);
 
-  border: 1px solid rgba(84,216,255,.17);
+  border:1px solid rgba(84,216,255,.17);
 
-  padding: 18px;
+  padding:18px;
 
-  border-radius: 13px;
+  border-radius:13px;
 
-  text-align: left;
+  text-align:left;
 
-  color: #e3f4ff;
+  color:#e3f4ff;
 
-  cursor: pointer;
+  cursor:pointer;
 
-  transition: .25s;
+  transition:.25s;
 
-  font-size: 13px;
+  font-size:13px;
 
 }
 
 .eco-item:hover,
 
-.eco-item.active {
+.eco-item.active,
 
-  border-color: var(--mint);
+.eco-item:focus-visible {
 
-  background: rgba(34,111,119,.24);
+  border-color:var(--mint);
+
+  background:rgba(34,111,119,.24);
 
 }
 
 .eco-item span {
 
-  display: block;
+  display:block;
 
-  color: var(--mint);
+  color:var(--mint);
 
-  font-size: 11px;
+  font-size:11px;
 
-  margin-bottom: 5px;
+  margin-bottom:5px;
 
 }
 
 .eco-detail {
 
-  margin-top: 22px;
+  margin-top:22px;
 
-  padding: 22px;
+  padding:22px;
 
-  border: 1px solid rgba(112,242,207,.25);
+  border:1px solid rgba(112,242,207,.25);
 
-  border-radius: 14px;
+  border-radius:14px;
 
-  background: rgba(5,18,31,.75);
+  background:rgba(5,18,31,.75);
 
-  min-height: 100px;
+  min-height:100px;
 
 }
 
 .eco-detail h3 {
 
-  margin: 0 0 6px;
+  margin:0 0 6px;
 
-  font-size: 19px;
+  font-size:19px;
 
 }
 
 .eco-detail p {
 
-  margin: 0;
+  margin:0;
 
-  color: var(--muted);
+  color:var(--muted);
 
-  font-size: 14px;
+  font-size:14px;
 
 }
 
@@ -972,71 +974,71 @@ h2 {
 
 .timeline {
 
-  position: relative;
+  position:relative;
 
-  border-left: 1px solid rgba(112,242,207,.4);
+  border-left:1px solid rgba(112,242,207,.4);
 
-  margin-left: 12px;
+  margin-left:12px;
 
-  padding-left: 32px;
+  padding-left:32px;
 
 }
 
 .milestone {
 
-  position: relative;
+  position:relative;
 
-  margin: 0 0 38px;
+  margin:0 0 38px;
 
 }
 
 .milestone:before {
 
-  content: "";
+  content:"";
 
-  position: absolute;
+  position:absolute;
 
-  left: -39px;
+  left:-39px;
 
-  top: 6px;
+  top:6px;
 
-  width: 12px;
+  width:12px;
 
-  height: 12px;
+  height:12px;
 
-  border-radius: 50%;
+  border-radius:50%;
 
-  background: var(--mint);
+  background:var(--mint);
 
-  box-shadow: 0 0 18px var(--mint);
+  box-shadow:0 0 18px var(--mint);
 
 }
 
 .milestone small {
 
-  color: var(--mint);
+  color:var(--mint);
 
-  font-weight: 800;
+  font-weight:800;
 
-  letter-spacing: .13em;
+  letter-spacing:.13em;
 
 }
 
 .milestone h3 {
 
-  margin: 8px 0;
+  margin:8px 0;
 
-  font-size: 23px;
+  font-size:23px;
 
 }
 
 .milestone p {
 
-  color: var(--muted);
+  color:var(--muted);
 
-  margin: 0;
+  margin:0;
 
-  max-width: 720px;
+  max-width:720px;
 
 }
 
@@ -1044,97 +1046,97 @@ h2 {
 
 .feature {
 
-  display: grid;
+  display:grid;
 
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns:1fr 1fr;
 
-  overflow: hidden;
+  overflow:hidden;
 
 }
 
 .feature img {
 
-  width: 100%;
+  width:100%;
 
-  height: 100%;
+  height:100%;
 
-  min-height: 340px;
+  min-height:340px;
 
-  object-fit: cover;
+  object-fit:cover;
 
 }
 
 .feature-copy {
 
-  padding: 42px;
+  padding:42px;
 
 }
 
 .feature-copy h3 {
 
-  font-size: clamp(27px,3vw,42px);
+  font-size:clamp(27px,3vw,42px);
 
-  line-height: 1.18;
+  line-height:1.18;
 
-  letter-spacing: -.04em;
+  letter-spacing:-.04em;
 
 }
 
 .feature-copy p {
 
-  color: var(--muted);
+  color:var(--muted);
 
 }
 
 .feature-copy a {
 
-  color: var(--mint);
+  color:var(--mint);
 
-  font-weight: 800;
+  font-weight:800;
 
-  text-underline-offset: 5px;
+  text-underline-offset:5px;
 
 }
 
 .publications {
 
-  display: grid;
+  display:grid;
 
-  grid-template-columns: repeat(2,1fr);
+  grid-template-columns:repeat(2,1fr);
 
-  gap: 18px;
+  gap:18px;
 
-  margin-top: 22px;
+  margin-top:22px;
 
 }
 
 .publication {
 
-  padding: 27px;
+  padding:27px;
 
 }
 
 .publication h3 {
 
-  font-size: 21px;
+  font-size:21px;
 
-  line-height: 1.3;
+  line-height:1.3;
 
 }
 
 .publication p {
 
-  color: var(--muted);
+  color:var(--muted);
 
-  font-size: 14px;
+  font-size:14px;
 
 }
 
 .publication a {
 
-  color: var(--cyan);
+  color:var(--cyan);
 
-  font-weight: 750;
+  font-weight:750;
 
 }
 
@@ -1142,37 +1144,37 @@ h2 {
 
 .creator {
 
-  display: grid;
+  display:grid;
 
-  grid-template-columns: 1.2fr .8fr;
+  grid-template-columns:1.2fr .8fr;
 
-  gap: 25px;
+  gap:25px;
 
-  align-items: center;
+  align-items:center;
 
 }
 
 .creator p {
 
-  color: var(--muted);
+  color:var(--muted);
 
 }
 
 .notice {
 
-  font-size: 13px;
+  font-size:13px;
 
-  color: #b7c7da;
+  color:#b7c7da;
 
-  border: 1px solid rgba(138,167,208,.23);
+  border:1px solid rgba(138,167,208,.23);
 
-  border-radius: 14px;
+  border-radius:14px;
 
-  background: rgba(23,35,55,.65);
+  background:rgba(23,35,55,.65);
 
-  padding: 20px;
+  padding:20px;
 
-  margin-top: 25px;
+  margin-top:25px;
 
 }
 
@@ -1180,59 +1182,59 @@ h2 {
 
 .research-panel {
 
-  padding: 38px;
+  padding:38px;
 
 }
 
 .research-panel h3 {
 
-  font-size: 27px;
+  font-size:27px;
 
-  margin: 0 0 14px;
+  margin:0 0 14px;
 
 }
 
 .research-panel p {
 
-  color: var(--muted);
+  color:var(--muted);
 
-  max-width: 800px;
+  max-width:800px;
 
 }
 
 .research-points {
 
-  display: grid;
+  display:grid;
 
-  grid-template-columns: repeat(2,1fr);
+  grid-template-columns:repeat(2,1fr);
 
-  gap: 12px;
+  gap:12px;
 
-  margin: 25px 0;
+  margin:25px 0;
 
 }
 
 .research-point {
 
-  padding: 18px;
+  padding:18px;
 
-  border: 1px solid var(--border);
+  border:1px solid var(--border);
 
-  border-radius: 12px;
+  border-radius:12px;
 
-  background: rgba(84,216,255,.045);
+  background:rgba(84,216,255,.045);
 
-  font-size: 14px;
+  font-size:14px;
 
 }
 
 .research-point strong {
 
-  display: block;
+  display:block;
 
-  color: var(--mint);
+  color:var(--mint);
 
-  margin-bottom: 5px;
+  margin-bottom:5px;
 
 }
 
@@ -1240,45 +1242,45 @@ h2 {
 
 footer {
 
-  padding: 45px 0;
+  padding:45px 0;
 
-  border-top: 1px solid var(--border);
+  border-top:1px solid var(--border);
 
-  color: var(--muted);
+  color:var(--muted);
 
-  font-size: 12px;
+  font-size:12px;
 
 }
 
 .footer-inner {
 
-  display: flex;
+  display:flex;
 
-  justify-content: space-between;
+  justify-content:space-between;
 
-  gap: 20px;
+  gap:20px;
 
-  flex-wrap: wrap;
+  flex-wrap:wrap;
 
 }
 
-/* SECTION REVEALS */
+/* REVEAL */
 
 .reveal {
 
-  opacity: 0;
+  opacity:0;
 
-  transform: translateY(25px);
+  transform:translateY(25px);
 
-  transition: opacity .8s, transform .8s;
+  transition:opacity .8s,transform .8s;
 
 }
 
 .reveal.visible {
 
-  opacity: 1;
+  opacity:1;
 
-  transform: none;
+  transform:none;
 
 }
 
@@ -1288,13 +1290,13 @@ footer {
 
   .links {
 
-    gap: 12px;
+    gap:12px;
 
   }
 
   .links a {
 
-    font-size: 11px;
+    font-size:11px;
 
   }
 
@@ -1306,25 +1308,25 @@ footer {
 
   .creator {
 
-    grid-template-columns: 1fr;
+    grid-template-columns:1fr;
 
   }
 
   .hero-visual {
 
-    min-height: 330px;
+    min-height:330px;
 
   }
 
   .hero-logo {
 
-    width: 240px;
+    width:240px;
 
   }
 
   .orbit {
 
-    width: 320px;
+    width:320px;
 
   }
 
@@ -1332,21 +1334,21 @@ footer {
 
   .tiers {
 
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns:repeat(2,1fr);
 
   }
 
   .feature {
 
-    grid-template-columns: 1fr;
+    grid-template-columns:1fr;
 
   }
 
   .feature img {
 
-    height: auto;
+    height:auto;
 
-    min-height: 0;
+    min-height:0;
 
   }
 
@@ -1356,127 +1358,127 @@ footer {
 
   .nav {
 
-    min-height: 72px;
+    min-height:72px;
 
   }
 
   .brand {
 
-    font-size: 11px;
+    font-size:11px;
 
   }
 
   .brand img {
 
-    width: 43px;
+    width:43px;
 
-    height: 43px;
+    height:43px;
 
   }
 
   .menu {
 
-    display: block;
+    display:block;
 
   }
 
   .links {
 
-    display: none;
+    display:none;
 
-    position: absolute;
+    position:absolute;
 
-    top: 72px;
+    top:72px;
 
-    left: 0;
+    left:0;
 
-    right: 0;
+    right:0;
 
-    padding: 22px 5%;
+    padding:22px 5%;
 
-    background: rgba(5,12,26,.98);
+    background:rgba(5,12,26,.98);
 
-    border-bottom: 1px solid var(--border);
+    border-bottom:1px solid var(--border);
 
-    flex-direction: column;
+    flex-direction:column;
 
-    align-items: flex-start;
+    align-items:flex-start;
 
-    gap: 18px;
+    gap:18px;
 
   }
 
   .links.open {
 
-    display: flex;
+    display:flex;
 
   }
 
   .links a {
 
-    font-size: 14px;
+    font-size:14px;
 
   }
 
   .hero {
 
-    padding: 65px 0 70px;
+    padding:65px 0 70px;
 
-    min-height: auto;
+    min-height:auto;
 
   }
 
   .hero-grid {
 
-    gap: 10px;
+    gap:10px;
 
   }
 
   .hero-visual {
 
-    order: -1;
+    order:-1;
 
-    min-height: 265px;
+    min-height:265px;
 
   }
 
   .hero-logo {
 
-    width: 190px;
+    width:190px;
 
   }
 
   .orbit {
 
-    width: 260px;
+    width:260px;
 
   }
 
   h1 {
 
-    font-size: clamp(43px,10vw,60px);
+    font-size:clamp(43px,10vw,60px);
 
-    letter-spacing: -.065em;
+    letter-spacing:-.065em;
 
   }
 
   .hero p {
 
-    font-size: 15px;
+    font-size:15px;
 
   }
 
   section.content {
 
-    padding: 75px 0;
+    padding:75px 0;
 
-    scroll-margin-top: 72px;
+    scroll-margin-top:72px;
 
   }
 
   h2 {
 
-    font-size: 36px;
+    font-size:36px;
 
   }
 
@@ -1490,33 +1492,33 @@ footer {
 
   .research-points {
 
-    grid-template-columns: 1fr;
+    grid-template-columns:1fr;
 
   }
 
   .ecosystem {
 
-    padding: 25px 18px;
+    padding:25px 18px;
 
   }
 
   .eco-core {
 
-    width: 130px;
+    width:130px;
 
-    height: 130px;
+    height:130px;
 
   }
 
   .eco-item {
 
-    padding: 15px;
+    padding:15px;
 
   }
 
   .feature-copy {
 
-    padding: 25px;
+    padding:25px;
 
   }
 
@@ -1524,25 +1526,23 @@ footer {
 
   .tier {
 
-    padding: 24px;
+    padding:24px;
 
   }
 
   .vision-quote {
 
-    padding: 24px;
+    padding:24px;
 
   }
 
   .research-panel {
 
-    padding: 24px;
+    padding:24px;
 
   }
 
 }
-
-/* ACCESSIBILITY */
 
 @media(prefers-reduced-motion:reduce) {
 
@@ -1552,19 +1552,19 @@ footer {
 
   *:after {
 
-    animation-duration: .01ms !important;
+    animation-duration:.01ms !important;
 
-    transition-duration: .01ms !important;
+    transition-duration:.01ms !important;
 
-    scroll-behavior: auto !important;
+    scroll-behavior:auto !important;
 
   }
 
   .reveal {
 
-    opacity: 1;
+    opacity:1;
 
-    transform: none;
+    transform:none;
 
   }
 
@@ -1582,19 +1582,39 @@ footer {
 
     {
 
+      "@type": "Person",
+
+      "@id": "https://jeremy26111.github.io/jeremy-blueprint/#creator",
+
+      "name": "Kyle Dolby",
+
+      "url": "https://jeremy26111.github.io/jeremy-blueprint/about.html",
+
+      "description": "Independent UK creator and concept developer of Jeremy Blueprint.",
+
+      "sameAs": [
+
+        "https://www.linkedin.com/in/kyle-dolby-1989-ksd"
+
+      ]
+
+    },
+
+    {
+
       "@type": "WebSite",
+
+      "@id": "https://jeremy26111.github.io/jeremy-blueprint/#website",
 
       "name": "Jeremy Blueprint",
 
       "url": "https://jeremy26111.github.io/jeremy-blueprint/",
 
-      "description": "Independent human-first AI companion ecosystem vision created by Kyle Dolby",
+      "description": "Independent human-first AI companion ecosystem vision created by Kyle Dolby.",
 
       "author": {
 
-        "@type": "Person",
-
-        "name": "Kyle Dolby"
+        "@id": "https://jeremy26111.github.io/jeremy-blueprint/#creator"
 
       }
 
@@ -1604,27 +1624,41 @@ footer {
 
       "@type": "WebPage",
 
+      "@id": "https://jeremy26111.github.io/jeremy-blueprint/#homepage",
+
       "name": "Jeremy Blueprint — Human-First AI Vision",
 
       "url": "https://jeremy26111.github.io/jeremy-blueprint/",
 
       "isPartOf": {
 
-        "@type": "WebSite",
-
-        "url": "https://jeremy26111.github.io/jeremy-blueprint/"
+        "@id": "https://jeremy26111.github.io/jeremy-blueprint/#website"
 
       },
 
-      "hasPart": {
+      "hasPart": [
 
-        "@type": "WebPage",
+        {
 
-        "name": "Jeremy Blueprint Research & Evidence",
+          "@type": "AboutPage",
 
-        "url": "https://jeremy26111.github.io/jeremy-blueprint/research.html"
+          "name": "About Kyle Dolby and Jeremy Blueprint",
 
-      }
+          "url": "https://jeremy26111.github.io/jeremy-blueprint/about.html"
+
+        },
+
+        {
+
+          "@type": "WebPage",
+
+          "name": "Jeremy Blueprint Research & Evidence",
+
+          "url": "https://jeremy26111.github.io/jeremy-blueprint/research.html"
+
+        }
+
+      ]
 
     },
 
@@ -1632,21 +1666,41 @@ footer {
 
       "@type": "CreativeWork",
 
+      "@id": "https://jeremy26111.github.io/jeremy-blueprint/#blueprint",
+
       "name": "Jeremy Blueprint",
 
-      "description": "An independent conceptual framework for a human-first AI life companion ecosystem integrating safeguarding, memory, wellbeing, accessibility, learning and human independence.",
+      "description": "An independent conceptual framework for a human-first AI life companion ecosystem integrating safeguarding, personal memory, wellbeing, accessibility, learning, contextual decision support and human independence.",
 
       "creator": {
 
-        "@type": "Person",
-
-        "name": "Kyle Dolby"
+        "@id": "https://jeremy26111.github.io/jeremy-blueprint/#creator"
 
       },
 
-      "url": "https://jeremy26111.github.io/jeremy-blueprint/research.html",
+      "url": "https://jeremy26111.github.io/jeremy-blueprint/",
 
-      "inLanguage": "en-GB"
+      "inLanguage": "en-GB",
+
+      "keywords": [
+
+        "Jeremy Blueprint",
+
+        "Kyle Dolby",
+
+        "Jeremy in a Bottle",
+
+        "Buddy AI Companion",
+
+        "Human-first AI",
+
+        "Responsible AI",
+
+        "AI Safeguarding",
+
+        "Personal AI Ecosystem"
+
+      ]
 
     }
 
@@ -1674,13 +1728,23 @@ footer {
 
     </a>
 
-    <button class="menu" id="menuButton" aria-expanded="false" aria-controls="navigation">
+    <button
+
+      class="menu"
+
+      id="menuButton"
+
+      type="button"
+
+      aria-expanded="false"
+
+      aria-controls="navigation">
 
       Menu ☰
 
     </button>
 
-    <nav class="links" id="navigation">
+    <nav class="links" id="navigation" aria-label="Main navigation">
 
       <a href="#vision">Vision</a>
 
@@ -1690,11 +1754,13 @@ footer {
 
       <a href="#origins">Origins</a>
 
-      <a href="#research">Research & Evidence</a>
+      <a href="#research">Research</a>
 
       <a href="#publications">Publications</a>
 
       <a href="#creator">Creator</a>
+
+      <a href="about.html">About Kyle Dolby</a>
 
     </nav>
 
@@ -1712,7 +1778,11 @@ footer {
 
     <div>
 
-      <div class="eyebrow">Independent human-first AI vision</div>
+      <div class="eyebrow">
+
+        Independent human-first AI vision
+
+      </div>
 
       <h1>
 
@@ -1736,17 +1806,37 @@ footer {
 
       <div class="actions">
 
-        <a class="btn btn-primary" href="#ecosystem">Explore the ecosystem ↗</a>
+        <a class="btn btn-primary" href="#ecosystem">
 
-        <a class="btn btn-outline" href="research.html">Explore Research ↗</a>
+          Explore the ecosystem ↗
 
-        <a class="btn btn-outline" href="#publications">Read the vision</a>
+        </a>
+
+        <a class="btn btn-outline" href="research.html">
+
+          Explore Research ↗
+
+        </a>
+
+        <a class="btn btn-outline" href="about.html">
+
+          Meet the Creator ↗
+
+        </a>
+
+        <a class="btn btn-outline" href="#publications">
+
+          Read the vision
+
+        </a>
 
       </div>
 
       <p class="micro">
 
-        Concept and vision by <strong>Kyle Dolby</strong> · United Kingdom
+        Concept and vision by
+
+        <strong>Kyle Dolby</strong> · United Kingdom
 
       </p>
 
@@ -1760,7 +1850,13 @@ footer {
 
       </div>
 
-      <img class="hero-logo" src="logo1.jpg" alt="Jeremy in a Bottle Blueprint emblem">
+      <img
+
+        class="hero-logo"
+
+        src="logo1.jpg"
+
+        alt="Jeremy in a Bottle Blueprint emblem">
 
     </div>
 
@@ -1882,7 +1978,11 @@ footer {
 
         One vision.
 
-        <span class="gradient">An ecosystem of human possibilities.</span>
+        <span class="gradient">
+
+          An ecosystem of human possibilities.
+
+        </span>
 
       </h2>
 
@@ -1910,7 +2010,13 @@ footer {
 
       <div class="eco-grid">
 
-        <button class="eco-item active"
+        <button
+
+          type="button"
+
+          class="eco-item active"
+
+          aria-pressed="true"
 
           data-title="Safety & Safeguarding"
 
@@ -1922,7 +2028,13 @@ footer {
 
         </button>
 
-        <button class="eco-item"
+        <button
+
+          type="button"
+
+          class="eco-item"
+
+          aria-pressed="false"
 
           data-title="Organisation & Memory"
 
@@ -1934,7 +2046,13 @@ footer {
 
         </button>
 
-        <button class="eco-item"
+        <button
+
+          type="button"
+
+          class="eco-item"
+
+          aria-pressed="false"
 
           data-title="Wellbeing & Support"
 
@@ -1946,7 +2064,13 @@ footer {
 
         </button>
 
-        <button class="eco-item"
+        <button
+
+          type="button"
+
+          class="eco-item"
+
+          aria-pressed="false"
 
           data-title="Learning & Opportunity"
 
@@ -1958,7 +2082,13 @@ footer {
 
         </button>
 
-        <button class="eco-item"
+        <button
+
+          type="button"
+
+          class="eco-item"
+
+          aria-pressed="false"
 
           data-title="Accessibility & Inclusion"
 
@@ -1970,7 +2100,13 @@ footer {
 
         </button>
 
-        <button class="eco-item"
+        <button
+
+          type="button"
+
+          class="eco-item"
+
+          aria-pressed="false"
 
           data-title="Connected Technology"
 
@@ -1999,6 +2135,28 @@ footer {
         </p>
 
       </div>
+
+    </div>
+
+    <div class="actions" style="justify-content:center;margin-top:30px">
+
+      <a class="btn btn-outline" href="about.html#ecosystem">
+
+        Explore the Wider Jeremy Blueprint Ecosystem ↗
+
+      </a>
+
+    </div>
+
+    <div class="notice reveal">
+
+      The six interactive areas above are an introduction, not a complete
+
+      inventory of Jeremy Blueprint. The wider public overview describes
+
+      additional proposed areas. Detailed technical designs and unpublished
+
+      development materials remain separate from this website.
 
     </div>
 
@@ -2140,7 +2298,7 @@ footer {
 
       <div class="milestone reveal">
 
-        <small>EARLY EXPLORATION</small>
+        <small>EARLIER EXPLORATION</small>
 
         <h3>Buddy</h3>
 
@@ -2192,13 +2350,13 @@ footer {
 
       <div class="milestone reveal">
 
-        <small>NOVEMBER 2026</small>
+        <small>2026 PUBLIC PRESENTATION</small>
 
         <h3>Independent public publication</h3>
 
         <p>
 
-          A public-facing website and article presenting
+          A public-facing website and articles presenting
 
           the human-first vision while keeping detailed
 
@@ -2210,11 +2368,35 @@ footer {
 
     </div>
 
+    <div class="notice reveal">
+
+      <strong>Development record:</strong>
+
+      The creator reports concept development in early 2025,
+
+      building on earlier exploration, with proposal activity
+
+      during June 2025. Precise historical dates and versions
+
+      should be assessed against the underlying original records.
+
+    </div>
+
+    <div class="actions">
+
+      <a class="btn btn-outline" href="about.html#origins">
+
+        Read the Development History ↗
+
+      </a>
+
+    </div>
+
   </div>
 
 </section>
 
-<!-- RESEARCH & EVIDENCE -->
+<!-- RESEARCH -->
 
 <section class="content" id="research">
 
@@ -2246,7 +2428,11 @@ footer {
 
     <div class="glass research-panel reveal">
 
-      <h3>Jeremy Blueprint — Human-First AI Companion Research</h3>
+      <h3>
+
+        Jeremy Blueprint — Human-First AI Companion Research
+
+      </h3>
 
       <p>
 
@@ -2320,9 +2506,9 @@ footer {
 
         </a>
 
-        <a class="btn btn-outline" href="#origins">
+        <a class="btn btn-outline" href="about.html">
 
-          Explore the Origins
+          About the Creator ↗
 
         </a>
 
@@ -2374,7 +2560,11 @@ footer {
 
       <div class="feature-copy">
 
-        <div class="kicker">Featured article · November 2026</div>
+        <div class="kicker">
+
+          Featured article · 2026
+
+        </div>
 
         <h3>
 
@@ -2408,7 +2598,11 @@ footer {
 
       <div class="glass publication reveal">
 
-        <div class="kicker">AI psychology & accountability</div>
+        <div class="kicker">
+
+          AI psychology & accountability
+
+        </div>
 
         <h3>
 
@@ -2422,7 +2616,9 @@ footer {
 
           Questions surrounding conversational influence,
 
-          emotional adaptation, transparency and meaningful oversight.
+          emotional adaptation, transparency
+
+          and meaningful oversight.
 
         </p>
 
@@ -2442,7 +2638,11 @@ footer {
 
       <div class="glass publication reveal">
 
-        <div class="kicker">Published perspective</div>
+        <div class="kicker">
+
+          Published perspective
+
+        </div>
 
         <h3>
 
@@ -2488,13 +2688,23 @@ footer {
 
     <div class="reveal">
 
-      <div class="kicker">07 / The creator</div>
+      <div class="kicker">
+
+        07 / The creator
+
+      </div>
 
       <h2>Kyle Dolby</h2>
 
       <p class="lead">
 
-        Independent creator of Jeremy Blueprint.
+        Independent UK creator and concept developer of
+
+        Jeremy Blueprint — a human-first AI companion
+
+        ecosystem developed through earlier concepts
+
+        including Buddy and Jeremy in a Bottle.
 
       </p>
 
@@ -2538,6 +2748,12 @@ footer {
 
         </a>
 
+        <a class="btn btn-outline" href="about.html">
+
+          About Kyle Dolby & Jeremy Blueprint ↗
+
+        </a>
+
         <a class="btn btn-outline" href="research.html">
 
           Research & Evidence ↗
@@ -2550,7 +2766,11 @@ footer {
 
     <div class="glass card reveal">
 
-      <div class="kicker">The mission</div>
+      <div class="kicker">
+
+        The mission
+
+      </div>
 
       <h3 style="font-size:30px;margin-top:18px">
 
@@ -2568,7 +2788,11 @@ footer {
 
       </p>
 
-      <div style="height:2px;background:linear-gradient(90deg,var(--cyan),var(--mint),transparent);margin-top:30px"></div>
+      <div
+
+        style="height:2px;background:linear-gradient(90deg,var(--cyan),var(--mint),transparent);margin-top:30px">
+
+      </div>
 
       <p style="margin-top:20px">
 
@@ -2594,6 +2818,12 @@ footer {
 
       endorsement or affiliation with an AI company or regulator.
 
+      This website presents a selective public overview.
+
+      It does not reproduce the complete historical development
+
+      archive or unpublished technical specifications.
+
     </div>
 
   </div>
@@ -2617,6 +2847,20 @@ footer {
     <span>
 
       Independent vision · Human-first by design
+
+    </span>
+
+    <span>
+
+      <a href="about.html">About</a> ·
+
+      <a href="research.html">Research</a> ·
+
+      <a href="https://www.linkedin.com/in/kyle-dolby-1989-ksd"
+
+         target="_blank"
+
+         rel="noopener noreferrer">LinkedIn</a>
 
     </span>
 
@@ -2654,7 +2898,9 @@ navigation.querySelectorAll("a").forEach(link => {
 
 /* COPYRIGHT YEAR */
 
-document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById("year").textContent =
+
+  new Date().getFullYear();
 
 /* INTERACTIVE ECOSYSTEM */
 
@@ -2668,9 +2914,17 @@ ecoButtons.forEach(button => {
 
   button.addEventListener("click", () => {
 
-    ecoButtons.forEach(item => item.classList.remove("active"));
+    ecoButtons.forEach(item => {
+
+      item.classList.remove("active");
+
+      item.setAttribute("aria-pressed", "false");
+
+    });
 
     button.classList.add("active");
+
+    button.setAttribute("aria-pressed", "true");
 
     ecoTitle.textContent = button.dataset.title;
 
@@ -2698,13 +2952,21 @@ if ("IntersectionObserver" in window) {
 
     });
 
-  }, { threshold: .08 });
+  }, { threshold:.08 });
 
-  document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+  document.querySelectorAll(".reveal").forEach(el => {
+
+    observer.observe(el);
+
+  });
 
 } else {
 
-  document.querySelectorAll(".reveal").forEach(el => el.classList.add("visible"));
+  document.querySelectorAll(".reveal").forEach(el => {
+
+    el.classList.add("visible");
+
+  });
 
 }
 
@@ -2722,6 +2984,8 @@ let height = 0;
 
 function resizeNetwork() {
 
+  if (!ctx) return;
+
   const ratio = Math.min(window.devicePixelRatio || 1, 2);
 
   width = window.innerWidth;
@@ -2732,23 +2996,23 @@ function resizeNetwork() {
 
   canvas.height = Math.floor(height * ratio);
 
-  ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
+  ctx.setTransform(ratio,0,0,ratio,0,0);
 
   const count = Math.min(
 
     65,
 
-    Math.max(22, Math.floor(width * height / 19000))
+    Math.max(22,Math.floor(width * height / 19000))
 
   );
 
-  particles = Array.from({ length: count }, () => ({
+  particles = Array.from({ length:count }, () => ({
 
-    x: Math.random() * width,
+    x:Math.random() * width,
 
-    y: Math.random() * height,
+    y:Math.random() * height,
 
-    r: Math.random() * 1.5 + .5
+    r:Math.random() * 1.5 + .5
 
   }));
 
@@ -2758,7 +3022,9 @@ function resizeNetwork() {
 
 function drawNetwork() {
 
-  ctx.clearRect(0, 0, width, height);
+  if (!ctx) return;
+
+  ctx.clearRect(0,0,width,height);
 
   for (let i = 0; i < particles.length; i++) {
 
@@ -2766,7 +3032,7 @@ function drawNetwork() {
 
     ctx.beginPath();
 
-    ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+    ctx.arc(p.x,p.y,p.r,0,Math.PI * 2);
 
     ctx.fillStyle = "rgba(105,216,255,.48)";
 
@@ -2786,11 +3052,17 @@ function drawNetwork() {
 
         ctx.beginPath();
 
-        ctx.moveTo(p.x, p.y);
+        ctx.moveTo(p.x,p.y);
 
-        ctx.lineTo(q.x, q.y);
+        ctx.lineTo(q.x,q.y);
 
-        ctx.strokeStyle = "rgba(74,192,232," + ((1 - distance / 135) * .13) + ")";
+        ctx.strokeStyle =
+
+          "rgba(74,192,232," +
+
+          ((1 - distance / 135) * .13) +
+
+          ")";
 
         ctx.lineWidth = .6;
 
@@ -2812,7 +3084,7 @@ window.addEventListener("resize", () => {
 
   clearTimeout(resizeTimer);
 
-  resizeTimer = setTimeout(resizeNetwork, 250);
+  resizeTimer = setTimeout(resizeNetwork,250);
 
 });
 
