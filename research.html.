@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+
+<html lang="en-GB">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Jeremy Blueprint | Human-First AI Companion Research</title>
+
+  <meta name="description"
+
+    content="Explore Jeremy Blueprint, an independent human-first AI companion ecosystem conceived by Kyle Dolby in early 2025. Covering safeguarding, memory, wellbeing, accessibility, education and human independence.">
+
+  <meta name="author" content="Kyle Dolby">
+
+  <meta name="robots" content="index, follow">
+
+  <link rel="canonical"
+
+    href="https://jeremy26111.github.io/jeremy-blueprint/research.html">
+
+  <style>
+
+    * { box-sizing: border-box; }
+
+    body {
+
+      margin: 0;
+
+      background: #0b1220;
+
+      color: #e9eef7;
+
+      font-family: Arial, sans-serif;
+
+      line-height: 1.7;
+
+    }
+
+    header {
+
+      background: #111d31;
+
+      padding: 55px 20px;
+
+      text-align: center;
+
+    }
+
+    h1 {
+
+      font-size: clamp(30px, 6vw, 48px);
+
+      line-height: 1.2;
+
+    }
+
+    h2 { color: #8bc5ff; }
+
+    .subtitle { color: #aebdd1; }
+
+    main {
+
+      max-width: 920px;
+
+      margin: auto;
+
+      padding: 30px 22px 70px;
+
+    }
+
+    section {
+
+      margin: 35px 0;
+
+      padding: 25px;
+
+      background: #142238;
+
+      border-radius: 14px;
+
+    }
+
+    a { color: #8bc5ff; }
+
+    .button {
+
+      display: inline-block;
+
+      padding: 12px 22px;
+
+      margin-top: 15px;
+
+      background: #2878d0;
+
+      color: white;
+
+      border-radius: 8px;
+
+      text-decoration: none;
+
+    }
+
+    footer {
+
+      padding: 30px;
+
+      text-align: center;
+
+      color: #aebdd1;
+
+    }
+
+  </style>
+
+  <script type="application/ld+json">
+
+  {
+
+    "@context": "https://schema.org",
+
+    "@type": "CreativeWork",
+
+    "name": "Jeremy Blueprint",
+
+    "headline": "A Human-First AI Companion Ecosystem",
+
+    "author": {
+
+      "@type": "Person",
+
+      "name": "Kyle Dolby"
+
+    },
+
+    "description": "An independent conceptual framework for a human-first AI life companion integrating safeguarding, organisation, wellbeing, accessibility, learning and personal development.",
+
+    "url": "https://jeremy26111.github.io/jeremy-blueprint/research.html",
+
+    "inLanguage": "en-GB",
+
+    "keywords": [
+
+      "human-first AI",
+
+      "AI companion ecosystem",
+
+      "Jeremy Blueprint",
+
+      "Kyle Dolby",
+
+      "AI safeguarding",
+
+      "personal AI memory",
+
+      "responsible AI",
+
+      "AI accessibility"
+
+    ]
+
+  }
+
+  </script>
+
+</head>
+
+<body>
+
+<header>
+
+  <h1>Jeremy Blueprint</h1>
+
+  <h2>A Human-First AI Companion Ecosystem</h2>
+
+  <p class="subtitle">
+
+    Independent concept and vision by Kyle Dolby
+
+    <br>
+
+    Original development: Early 2025
+
+  </p>
+
+  <a class="button" href="./">
+
+    Return to Main Website
+
+  </a>
+
+</header>
+
+<main>
+
+<section>
+
+  <h2>1. Executive Overview</h2>
+
+  <p>
+
+    Jeremy Blueprint presents a vision for an interconnected
+
+    artificial intelligence companion designed around
+
+    human needs, independence and long-term wellbeing.
+
+  </p>
+
+  <p>
+
+    Rather than treating artificial intelligence as an
+
+    isolated chatbot, the framework proposes a connected
+
+    ecosystem capable of supporting people throughout
+
+    everyday life.
+
+  </p>
+
+  <p>
+
+    Its guiding principle is that intelligence should
+
+    serve humanity, not require humanity to adapt to it.
+
+  </p>
+
+</section>
+
+<section>
+
+  <h2>2. Origins and Development</h2>
+
+  <p>
+
+    The concept developed through earlier explorations
+
+    known as Buddy and Jeremy in a Bottle during
+
+    early 2025.
+
+  </p>
+
+  <p>
+
+    It subsequently evolved into Jeremy Blueprint,
+
+    a broader human-first artificial intelligence vision.
+
+  </p>
+
+  <p>
+
+    The creator maintains historical development records
+
+    and correspondence relating to the concept.
+
+    Independent verification of the complete development
+
+    chronology has not been published here.
+
+  </p>
+
+</section>
+
+<section>
+
+  <h2>3. The Human-First Principles</h2>
+
+  <ul>
+
+    <li>Human independence and autonomy</li>
+
+    <li>Safeguarding and proactive protection</li>
+
+    <li>Privacy and user-controlled information</li>
+
+    <li>Accessibility and inclusion</li>
+
+    <li>Transparency and accountability</li>
+
+    <li>Personal growth and opportunity</li>
+
+    <li>Responsible companionship</li>
+
+  </ul>
+
+</section>
+
+<section>
+
+  <h2>4. The Proposed Companion Ecosystem</h2>
+
+  <p>
+
+    Jeremy Blueprint proposes connected support across
+
+    multiple areas of human life.
+
+  </p>
+
+  <ul>
+
+    <li>Safety, safeguarding and emergency assistance</li>
+
+    <li>Organisation, memory and daily planning</li>
+
+    <li>Wellbeing and responsible companionship</li>
+
+    <li>Learning, careers and personal development</li>
+
+    <li>Accessibility and independent living</li>
+
+    <li>Financial and legal information navigation</li>
+
+    <li>Healthcare and public-service navigation</li>
+
+    <li>Community and social connection</li>
+
+    <li>Transport, devices and future robotics integration</li>
+
+    <li>News, alerts and contextual information</li>
+
+  </ul>
+
+  <p>
+
+    These are proposed capabilities rather than
+
+    claims of a fully implemented product.
+
+  </p>
+
+</section>
+
+<section>
+
+  <h2>5. Safeguarding and Human Independence</h2>
+
+  <p>
+
+    The framework places human safety and independent
+
+    decision-making at the centre of AI companionship.
+
+  </p>
+
+  <p>
+
+    Proposed safeguards include proactive risk awareness,
+
+    emergency assistance, appropriate human oversight
+
+    and clear boundaries for sensitive situations.
+
+  </p>
+
+  <p>
+
+    Any real-world implementation would require
+
+    technical validation, privacy safeguards,
+
+    appropriate professional oversight and
+
+    compliance with applicable law.
+
+  </p>
+
+</section>
+
+<section>
+
+  <h2>6. Personal Memory and Continuity</h2>
+
+  <p>
+
+    Jeremy Blueprint envisions a companion that can
+
+    support long-term goals, personal organisation
+
+    and continuity across everyday activities.
+
+  </p>
+
+  <p>
+
+    Users should remain informed about what information
+
+    is retained and have meaningful control over
+
+    personal information.
+
+  </p>
+
+</section>
+
+<section>
+
+  <h2>7. Accessibility and Inclusion</h2>
+
+  <p>
+
+    The vision includes support for people with
+
+    different abilities, circumstances and
+
+    accessibility requirements.
+
+  </p>
+
+  <p>
+
+    The objective is to expand independence and
+
+    access to opportunity rather than create
+
+    unnecessary dependence on technology.
+
+  </p>
+
+</section>
+
+<section>
+
+  <h2>8. Research and Development Priorities</h2>
+
+  <ul>
+
+    <li>Privacy-preserving personal memory</li>
+
+    <li>Safeguarding and emergency-response validation</li>
+
+    <li>Human oversight and professional boundaries</li>
+
+    <li>Accessibility and inclusive interface design</li>
+
+    <li>Secure interoperability with external services</li>
+
+    <li>Long-term wellbeing and autonomy evaluation</li>
+
+    <li>Technical feasibility and prototype development</li>
+
+  </ul>
+
+</section>
+
+<section>
+
+  <h2>9. Current Development Status</h2>
+
+  <p>
+
+    Jeremy Blueprint is an independently documented
+
+    conceptual framework and proposed ecosystem.
+
+  </p>
+
+  <p>
+
+    This publication does not claim a deployed,
+
+    commercially validated AI platform or a
+
+    completed technical implementation.
+
+  </p>
+
+  <p>
+
+    Future progress would require engineering,
+
+    research, safety testing, partnerships and
+
+    independent evaluation.
+
+  </p>
+
+</section>
+
+<section>
+
+  <h2>10. Creator and Further Information</h2>
+
+  <p>
+
+    Jeremy Blueprint was developed as an independent
+
+    human-first AI vision by Kyle Dolby,
+
+    United Kingdom.
+
+  </p>
+
+  <p>
+
+    For the wider vision, published articles and
+
+    background information, visit the main website.
+
+  </p>
+
+  <a class="button" href="./">
+
+    Explore Jeremy Blueprint
+
+  </a>
+
+</section>
+
+</main>
+
+<footer>
+
+  Jeremy Blueprint | Kyle Dolby | United Kingdom
+
+  <br>
+
+  Independent Human-First AI Vision
+
+</footer>
+
+</body>
+
+</html>
