@@ -12,9 +12,9 @@
 
 <meta name="author" content="Kyle Dolby">
 
-<meta name="description" content="Jeremy Blueprint by Kyle Dolby. An independent human-first AI companion ecosystem vision exploring safeguarding, wellbeing, accessibility, personal memory, learning and human independence.">
-
 <meta name="robots" content="index,follow">
+
+<meta name="description" content="Jeremy Blueprint by Kyle Dolby. An independent human-first AI companion ecosystem vision exploring safeguarding, wellbeing, accessibility, personal memory, learning and human independence.">
 
 <title>Jeremy Blueprint | The Future of AI Should Be Human</title>
 
@@ -118,7 +118,13 @@ z-index:-1;
 
 }
 
-.container{width:min(1160px,90%);margin:auto}
+.container{
+
+width:min(1160px,90%);
+
+margin:auto;
+
+}
 
 header{
 
@@ -206,7 +212,7 @@ color:#c2d3e8;
 
 text-decoration:none;
 
-transition:.25s;
+transition:color .25s;
 
 }
 
@@ -292,14 +298,6 @@ border-radius:50%;
 
 box-shadow:0 0 14px var(--mint);
 
-animation:pulse 3s infinite;
-
-}
-
-@keyframes pulse{
-
-50%{opacity:.35;box-shadow:0 0 24px var(--mint)}
-
 }
 
 h1{
@@ -368,11 +366,11 @@ font-weight:800;
 
 text-decoration:none;
 
-transition:.3s;
+transition:transform .3s;
 
 }
 
-.btn:hover{transform:translateY(-4px)}
+.btn:hover{transform:translateY(-3px)}
 
 .btn-primary{
 
@@ -392,6 +390,8 @@ background:rgba(15,33,55,.6);
 
 }
 
+/* STABLE LOGO AND SINGLE SLOW ORBIT */
+
 .hero-visual{
 
 position:relative;
@@ -402,9 +402,9 @@ place-items:center;
 
 min-height:440px;
 
-}
+isolation:isolate;
 
-/* ONE SLOW ORBIT */
+}
 
 .orbit{
 
@@ -424,7 +424,7 @@ box-shadow:
 
 inset 0 0 70px rgba(38,170,221,.08);
 
-animation:rotate 120s linear infinite;
+animation:none;
 
 }
 
@@ -448,9 +448,51 @@ content:"";
 
 position:absolute;
 
-top:8%;
+top:50%;
 
-left:16%;
+left:50%;
+
+width:12px;
+
+height:12px;
+
+border-radius:50%;
+
+background:var(--cyan);
+
+box-shadow:0 0 25px var(--cyan);
+
+transform:translate(-50%,-50%);
+
+opacity:0;
+
+}
+
+/* The only moving ball */
+
+.orbit-ball{
+
+position:absolute;
+
+inset:0;
+
+border-radius:50%;
+
+animation:slowOrbit 180s linear infinite;
+
+will-change:transform;
+
+}
+
+.orbit-ball:after{
+
+content:"";
+
+position:absolute;
+
+top:-6px;
+
+left:calc(50% - 6px);
 
 width:12px;
 
@@ -464,13 +506,13 @@ box-shadow:0 0 25px var(--cyan);
 
 }
 
-@keyframes rotate{
+@keyframes slowOrbit{
+
+from{transform:rotate(0deg)}
 
 to{transform:rotate(360deg)}
 
 }
-
-/* GENTLE LOGO FLOAT */
 
 .hero-logo{
 
@@ -490,13 +532,9 @@ position:relative;
 
 z-index:2;
 
-animation:float 12s ease-in-out infinite;
+animation:none!important;
 
-}
-
-@keyframes float{
-
-50%{transform:translateY(-8px)}
+transform:none!important;
 
 }
 
@@ -1134,7 +1172,11 @@ transform:none;
 
 }
 
-.research-panel{padding:38px}
+.research-panel{
+
+padding:38px;
+
+}
 
 .research-panel h3{
 
@@ -1254,7 +1296,13 @@ gap:18px;
 
 .links a{font-size:14px}
 
-.hero{padding:65px 0 70px;min-height:auto}
+.hero{
+
+padding:65px 0 70px;
+
+min-height:auto;
+
+}
 
 .hero-grid{gap:10px}
 
@@ -1278,7 +1326,19 @@ section.content{padding:75px 0;scroll-margin-top:72px}
 
 h2{font-size:36px}
 
-.grid,.tiers,.eco-grid,.publications,.research-points{grid-template-columns:1fr}
+.grid,
+
+.tiers,
+
+.eco-grid,
+
+.publications,
+
+.research-points{
+
+grid-template-columns:1fr;
+
+}
 
 .ecosystem{padding:25px 18px}
 
@@ -1332,7 +1392,13 @@ scroll-behavior:auto!important;
 
 "description":"Independent human-first AI companion ecosystem vision created by Kyle Dolby",
 
-"author":{"@type":"Person","name":"Kyle Dolby"}
+"author":{
+
+"@type":"Person",
+
+"name":"Kyle Dolby"
+
+}
 
 },
 
@@ -1372,7 +1438,13 @@ scroll-behavior:auto!important;
 
 "description":"An independent conceptual framework for a human-first AI life companion ecosystem integrating safeguarding, memory, wellbeing, accessibility, learning and human independence.",
 
-"creator":{"@type":"Person","name":"Kyle Dolby"},
+"creator":{
+
+"@type":"Person",
+
+"name":"Kyle Dolby"
+
+},
 
 "url":"https://jeremy26111.github.io/jeremy-blueprint/research.html",
 
@@ -1484,7 +1556,11 @@ Concept and vision by <strong>Kyle Dolby</strong> · United Kingdom
 
 <div class="hero-visual">
 
-<div class="orbit" aria-hidden="true"></div>
+<div class="orbit" aria-hidden="true">
+
+<div class="orbit-ball"></div>
+
+</div>
 
 <img class="hero-logo" src="logo1.jpg" alt="Jeremy in a Bottle Blueprint emblem">
 
@@ -1960,7 +2036,7 @@ Explore the framework.
 
 <p class="lead">
 
-Jeremy Blueprint now includes a dedicated research page
+Jeremy Blueprint includes a dedicated research page
 
 explaining its origins, guiding principles, proposed ecosystem,
 
@@ -2352,6 +2428,8 @@ Independent vision · Human-first by design
 
 <script>
 
+/* MOBILE MENU */
+
 const menuButton=document.getElementById("menuButton");
 
 const navigation=document.getElementById("navigation");
@@ -2376,7 +2454,11 @@ menuButton.setAttribute("aria-expanded","false");
 
 });
 
+/* COPYRIGHT YEAR */
+
 document.getElementById("year").textContent=new Date().getFullYear();
+
+/* INTERACTIVE ECOSYSTEM */
 
 const ecoButtons=document.querySelectorAll(".eco-item");
 
@@ -2399,6 +2481,8 @@ ecoInfo.textContent=button.dataset.info;
 });
 
 });
+
+/* SECTION REVEAL */
 
 if("IntersectionObserver" in window){
 
@@ -2426,21 +2510,17 @@ document.querySelectorAll(".reveal").forEach(el=>el.classList.add("visible"));
 
 }
 
-/* CALM ANIMATED BACKGROUND */
+/* STATIC BACKGROUND NETWORK - NO MOVING PARTICLES */
 
 const canvas=document.getElementById("network");
 
 const ctx=canvas.getContext("2d");
-
-const reduceMotion=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 let particles=[];
 
 let width=0;
 
 let height=0;
-
-let animationId=null;
 
 function resizeNetwork(){
 
@@ -2456,13 +2536,11 @@ canvas.height=Math.floor(height*ratio);
 
 ctx.setTransform(ratio,0,0,ratio,0,0);
 
-/* Fewer background particles */
-
 const count=Math.min(
 
-38,
+65,
 
-Math.max(15,Math.floor(width*height/30000))
+Math.max(22,Math.floor(width*height/19000))
 
 );
 
@@ -2472,15 +2550,11 @@ x:Math.random()*width,
 
 y:Math.random()*height,
 
-/* Much slower movement */
-
-vx:(Math.random()-.5)*.06,
-
-vy:(Math.random()-.5)*.06,
-
-r:Math.random()*1.2+.4
+r:Math.random()*1.5+.5
 
 }));
+
+drawNetwork();
 
 }
 
@@ -2492,23 +2566,11 @@ for(let i=0;i<particles.length;i++){
 
 const p=particles[i];
 
-if(!reduceMotion){
-
-p.x+=p.vx;
-
-p.y+=p.vy;
-
-if(p.x<0||p.x>width)p.vx*=-1;
-
-if(p.y<0||p.y>height)p.vy*=-1;
-
-}
-
 ctx.beginPath();
 
 ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
 
-ctx.fillStyle="rgba(105,216,255,.32)";
+ctx.fillStyle="rgba(105,216,255,.48)";
 
 ctx.fill();
 
@@ -2530,9 +2592,9 @@ ctx.moveTo(p.x,p.y);
 
 ctx.lineTo(q.x,q.y);
 
-ctx.strokeStyle="rgba(74,192,232,"+((1-distance/135)*.09)+")";
+ctx.strokeStyle="rgba(74,192,232,"+((1-distance/135)*.13)+")";
 
-ctx.lineWidth=.5;
+ctx.lineWidth=.6;
 
 ctx.stroke();
 
@@ -2542,17 +2604,9 @@ ctx.stroke();
 
 }
 
-if(!reduceMotion){
-
-animationId=requestAnimationFrame(drawNetwork);
-
-}
-
 }
 
 resizeNetwork();
-
-drawNetwork();
 
 let resizeTimer;
 
@@ -2560,15 +2614,7 @@ window.addEventListener("resize",()=>{
 
 clearTimeout(resizeTimer);
 
-resizeTimer=setTimeout(()=>{
-
-if(animationId)cancelAnimationFrame(animationId);
-
-resizeNetwork();
-
-drawNetwork();
-
-},180);
+resizeTimer=setTimeout(resizeNetwork,250);
 
 });
 
