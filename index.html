@@ -12,7 +12,9 @@
 
 <meta name="author" content="Kyle Dolby">
 
-<meta name="description" content="Jeremy Blueprint by Kyle Dolby. An independent human-first vision for the future of artificial intelligence, safeguarding, wellbeing, accessibility and personal AI companionship.">
+<meta name="description" content="Jeremy Blueprint by Kyle Dolby. An independent human-first AI companion ecosystem vision exploring safeguarding, wellbeing, accessibility, personal memory, learning and human independence.">
+
+<meta name="robots" content="index,follow">
 
 <title>Jeremy Blueprint | The Future of AI Should Be Human</title>
 
@@ -22,11 +24,13 @@
 
 <meta property="og:title" content="Jeremy Blueprint — The Future of AI Should Be Human">
 
-<meta property="og:description" content="An independent human-first AI vision by Kyle Dolby.">
+<meta property="og:description" content="An independent human-first AI companion ecosystem vision by Kyle Dolby.">
 
 <meta property="og:image" content="https://jeremy26111.github.io/jeremy-blueprint/jeremy-cover.jpg">
 
 <meta property="og:type" content="website">
+
+<meta property="og:url" content="https://jeremy26111.github.io/jeremy-blueprint/">
 
 <meta name="twitter:card" content="summary_large_image">
 
@@ -182,7 +186,17 @@ box-shadow:0 0 22px rgba(84,216,255,.2);
 
 }
 
-.links{display:flex;align-items:center;gap:23px}
+.links{
+
+display:flex;
+
+align-items:center;
+
+gap:18px;
+
+flex-wrap:wrap;
+
+}
 
 .links a{
 
@@ -402,9 +416,15 @@ border:1px solid rgba(84,216,255,.3);
 
 border-radius:50%;
 
-box-shadow:0 0 100px rgba(38,170,221,.1),inset 0 0 70px rgba(38,170,221,.08);
+box-shadow:
 
-animation:rotate 35s linear infinite;
+0 0 100px rgba(38,170,221,.1),
+
+inset 0 0 70px rgba(38,170,221,.08);
+
+/* Slower orbit: one rotation every 100 seconds */
+
+animation:rotate 100s linear infinite;
 
 }
 
@@ -444,7 +464,11 @@ box-shadow:0 0 25px var(--cyan);
 
 }
 
-@keyframes rotate{to{transform:rotate(360deg)}}
+@keyframes rotate{
+
+to{transform:rotate(360deg)}
+
+}
 
 .hero-logo{
 
@@ -454,17 +478,27 @@ border-radius:25px;
 
 border:1px solid rgba(84,216,255,.5);
 
-box-shadow:0 0 75px rgba(43,169,222,.22),0 25px 75px #0009;
+box-shadow:
+
+0 0 75px rgba(43,169,222,.22),
+
+0 25px 75px #0009;
 
 position:relative;
 
 z-index:2;
 
-animation:float 6s ease-in-out infinite;
+/* Slower logo floating */
+
+animation:float 9s ease-in-out infinite;
 
 }
 
-@keyframes float{50%{transform:translateY(-14px)}}
+@keyframes float{
+
+50%{transform:translateY(-10px)}
+
+}
 
 .micro{
 
@@ -486,7 +520,13 @@ scroll-margin-top:80px;
 
 }
 
-.section-head{max-width:780px;margin-bottom:40px}
+.section-head{
+
+max-width:780px;
+
+margin-bottom:40px;
+
+}
 
 .kicker{
 
@@ -584,9 +624,25 @@ margin-bottom:22px;
 
 }
 
-.card h3{font-size:20px;line-height:1.3;margin:0 0 12px}
+.card h3{
 
-.card p{font-size:14px;color:var(--muted);margin:0}
+font-size:20px;
+
+line-height:1.3;
+
+margin:0 0 12px;
+
+}
+
+.card p{
+
+font-size:14px;
+
+color:var(--muted);
+
+margin:0;
+
+}
 
 .card .number{
 
@@ -630,7 +686,15 @@ gap:20px;
 
 }
 
-.tier{padding:32px;position:relative;overflow:hidden}
+.tier{
+
+padding:32px;
+
+position:relative;
+
+overflow:hidden;
+
+}
 
 .tier:before{
 
@@ -654,9 +718,21 @@ right:-80px;
 
 }
 
-.tier .symbol{font-size:34px;margin-bottom:20px}
+.tier .symbol{
 
-.tier h3{font-size:27px;margin:0}
+font-size:34px;
+
+margin-bottom:20px;
+
+}
+
+.tier h3{
+
+font-size:27px;
+
+margin:0;
+
+}
 
 .tier .subtitle{
 
@@ -674,7 +750,13 @@ margin:5px 0 20px;
 
 }
 
-.tier p{color:var(--muted);font-size:14px}
+.tier p{
+
+color:var(--muted);
+
+font-size:14px;
+
+}
 
 .ecosystem{
 
@@ -708,15 +790,33 @@ background:radial-gradient(circle,rgba(42,167,205,.35),rgba(8,25,43,.9));
 
 border:1px solid var(--cyan);
 
-box-shadow:0 0 0 18px rgba(84,216,255,.035),0 0 70px rgba(84,216,255,.22);
+box-shadow:
+
+0 0 0 18px rgba(84,216,255,.035),
+
+0 0 70px rgba(84,216,255,.22);
 
 text-align:center;
 
 }
 
-.eco-core strong{font-size:21px;letter-spacing:-.04em}
+.eco-core strong{
 
-.eco-core span{font-size:10px;color:var(--mint);letter-spacing:.13em}
+font-size:21px;
+
+letter-spacing:-.04em;
+
+}
+
+.eco-core span{
+
+font-size:10px;
+
+color:var(--mint);
+
+letter-spacing:.13em;
+
+}
 
 .eco-grid{
 
@@ -750,7 +850,9 @@ font-size:13px;
 
 }
 
-.eco-item:hover,.eco-item.active{
+.eco-item:hover,
+
+.eco-item.active{
 
 border-color:var(--mint);
 
@@ -786,9 +888,23 @@ min-height:100px;
 
 }
 
-.eco-detail h3{margin:0 0 6px;font-size:19px}
+.eco-detail h3{
 
-.eco-detail p{margin:0;color:var(--muted);font-size:14px}
+margin:0 0 6px;
+
+font-size:19px;
+
+}
+
+.eco-detail p{
+
+margin:0;
+
+color:var(--muted);
+
+font-size:14px;
+
+}
 
 .timeline{
 
@@ -802,7 +918,13 @@ padding-left:32px;
 
 }
 
-.milestone{position:relative;margin:0 0 38px}
+.milestone{
+
+position:relative;
+
+margin:0 0 38px;
+
+}
 
 .milestone:before{
 
@@ -836,9 +958,23 @@ letter-spacing:.13em;
 
 }
 
-.milestone h3{margin:8px 0;font-size:23px}
+.milestone h3{
 
-.milestone p{color:var(--muted);margin:0;max-width:720px}
+margin:8px 0;
+
+font-size:23px;
+
+}
+
+.milestone p{
+
+color:var(--muted);
+
+margin:0;
+
+max-width:720px;
+
+}
 
 .feature{
 
@@ -900,11 +1036,29 @@ margin-top:22px;
 
 .publication{padding:27px}
 
-.publication h3{font-size:21px;line-height:1.3}
+.publication h3{
 
-.publication p{color:var(--muted);font-size:14px}
+font-size:21px;
 
-.publication a{color:var(--cyan);font-weight:750}
+line-height:1.3;
+
+}
+
+.publication p{
+
+color:var(--muted);
+
+font-size:14px;
+
+}
+
+.publication a{
+
+color:var(--cyan);
+
+font-weight:750;
+
+}
 
 .creator{
 
@@ -972,7 +1126,81 @@ transition:opacity .8s,transform .8s;
 
 }
 
-.reveal.visible{opacity:1;transform:none}
+.reveal.visible{
+
+opacity:1;
+
+transform:none;
+
+}
+
+/* Research section */
+
+.research-panel{
+
+padding:38px;
+
+}
+
+.research-panel h3{
+
+font-size:27px;
+
+margin:0 0 14px;
+
+}
+
+.research-panel p{
+
+color:var(--muted);
+
+max-width:800px;
+
+}
+
+.research-points{
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:12px;
+
+margin:25px 0;
+
+}
+
+.research-point{
+
+padding:18px;
+
+border:1px solid var(--border);
+
+border-radius:12px;
+
+background:rgba(84,216,255,.045);
+
+font-size:14px;
+
+}
+
+.research-point strong{
+
+display:block;
+
+color:var(--mint);
+
+margin-bottom:5px;
+
+}
+
+@media(max-width:1050px){
+
+.links{gap:12px}
+
+.links a{font-size:11px}
+
+}
 
 @media(max-width:900px){
 
@@ -1042,7 +1270,13 @@ gap:18px;
 
 .orbit{width:260px}
 
-h1{font-size:clamp(43px,10vw,60px);letter-spacing:-.065em}
+h1{
+
+font-size:clamp(43px,10vw,60px);
+
+letter-spacing:-.065em;
+
+}
 
 .hero p{font-size:15px}
 
@@ -1050,7 +1284,7 @@ section.content{padding:75px 0;scroll-margin-top:72px}
 
 h2{font-size:36px}
 
-.grid,.tiers,.eco-grid,.publications{grid-template-columns:1fr}
+.grid,.tiers,.eco-grid,.publications,.research-points{grid-template-columns:1fr}
 
 .ecosystem{padding:25px 18px}
 
@@ -1063,6 +1297,8 @@ h2{font-size:36px}
 .card,.tier{padding:24px}
 
 .vision-quote{padding:24px}
+
+.research-panel{padding:24px}
 
 }
 
@@ -1088,17 +1324,81 @@ scroll-behavior:auto!important;
 
 {
 
-"@context":"https://schema.org",
+  "@context":"https://schema.org",
 
-"@type":"WebSite",
+  "@graph":[
 
-"name":"Jeremy Blueprint",
+    {
 
-"url":"https://jeremy26111.github.io/jeremy-blueprint/",
+      "@type":"WebSite",
 
-"description":"Independent human-first AI vision created by Kyle Dolby",
+      "name":"Jeremy Blueprint",
 
-"author":{"@type":"Person","name":"Kyle Dolby"}
+      "url":"https://jeremy26111.github.io/jeremy-blueprint/",
+
+      "description":"Independent human-first AI companion ecosystem vision created by Kyle Dolby",
+
+      "author":{
+
+        "@type":"Person",
+
+        "name":"Kyle Dolby"
+
+      }
+
+    },
+
+    {
+
+      "@type":"WebPage",
+
+      "name":"Jeremy Blueprint — Human-First AI Vision",
+
+      "url":"https://jeremy26111.github.io/jeremy-blueprint/",
+
+      "isPartOf":{
+
+        "@type":"WebSite",
+
+        "url":"https://jeremy26111.github.io/jeremy-blueprint/"
+
+      },
+
+      "hasPart":{
+
+        "@type":"WebPage",
+
+        "name":"Jeremy Blueprint Research & Evidence",
+
+        "url":"https://jeremy26111.github.io/jeremy-blueprint/research.html"
+
+      }
+
+    },
+
+    {
+
+      "@type":"CreativeWork",
+
+      "name":"Jeremy Blueprint",
+
+      "description":"An independent conceptual framework for a human-first AI life companion ecosystem integrating safeguarding, memory, wellbeing, accessibility, learning and human independence.",
+
+      "creator":{
+
+        "@type":"Person",
+
+        "name":"Kyle Dolby"
+
+      },
+
+      "url":"https://jeremy26111.github.io/jeremy-blueprint/research.html",
+
+      "inLanguage":"en-GB"
+
+    }
+
+  ]
 
 }
 
@@ -1122,7 +1422,11 @@ scroll-behavior:auto!important;
 
 </a>
 
-<button class="menu" id="menuButton" aria-expanded="false" aria-controls="navigation">Menu ☰</button>
+<button class="menu" id="menuButton" aria-expanded="false" aria-controls="navigation">
+
+Menu ☰
+
+</button>
 
 <nav class="links" id="navigation">
 
@@ -1133,6 +1437,8 @@ scroll-behavior:auto!important;
 <a href="#experience">Experience</a>
 
 <a href="#origins">Origins</a>
+
+<a href="#research">Research & Evidence</a>
 
 <a href="#publications">Publications</a>
 
@@ -1146,6 +1452,8 @@ scroll-behavior:auto!important;
 
 <main>
 
+<!-- HERO -->
+
 <section class="hero" id="home">
 
 <div class="container hero-grid">
@@ -1154,13 +1462,23 @@ scroll-behavior:auto!important;
 
 <div class="eyebrow">Independent human-first AI vision</div>
 
-<h1>The future of AI <span class="gradient">should be human.</span></h1>
+<h1>
+
+The future of AI
+
+<span class="gradient">should be human.</span>
+
+</h1>
 
 <p>
 
 Intelligence is advancing. Humanity must remain at its centre.
 
-Discover Jeremy Blueprint — an independent vision for a connected AI life companion ecosystem designed around safeguarding, wellbeing, accessibility and human independence.
+Discover Jeremy Blueprint — an independent vision for a connected
+
+AI life companion ecosystem designed around safeguarding,
+
+wellbeing, accessibility and human independence.
 
 </p>
 
@@ -1168,11 +1486,17 @@ Discover Jeremy Blueprint — an independent vision for a connected AI life comp
 
 <a class="btn btn-primary" href="#ecosystem">Explore the ecosystem ↗</a>
 
+<a class="btn btn-outline" href="research.html">Explore Research ↗</a>
+
 <a class="btn btn-outline" href="#publications">Read the vision</a>
 
 </div>
 
-<p class="micro">Concept and vision by <strong>Kyle Dolby</strong> · United Kingdom</p>
+<p class="micro">
+
+Concept and vision by <strong>Kyle Dolby</strong> · United Kingdom
+
+</p>
 
 </div>
 
@@ -1188,6 +1512,8 @@ Discover Jeremy Blueprint — an independent vision for a connected AI life comp
 
 </section>
 
+<!-- VISION -->
+
 <section class="content" id="vision">
 
 <div class="container">
@@ -1196,11 +1522,21 @@ Discover Jeremy Blueprint — an independent vision for a connected AI life comp
 
 <div class="kicker">01 / The vision</div>
 
-<h2>Technology should understand human needs. <span class="gradient">Not just human instructions.</span></h2>
+<h2>
+
+Technology should understand human needs.
+
+<span class="gradient">Not just human instructions.</span>
+
+</h2>
 
 <p class="lead">
 
-Jeremy Blueprint explores a future in which artificial intelligence helps people navigate life, pursue opportunities, remain independent and access meaningful support.
+Jeremy Blueprint explores a future in which artificial intelligence
+
+helps people navigate life, pursue opportunities, remain independent
+
+and access meaningful support.
 
 </p>
 
@@ -1208,7 +1544,9 @@ Jeremy Blueprint explores a future in which artificial intelligence helps people
 
 <div class="vision-quote reveal">
 
-“The measure of better AI is not simply what technology can achieve — but how much better it helps humanity live.”
+“The measure of better AI is not simply what technology can achieve —
+
+but how much better it helps humanity live.”
 
 </div>
 
@@ -1222,7 +1560,13 @@ Jeremy Blueprint explores a future in which artificial intelligence helps people
 
 <h3>Human autonomy</h3>
 
-<p>Support individual decisions, confidence and independence rather than replacing human judgment.</p>
+<p>
+
+Support individual decisions, confidence and independence
+
+rather than replacing human judgment.
+
+</p>
 
 </div>
 
@@ -1234,7 +1578,13 @@ Jeremy Blueprint explores a future in which artificial intelligence helps people
 
 <h3>Safeguarding first</h3>
 
-<p>Explore responsible protective assistance, appropriate alerts and supportive pathways for vulnerable people.</p>
+<p>
+
+Explore responsible protective assistance, appropriate alerts
+
+and supportive pathways for vulnerable people.
+
+</p>
 
 </div>
 
@@ -1246,7 +1596,13 @@ Jeremy Blueprint explores a future in which artificial intelligence helps people
 
 <h3>Meaningful transparency</h3>
 
-<p>Privacy, understandable AI behaviour, user choice and accountability should be foundational.</p>
+<p>
+
+Privacy, understandable AI behaviour, user choice
+
+and accountability should be foundational.
+
+</p>
 
 </div>
 
@@ -1256,6 +1612,8 @@ Jeremy Blueprint explores a future in which artificial intelligence helps people
 
 </section>
 
+<!-- ECOSYSTEM -->
+
 <section class="content" id="ecosystem">
 
 <div class="container">
@@ -1264,11 +1622,19 @@ Jeremy Blueprint explores a future in which artificial intelligence helps people
 
 <div class="kicker">02 / Connected intelligence</div>
 
-<h2>One vision. <span class="gradient">An ecosystem of human possibilities.</span></h2>
+<h2>
+
+One vision.
+
+<span class="gradient">An ecosystem of human possibilities.</span>
+
+</h2>
 
 <p class="lead">
 
-The proposed ecosystem brings together everyday assistance, personal development, protection and connected technology.
+The proposed ecosystem brings together everyday assistance,
+
+personal development, protection and connected technology.
 
 Select a capability to explore its purpose.
 
@@ -1288,17 +1654,77 @@ Select a capability to explore its purpose.
 
 <div class="eco-grid">
 
-<button class="eco-item active" data-title="Safety & Safeguarding" data-info="Exploring supportive safety alerts, emergency pathways and responsible future wearable-enabled protection, with privacy and appropriate human oversight."><span>01 / PROTECTION</span>Safety & safeguarding</button>
+<button class="eco-item active"
 
-<button class="eco-item" data-title="Organisation & Memory" data-info="A personal companion concept for routines, reminders, important information and goals, designed around meaningful user control."><span>02 / DAILY LIFE</span>Organisation & memory</button>
+data-title="Safety & Safeguarding"
 
-<button class="eco-item" data-title="Wellbeing & Support" data-info="Reflective check-ins, encouragement and practical wellbeing support that complements rather than replaces qualified care and real-world relationships."><span>03 / WELLBEING</span>Personal wellbeing</button>
+data-info="Exploring supportive safety alerts, emergency pathways and responsible future wearable-enabled protection, with privacy and appropriate human oversight.">
 
-<button class="eco-item" data-title="Learning & Opportunity" data-info="Exploring education, skill development, career navigation and informed decision-making across different stages of life."><span>04 / GROWTH</span>Learning & careers</button>
+<span>01 / PROTECTION</span>
 
-<button class="eco-item" data-title="Accessibility & Inclusion" data-info="Reducing barriers to information, useful services and participation for people with different needs and abilities."><span>05 / INCLUSION</span>Accessibility</button>
+Safety & safeguarding
 
-<button class="eco-item" data-title="Connected Technology" data-info="Longer-term conceptual possibilities include connected devices, wearables, transport and robotics. These are future ambitions, not deployed capabilities."><span>06 / FUTURE</span>Devices & robotics</button>
+</button>
+
+<button class="eco-item"
+
+data-title="Organisation & Memory"
+
+data-info="A personal companion concept for routines, reminders, important information and goals, designed around meaningful user control.">
+
+<span>02 / DAILY LIFE</span>
+
+Organisation & memory
+
+</button>
+
+<button class="eco-item"
+
+data-title="Wellbeing & Support"
+
+data-info="Reflective check-ins, encouragement and practical wellbeing support that complements rather than replaces qualified care and real-world relationships.">
+
+<span>03 / WELLBEING</span>
+
+Personal wellbeing
+
+</button>
+
+<button class="eco-item"
+
+data-title="Learning & Opportunity"
+
+data-info="Exploring education, skill development, career navigation and informed decision-making across different stages of life.">
+
+<span>04 / GROWTH</span>
+
+Learning & careers
+
+</button>
+
+<button class="eco-item"
+
+data-title="Accessibility & Inclusion"
+
+data-info="Reducing barriers to information, useful services and participation for people with different needs and abilities.">
+
+<span>05 / INCLUSION</span>
+
+Accessibility
+
+</button>
+
+<button class="eco-item"
+
+data-title="Connected Technology"
+
+data-info="Longer-term conceptual possibilities include connected devices, wearables, transport and robotics. These are future ambitions, not deployed capabilities.">
+
+<span>06 / FUTURE</span>
+
+Devices & robotics
+
+</button>
 
 </div>
 
@@ -1306,7 +1732,15 @@ Select a capability to explore its purpose.
 
 <h3 id="ecoTitle">Safety & Safeguarding</h3>
 
-<p id="ecoInfo">Exploring supportive safety alerts, emergency pathways and responsible future wearable-enabled protection, with privacy and appropriate human oversight.</p>
+<p id="ecoInfo">
+
+Exploring supportive safety alerts, emergency pathways
+
+and responsible future wearable-enabled protection,
+
+with privacy and appropriate human oversight.
+
+</p>
 
 </div>
 
@@ -1316,6 +1750,8 @@ Select a capability to explore its purpose.
 
 </section>
 
+<!-- EXPERIENCE -->
+
 <section class="content" id="experience">
 
 <div class="container">
@@ -1324,11 +1760,21 @@ Select a capability to explore its purpose.
 
 <div class="kicker">03 / The companion experience</div>
 
-<h2>Guidance. Breakthrough. <span class="gradient">Direction.</span></h2>
+<h2>
+
+Guidance. Breakthrough.
+
+<span class="gradient">Direction.</span>
+
+</h2>
 
 <p class="lead">
 
-Three proposed layers of the Jeremy experience, designed to help people move from everyday questions towards meaningful progress.
+Three proposed layers of the Jeremy experience,
+
+designed to help people move from everyday questions
+
+towards meaningful progress.
 
 </p>
 
@@ -1344,7 +1790,13 @@ Three proposed layers of the Jeremy experience, designed to help people move fro
 
 <div class="subtitle">Free core guidance</div>
 
-<p>A welcoming starting point for everyday questions, practical guidance, reflection and finding a way forward.</p>
+<p>
+
+A welcoming starting point for everyday questions,
+
+practical guidance, reflection and finding a way forward.
+
+</p>
 
 </div>
 
@@ -1356,7 +1808,13 @@ Three proposed layers of the Jeremy experience, designed to help people move fro
 
 <div class="subtitle">Breakthrough tier</div>
 
-<p>Deeper support for overcoming obstacles, exploring opportunities and turning ambitions into practical steps.</p>
+<p>
+
+Deeper support for overcoming obstacles,
+
+exploring opportunities and turning ambitions into practical steps.
+
+</p>
 
 </div>
 
@@ -1368,7 +1826,13 @@ Three proposed layers of the Jeremy experience, designed to help people move fro
 
 <div class="subtitle">Strategic navigation</div>
 
-<p>A proposed experience for longer-term planning, priorities and more complex personal or professional goals.</p>
+<p>
+
+A proposed experience for longer-term planning,
+
+priorities and more complex personal or professional goals.
+
+</p>
 
 </div>
 
@@ -1376,13 +1840,17 @@ Three proposed layers of the Jeremy experience, designed to help people move fro
 
 <div class="notice reveal">
 
-Lantern, Key and Compass describe proposed product concepts. They are not currently available services or verified technical implementations.
+Lantern, Key and Compass describe proposed product concepts.
+
+They are not currently available services or verified technical implementations.
 
 </div>
 
 </div>
 
 </section>
+
+<!-- ORIGINS -->
 
 <section class="content" id="origins">
 
@@ -1392,11 +1860,21 @@ Lantern, Key and Compass describe proposed product concepts. They are not curren
 
 <div class="kicker">04 / Origins & evolution</div>
 
-<h2>From an idea to a <span class="gradient">human-first blueprint.</span></h2>
+<h2>
+
+From an idea to a
+
+<span class="gradient">human-first blueprint.</span>
+
+</h2>
 
 <p class="lead">
 
-Jeremy Blueprint evolved through iterative conceptual development, exploring how AI might become more supportive, responsible and useful in everyday life.
+Jeremy Blueprint evolved through iterative conceptual development,
+
+exploring how AI might become more supportive,
+
+responsible and useful in everyday life.
 
 </p>
 
@@ -1410,7 +1888,13 @@ Jeremy Blueprint evolved through iterative conceptual development, exploring how
 
 <h3>Buddy</h3>
 
-<p>An early companion concept centred on personal assistance, encouragement, goals and practical daily support.</p>
+<p>
+
+An early companion concept centred on personal assistance,
+
+encouragement, goals and practical daily support.
+
+</p>
 
 </div>
 
@@ -1420,7 +1904,15 @@ Jeremy Blueprint evolved through iterative conceptual development, exploring how
 
 <h3>Jeremy in a Bottle</h3>
 
-<p>“Helping dreams become reality.” A broader personal AI life companion vision developed through iterative exploration.</p>
+<p>
+
+“Helping dreams become reality.”
+
+A broader personal AI life companion vision
+
+developed through iterative exploration.
+
+</p>
 
 </div>
 
@@ -1430,7 +1922,15 @@ Jeremy Blueprint evolved through iterative conceptual development, exploring how
 
 <h3>Jeremy Blueprint</h3>
 
-<p>The concept expanded into a connected vision spanning safeguarding, wellbeing, accessibility, learning, organisation and responsible AI design.</p>
+<p>
+
+The concept expanded into a connected vision spanning
+
+safeguarding, wellbeing, accessibility, learning,
+
+organisation and responsible AI design.
+
+</p>
 
 </div>
 
@@ -1440,7 +1940,15 @@ Jeremy Blueprint evolved through iterative conceptual development, exploring how
 
 <h3>Independent public publication</h3>
 
-<p>A public-facing website and article presenting the human-first vision while keeping detailed private development materials separate.</p>
+<p>
+
+A public-facing website and article presenting
+
+the human-first vision while keeping detailed
+
+private development materials separate.
+
+</p>
 
 </div>
 
@@ -1450,37 +1958,191 @@ Jeremy Blueprint evolved through iterative conceptual development, exploring how
 
 </section>
 
+<!-- RESEARCH & EVIDENCE -->
+
+<section class="content" id="research">
+
+<div class="container">
+
+<div class="section-head reveal">
+
+<div class="kicker">05 / Research & evidence</div>
+
+<h2>
+
+Explore the framework.
+
+<span class="gradient">Examine the vision.</span>
+
+</h2>
+
+<p class="lead">
+
+Jeremy Blueprint now includes a dedicated research page
+
+explaining its origins, guiding principles, proposed ecosystem,
+
+safeguarding priorities and future development requirements.
+
+</p>
+
+</div>
+
+<div class="glass research-panel reveal">
+
+<h3>Jeremy Blueprint — Human-First AI Companion Research</h3>
+
+<p>
+
+The research publication provides a structured overview
+
+of the independent concept developed by Kyle Dolby,
+
+including its proposed applications across everyday life.
+
+</p>
+
+<div class="research-points">
+
+<div class="research-point">
+
+<strong>Origins & development</strong>
+
+The evolution from Buddy and Jeremy in a Bottle
+
+to the wider Jeremy Blueprint vision.
+
+</div>
+
+<div class="research-point">
+
+<strong>Human-first principles</strong>
+
+Safeguarding, autonomy, privacy,
+
+accessibility and transparency.
+
+</div>
+
+<div class="research-point">
+
+<strong>Connected ecosystem</strong>
+
+Personal memory, organisation, wellbeing,
+
+education, opportunity and future integrations.
+
+</div>
+
+<div class="research-point">
+
+<strong>Research priorities</strong>
+
+Technical feasibility, independent evaluation,
+
+responsible implementation and long-term human benefit.
+
+</div>
+
+</div>
+
+<p>
+
+This is a conceptual research overview.
+
+It does not claim that the complete ecosystem
+
+has been technically implemented or independently validated.
+
+</p>
+
+<div class="actions">
+
+<a class="btn btn-primary" href="research.html">
+
+Read the Full Research Page ↗
+
+</a>
+
+<a class="btn btn-outline" href="#origins">
+
+Explore the Origins
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PUBLICATIONS -->
+
 <section class="content" id="publications">
 
 <div class="container">
 
 <div class="section-head reveal">
 
-<div class="kicker">05 / Publications & perspectives</div>
+<div class="kicker">06 / Publications & perspectives</div>
 
-<h2>Ideas that challenge <span class="gradient">the direction of AI.</span></h2>
+<h2>
 
-<p class="lead">Independent writing exploring how increasingly powerful artificial intelligence should serve people and society.</p>
+Ideas that challenge
+
+<span class="gradient">the direction of AI.</span>
+
+</h2>
+
+<p class="lead">
+
+Independent writing exploring how increasingly powerful
+
+artificial intelligence should serve people and society.
+
+</p>
 
 </div>
 
 <article class="glass feature reveal">
 
-<img src="jeremy-cover.jpg" alt="Jeremy Blueprint human-first AI vision article cover" loading="lazy">
+<img
+
+src="jeremy-cover.jpg"
+
+alt="Jeremy Blueprint human-first AI vision article cover"
+
+loading="lazy">
 
 <div class="feature-copy">
 
 <div class="kicker">Featured article · November 2026</div>
 
-<h3>The Future of AI Needs More Than Intelligence — It Needs Humanity</h3>
+<h3>
+
+The Future of AI Needs More Than Intelligence —
+
+It Needs Humanity
+
+</h3>
 
 <p>
 
-A human-first perspective on safeguarding, autonomy, wellbeing, connected assistance, accountability and the future of AI.
+A human-first perspective on safeguarding,
+
+autonomy, wellbeing, connected assistance,
+
+accountability and the future of AI.
 
 </p>
 
-<a href="jeremy-blueprint-article.html">Read the full Jeremy Blueprint article ↗</a>
+<a href="jeremy-blueprint-article.html">
+
+Read the full Jeremy Blueprint article ↗
+
+</a>
 
 </div>
 
@@ -1492,11 +2154,33 @@ A human-first perspective on safeguarding, autonomy, wellbeing, connected assist
 
 <div class="kicker">AI psychology & accountability</div>
 
-<h3>AI Is Learning to Understand You. But Who Is Teaching It How to Influence You?</h3>
+<h3>
 
-<p>Questions surrounding conversational influence, emotional adaptation, transparency and meaningful oversight.</p>
+AI Is Learning to Understand You.
 
-<a href="https://www.linkedin.com/in/kyle-dolby-1989-ksd" target="_blank" rel="noopener noreferrer">Explore Kyle's writing ↗</a>
+But Who Is Teaching It How to Influence You?
+
+</h3>
+
+<p>
+
+Questions surrounding conversational influence,
+
+emotional adaptation, transparency and meaningful oversight.
+
+</p>
+
+<a
+
+href="https://www.linkedin.com/in/kyle-dolby-1989-ksd"
+
+target="_blank"
+
+rel="noopener noreferrer">
+
+Explore Kyle's writing ↗
+
+</a>
 
 </div>
 
@@ -1504,11 +2188,33 @@ A human-first perspective on safeguarding, autonomy, wellbeing, connected assist
 
 <div class="kicker">Published perspective</div>
 
-<h3>AI Is Becoming More Powerful. But Is It Becoming More Human?</h3>
+<h3>
 
-<p>Exploring the relationship between technological progress, responsible design and human benefit.</p>
+AI Is Becoming More Powerful.
 
-<a href="https://www.aigovernancedesk.com/ai-becoming-more-powerful-more-human/" target="_blank" rel="noopener noreferrer">Read at AI Governance Desk ↗</a>
+But Is It Becoming More Human?
+
+</h3>
+
+<p>
+
+Exploring the relationship between technological progress,
+
+responsible design and human benefit.
+
+</p>
+
+<a
+
+href="https://www.aigovernancedesk.com/ai-becoming-more-powerful-more-human/"
+
+target="_blank"
+
+rel="noopener noreferrer">
+
+Read at AI Governance Desk ↗
+
+</a>
 
 </div>
 
@@ -1518,35 +2224,69 @@ A human-first perspective on safeguarding, autonomy, wellbeing, connected assist
 
 </section>
 
+<!-- CREATOR -->
+
 <section class="content" id="creator">
 
 <div class="container creator">
 
 <div class="reveal">
 
-<div class="kicker">06 / The creator</div>
+<div class="kicker">07 / The creator</div>
 
 <h2>Kyle Dolby</h2>
 
-<p class="lead">Independent creator of Jeremy Blueprint.</p>
+<p class="lead">
 
-<p>
-
-Jeremy Blueprint represents an evolving vision for artificial intelligence that prioritises human wellbeing, safety, independence and meaningful progress.
+Independent creator of Jeremy Blueprint.
 
 </p>
 
 <p>
 
-The public website introduces the vision and its principles without disclosing private technical specifications or asserting unverified affiliations.
+Jeremy Blueprint represents an evolving vision
+
+for artificial intelligence that prioritises
+
+human wellbeing, safety, independence
+
+and meaningful progress.
+
+</p>
+
+<p>
+
+The public website introduces the vision
+
+and its principles without disclosing
+
+private technical specifications
+
+or asserting unverified affiliations.
 
 </p>
 
 <div class="actions">
 
-<a class="btn btn-primary" href="https://www.linkedin.com/in/kyle-dolby-1989-ksd" target="_blank" rel="noopener noreferrer">Connect on LinkedIn ↗</a>
+<a
 
-<a class="btn btn-outline" href="#publications">Explore publications</a>
+class="btn btn-primary"
+
+href="https://www.linkedin.com/in/kyle-dolby-1989-ksd"
+
+target="_blank"
+
+rel="noopener noreferrer">
+
+Connect on LinkedIn ↗
+
+</a>
+
+<a class="btn btn-outline" href="research.html">
+
+Research & Evidence ↗
+
+</a>
 
 </div>
 
@@ -1556,17 +2296,29 @@ The public website introduces the vision and its principles without disclosing p
 
 <div class="kicker">The mission</div>
 
-<h3 style="font-size:30px;margin-top:18px">Helping dreams become reality.</h3>
+<h3 style="font-size:30px;margin-top:18px">
+
+Helping dreams become reality.
+
+</h3>
 
 <p>
 
-A future in which greater intelligence creates greater human opportunity, independence, confidence and connection.
+A future in which greater intelligence creates
+
+greater human opportunity, independence,
+
+confidence and connection.
 
 </p>
 
 <div style="height:2px;background:linear-gradient(90deg,var(--cyan),var(--mint),transparent);margin-top:30px"></div>
 
-<p style="margin-top:20px">Jeremy in a Bottle · Blueprint · United Kingdom</p>
+<p style="margin-top:20px">
+
+Jeremy in a Bottle · Blueprint · United Kingdom
+
+</p>
 
 </div>
 
@@ -1576,7 +2328,15 @@ A future in which greater intelligence creates greater human opportunity, indepe
 
 <div class="notice reveal">
 
-<strong>Independent concept notice:</strong> Jeremy Blueprint is a proposed vision and design concept. Descriptions of future capabilities are conceptual and do not imply a working product, independent technical validation, endorsement or affiliation with an AI company or regulator.
+<strong>Independent concept notice:</strong>
+
+Jeremy Blueprint is a proposed vision and design concept.
+
+Descriptions of future capabilities are conceptual and do not
+
+imply a working product, independent technical validation,
+
+endorsement or affiliation with an AI company or regulator.
 
 </div>
 
@@ -1590,9 +2350,19 @@ A future in which greater intelligence creates greater human opportunity, indepe
 
 <div class="container footer-inner">
 
-<span>© <span id="year">2026</span> Kyle Dolby · Jeremy Blueprint. All rights reserved.</span>
+<span>
 
-<span>Independent vision · Human-first by design</span>
+© <span id="year">2026</span>
+
+Kyle Dolby · Jeremy Blueprint. All rights reserved.
+
+</span>
+
+<span>
+
+Independent vision · Human-first by design
+
+</span>
 
 </div>
 
@@ -1674,6 +2444,8 @@ document.querySelectorAll(".reveal").forEach(el=>el.classList.add("visible"));
 
 }
 
+/* Animated background */
+
 const canvas=document.getElementById("network");
 
 const ctx=canvas.getContext("2d");
@@ -1682,7 +2454,9 @@ const reduceMotion=window.matchMedia("(prefers-reduced-motion: reduce)").matches
 
 let particles=[];
 
-let width=0,height=0;
+let width=0;
+
+let height=0;
 
 let animationId=null;
 
@@ -1700,7 +2474,13 @@ canvas.height=Math.floor(height*ratio);
 
 ctx.setTransform(ratio,0,0,ratio,0,0);
 
-const count=Math.min(65,Math.max(22,Math.floor(width*height/19000)));
+const count=Math.min(
+
+65,
+
+Math.max(22,Math.floor(width*height/19000))
+
+);
 
 particles=Array.from({length:count},()=>({
 
@@ -1776,7 +2556,11 @@ ctx.stroke();
 
 }
 
-if(!reduceMotion)animationId=requestAnimationFrame(drawNetwork);
+if(!reduceMotion){
+
+animationId=requestAnimationFrame(drawNetwork);
+
+}
 
 }
 
