@@ -292,7 +292,7 @@ border-radius:50%;
 
 box-shadow:0 0 14px var(--mint);
 
-animation:pulse 2s infinite;
+animation:pulse 3s infinite;
 
 }
 
@@ -404,6 +404,8 @@ min-height:440px;
 
 }
 
+/* ONE SLOW ORBIT */
+
 .orbit{
 
 position:absolute;
@@ -422,9 +424,7 @@ box-shadow:
 
 inset 0 0 70px rgba(38,170,221,.08);
 
-/* Slower orbit: one rotation every 100 seconds */
-
-animation:rotate 100s linear infinite;
+animation:rotate 120s linear infinite;
 
 }
 
@@ -470,6 +470,8 @@ to{transform:rotate(360deg)}
 
 }
 
+/* GENTLE LOGO FLOAT */
+
 .hero-logo{
 
 width:min(78%,305px);
@@ -488,15 +490,13 @@ position:relative;
 
 z-index:2;
 
-/* Slower logo floating */
-
-animation:float 9s ease-in-out infinite;
+animation:float 12s ease-in-out infinite;
 
 }
 
 @keyframes float{
 
-50%{transform:translateY(-10px)}
+50%{transform:translateY(-8px)}
 
 }
 
@@ -1134,13 +1134,7 @@ transform:none;
 
 }
 
-/* Research section */
-
-.research-panel{
-
-padding:38px;
-
-}
+.research-panel{padding:38px}
 
 .research-panel h3{
 
@@ -1324,81 +1318,69 @@ scroll-behavior:auto!important;
 
 {
 
-  "@context":"https://schema.org",
+"@context":"https://schema.org",
 
-  "@graph":[
+"@graph":[
 
-    {
+{
 
-      "@type":"WebSite",
+"@type":"WebSite",
 
-      "name":"Jeremy Blueprint",
+"name":"Jeremy Blueprint",
 
-      "url":"https://jeremy26111.github.io/jeremy-blueprint/",
+"url":"https://jeremy26111.github.io/jeremy-blueprint/",
 
-      "description":"Independent human-first AI companion ecosystem vision created by Kyle Dolby",
+"description":"Independent human-first AI companion ecosystem vision created by Kyle Dolby",
 
-      "author":{
+"author":{"@type":"Person","name":"Kyle Dolby"}
 
-        "@type":"Person",
+},
 
-        "name":"Kyle Dolby"
+{
 
-      }
+"@type":"WebPage",
 
-    },
+"name":"Jeremy Blueprint — Human-First AI Vision",
 
-    {
+"url":"https://jeremy26111.github.io/jeremy-blueprint/",
 
-      "@type":"WebPage",
+"isPartOf":{
 
-      "name":"Jeremy Blueprint — Human-First AI Vision",
+"@type":"WebSite",
 
-      "url":"https://jeremy26111.github.io/jeremy-blueprint/",
+"url":"https://jeremy26111.github.io/jeremy-blueprint/"
 
-      "isPartOf":{
+},
 
-        "@type":"WebSite",
+"hasPart":{
 
-        "url":"https://jeremy26111.github.io/jeremy-blueprint/"
+"@type":"WebPage",
 
-      },
+"name":"Jeremy Blueprint Research & Evidence",
 
-      "hasPart":{
+"url":"https://jeremy26111.github.io/jeremy-blueprint/research.html"
 
-        "@type":"WebPage",
+}
 
-        "name":"Jeremy Blueprint Research & Evidence",
+},
 
-        "url":"https://jeremy26111.github.io/jeremy-blueprint/research.html"
+{
 
-      }
+"@type":"CreativeWork",
 
-    },
+"name":"Jeremy Blueprint",
 
-    {
+"description":"An independent conceptual framework for a human-first AI life companion ecosystem integrating safeguarding, memory, wellbeing, accessibility, learning and human independence.",
 
-      "@type":"CreativeWork",
+"creator":{"@type":"Person","name":"Kyle Dolby"},
 
-      "name":"Jeremy Blueprint",
+"url":"https://jeremy26111.github.io/jeremy-blueprint/research.html",
 
-      "description":"An independent conceptual framework for a human-first AI life companion ecosystem integrating safeguarding, memory, wellbeing, accessibility, learning and human independence.",
+"inLanguage":"en-GB"
 
-      "creator":{
+}
 
-        "@type":"Person",
-
-        "name":"Kyle Dolby"
-
-      },
-
-      "url":"https://jeremy26111.github.io/jeremy-blueprint/research.html",
-
-      "inLanguage":"en-GB"
-
-    }
-
-  ]
+]
 
 }
 
@@ -2444,7 +2426,7 @@ document.querySelectorAll(".reveal").forEach(el=>el.classList.add("visible"));
 
 }
 
-/* Animated background */
+/* CALM ANIMATED BACKGROUND */
 
 const canvas=document.getElementById("network");
 
@@ -2474,11 +2456,13 @@ canvas.height=Math.floor(height*ratio);
 
 ctx.setTransform(ratio,0,0,ratio,0,0);
 
+/* Fewer background particles */
+
 const count=Math.min(
 
-65,
+38,
 
-Math.max(22,Math.floor(width*height/19000))
+Math.max(15,Math.floor(width*height/30000))
 
 );
 
@@ -2488,11 +2472,13 @@ x:Math.random()*width,
 
 y:Math.random()*height,
 
-vx:(Math.random()-.5)*.35,
+/* Much slower movement */
 
-vy:(Math.random()-.5)*.35,
+vx:(Math.random()-.5)*.06,
 
-r:Math.random()*1.5+.5
+vy:(Math.random()-.5)*.06,
+
+r:Math.random()*1.2+.4
 
 }));
 
@@ -2522,7 +2508,7 @@ ctx.beginPath();
 
 ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
 
-ctx.fillStyle="rgba(105,216,255,.48)";
+ctx.fillStyle="rgba(105,216,255,.32)";
 
 ctx.fill();
 
@@ -2544,9 +2530,9 @@ ctx.moveTo(p.x,p.y);
 
 ctx.lineTo(q.x,q.y);
 
-ctx.strokeStyle="rgba(74,192,232,"+((1-distance/135)*.13)+")";
+ctx.strokeStyle="rgba(74,192,232,"+((1-distance/135)*.09)+")";
 
-ctx.lineWidth=.6;
+ctx.lineWidth=.5;
 
 ctx.stroke();
 
