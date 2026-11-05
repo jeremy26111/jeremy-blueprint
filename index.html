@@ -6,13 +6,13 @@
 
 <meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <meta name="theme-color" content="#050914">
 
 <meta name="author" content="Kyle Dolby">
 
-<meta name="robots" content="index,follow">
+<meta name="robots" content="index, follow">
 
 <meta name="description" content="Jeremy Blueprint by Kyle Dolby. An independent human-first AI companion ecosystem vision exploring safeguarding, wellbeing, accessibility, personal memory, learning and human independence.">
 
@@ -36,1339 +36,1537 @@
 
 <style>
 
-:root{
+:root {
 
---bg:#050914;
+  --bg: #050914;
 
---surface:#0b1426;
+  --surface: #0b1426;
 
---surface2:#101d32;
+  --surface2: #101d32;
 
---text:#edf5ff;
+  --text: #edf5ff;
 
---muted:#9bafc8;
+  --muted: #9bafc8;
 
---cyan:#54d8ff;
+  --cyan: #54d8ff;
 
---mint:#70f2cf;
+  --mint: #70f2cf;
 
---gold:#f4d38b;
+  --gold: #f4d38b;
 
---border:rgba(115,199,255,.19);
-
-}
-
-*{box-sizing:border-box}
-
-html{scroll-behavior:smooth}
-
-body{
-
-margin:0;
-
-background:var(--bg);
-
-color:var(--text);
-
-font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
-
-line-height:1.7;
-
-overflow-x:hidden;
+  --border: rgba(115,199,255,.19);
 
 }
 
-a{color:inherit}
+* {
 
-button{font:inherit}
-
-canvas#network{
-
-position:fixed;
-
-inset:0;
-
-width:100%;
-
-height:100%;
-
-z-index:-2;
-
-pointer-events:none;
+  box-sizing: border-box;
 
 }
 
-body:before{
+html {
 
-content:"";
-
-position:fixed;
-
-inset:0;
-
-background:
-
-radial-gradient(ellipse at 80% 12%,rgba(15,116,165,.17),transparent 45%),
-
-radial-gradient(ellipse at 15% 85%,rgba(19,132,116,.10),transparent 48%);
-
-pointer-events:none;
-
-z-index:-1;
+  scroll-behavior: smooth;
 
 }
 
-.container{
+body {
 
-width:min(1160px,90%);
+  margin: 0;
 
-margin:auto;
+  background: var(--bg);
 
-}
+  color: var(--text);
 
-header{
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
 
-position:sticky;
+  line-height: 1.7;
 
-top:0;
-
-z-index:100;
-
-background:rgba(5,10,22,.83);
-
-backdrop-filter:blur(24px);
-
-border-bottom:1px solid var(--border);
+  overflow-x: hidden;
 
 }
 
-.nav{
+a {
 
-min-height:80px;
-
-display:flex;
-
-align-items:center;
-
-justify-content:space-between;
-
-gap:20px;
+  color: inherit;
 
 }
 
-.brand{
+button {
 
-display:flex;
-
-align-items:center;
-
-gap:12px;
-
-font-size:13px;
-
-font-weight:850;
-
-letter-spacing:.13em;
-
-text-decoration:none;
-
-line-height:1.4;
+  font: inherit;
 
 }
 
-.brand img{
+/* BACKGROUND */
 
-width:48px;
+canvas#network {
 
-height:48px;
+  position: fixed;
 
-object-fit:cover;
+  inset: 0;
 
-border-radius:14px;
+  width: 100%;
 
-border:1px solid var(--cyan);
+  height: 100%;
 
-box-shadow:0 0 22px rgba(84,216,255,.2);
+  z-index: -2;
 
-}
-
-.links{
-
-display:flex;
-
-align-items:center;
-
-gap:18px;
-
-flex-wrap:wrap;
+  pointer-events: none;
 
 }
 
-.links a{
+body:before {
 
-font-size:12px;
+  content: "";
 
-color:#c2d3e8;
+  position: fixed;
 
-text-decoration:none;
+  inset: 0;
 
-transition:color .25s;
+  background:
 
-}
+    radial-gradient(ellipse at 80% 12%, rgba(15,116,165,.17), transparent 45%),
 
-.links a:hover{color:var(--mint)}
+    radial-gradient(ellipse at 15% 85%, rgba(19,132,116,.10), transparent 48%);
 
-.menu{
+  pointer-events: none;
 
-display:none;
-
-background:rgba(84,216,255,.09);
-
-border:1px solid var(--border);
-
-color:white;
-
-padding:10px 15px;
-
-border-radius:12px;
-
-cursor:pointer;
+  z-index: -1;
 
 }
 
-.hero{
+.container {
 
-min-height:calc(100svh - 80px);
+  width: min(1160px, 90%);
 
-display:flex;
-
-align-items:center;
-
-position:relative;
-
-overflow:hidden;
-
-padding:80px 0 100px;
+  margin: auto;
 
 }
 
-.hero-grid{
+/* HEADER */
 
-display:grid;
+header {
 
-grid-template-columns:1.12fr .88fr;
+  position: sticky;
 
-align-items:center;
+  top: 0;
 
-gap:55px;
+  z-index: 100;
 
-}
+  background: rgba(5,10,22,.83);
 
-.eyebrow{
+  backdrop-filter: blur(24px);
 
-display:inline-flex;
-
-align-items:center;
-
-gap:10px;
-
-color:var(--mint);
-
-font-size:11px;
-
-font-weight:850;
-
-letter-spacing:.19em;
-
-text-transform:uppercase;
+  border-bottom: 1px solid var(--border);
 
 }
 
-.eyebrow:before{
+.nav {
 
-content:"";
+  min-height: 80px;
 
-width:7px;
+  display: flex;
 
-height:7px;
+  align-items: center;
 
-background:var(--mint);
+  justify-content: space-between;
 
-border-radius:50%;
-
-box-shadow:0 0 14px var(--mint);
+  gap: 20px;
 
 }
 
-h1{
+.brand {
 
-font-size:clamp(46px,6.4vw,92px);
+  display: flex;
 
-line-height:1.04;
+  align-items: center;
 
-letter-spacing:-.075em;
+  gap: 12px;
 
-margin:25px 0;
+  font-size: 13px;
 
-font-weight:850;
+  font-weight: 850;
 
-}
+  letter-spacing: .13em;
 
-.gradient{
+  text-decoration: none;
 
-background:linear-gradient(110deg,#fff 5%,#61d7ff 50%,#70f2cf 95%);
-
--webkit-background-clip:text;
-
-background-clip:text;
-
-color:transparent;
+  line-height: 1.4;
 
 }
 
-.hero p{
+.brand img {
 
-font-size:17px;
+  width: 48px;
 
-max-width:570px;
+  height: 48px;
 
-color:var(--muted);
+  object-fit: cover;
 
-}
+  border-radius: 14px;
 
-.actions{
+  border: 1px solid var(--cyan);
 
-display:flex;
-
-gap:13px;
-
-flex-wrap:wrap;
-
-margin-top:32px;
+  box-shadow: 0 0 22px rgba(84,216,255,.2);
 
 }
 
-.btn{
+.links {
 
-display:inline-flex;
+  display: flex;
 
-align-items:center;
+  align-items: center;
 
-justify-content:center;
+  gap: 18px;
 
-padding:14px 22px;
-
-border-radius:12px;
-
-font-size:13px;
-
-font-weight:800;
-
-text-decoration:none;
-
-transition:transform .3s;
+  flex-wrap: wrap;
 
 }
 
-.btn:hover{transform:translateY(-3px)}
+.links a {
 
-.btn-primary{
+  font-size: 12px;
 
-background:linear-gradient(110deg,var(--cyan),var(--mint));
+  color: #c2d3e8;
 
-color:#061322;
+  text-decoration: none;
 
-box-shadow:0 8px 35px rgba(84,216,255,.17);
-
-}
-
-.btn-outline{
-
-border:1px solid rgba(121,205,255,.35);
-
-background:rgba(15,33,55,.6);
+  transition: color .25s;
 
 }
 
-/* STABLE LOGO AND SINGLE SLOW ORBIT */
+.links a:hover {
 
-.hero-visual{
-
-position:relative;
-
-display:grid;
-
-place-items:center;
-
-min-height:440px;
-
-isolation:isolate;
+  color: var(--mint);
 
 }
 
-.orbit{
+.menu {
 
-position:absolute;
+  display: none;
 
-width:min(100%,430px);
+  background: rgba(84,216,255,.09);
 
-aspect-ratio:1;
+  border: 1px solid var(--border);
 
-border:1px solid rgba(84,216,255,.3);
+  color: white;
 
-border-radius:50%;
+  padding: 10px 15px;
 
-box-shadow:
+  border-radius: 12px;
 
-0 0 100px rgba(38,170,221,.1),
-
-inset 0 0 70px rgba(38,170,221,.08);
-
-animation:none;
+  cursor: pointer;
 
 }
 
-.orbit:before{
+/* HERO */
 
-content:"";
+.hero {
 
-position:absolute;
+  min-height: calc(100svh - 80px);
 
-inset:38px;
+  display: flex;
 
-border:1px dashed rgba(112,242,207,.3);
+  align-items: center;
 
-border-radius:50%;
+  position: relative;
 
-}
+  overflow: hidden;
 
-.orbit:after{
-
-content:"";
-
-position:absolute;
-
-top:50%;
-
-left:50%;
-
-width:12px;
-
-height:12px;
-
-border-radius:50%;
-
-background:var(--cyan);
-
-box-shadow:0 0 25px var(--cyan);
-
-transform:translate(-50%,-50%);
-
-opacity:0;
+  padding: 80px 0 100px;
 
 }
 
-/* The only moving ball */
+.hero-grid {
 
-.orbit-ball{
+  display: grid;
 
-position:absolute;
+  grid-template-columns: 1.12fr .88fr;
 
-inset:0;
+  align-items: center;
 
-border-radius:50%;
-
-animation:slowOrbit 180s linear infinite;
-
-will-change:transform;
+  gap: 55px;
 
 }
 
-.orbit-ball:after{
+.eyebrow {
 
-content:"";
+  display: inline-flex;
 
-position:absolute;
+  align-items: center;
 
-top:-6px;
+  gap: 10px;
 
-left:calc(50% - 6px);
+  color: var(--mint);
 
-width:12px;
+  font-size: 11px;
 
-height:12px;
+  font-weight: 850;
 
-border-radius:50%;
+  letter-spacing: .19em;
 
-background:var(--cyan);
-
-box-shadow:0 0 25px var(--cyan);
+  text-transform: uppercase;
 
 }
 
-@keyframes slowOrbit{
+.eyebrow:before {
 
-from{transform:rotate(0deg)}
+  content: "";
 
-to{transform:rotate(360deg)}
+  width: 7px;
 
-}
+  height: 7px;
 
-.hero-logo{
+  background: var(--mint);
 
-width:min(78%,305px);
+  border-radius: 50%;
 
-border-radius:25px;
-
-border:1px solid rgba(84,216,255,.5);
-
-box-shadow:
-
-0 0 75px rgba(43,169,222,.22),
-
-0 25px 75px #0009;
-
-position:relative;
-
-z-index:2;
-
-animation:none!important;
-
-transform:none!important;
+  box-shadow: 0 0 14px var(--mint);
 
 }
 
-.micro{
+h1 {
 
-margin-top:24px;
+  font-size: clamp(46px, 6.4vw, 92px);
 
-font-size:12px!important;
+  line-height: 1.04;
 
-letter-spacing:.04em;
+  letter-spacing: -.075em;
 
-}
+  margin: 25px 0;
 
-section.content{
-
-padding:110px 0;
-
-border-top:1px solid rgba(112,186,255,.09);
-
-scroll-margin-top:80px;
+  font-weight: 850;
 
 }
 
-.section-head{
+.gradient {
 
-max-width:780px;
+  background: linear-gradient(110deg, #fff 5%, #61d7ff 50%, #70f2cf 95%);
 
-margin-bottom:40px;
+  -webkit-background-clip: text;
 
-}
+  background-clip: text;
 
-.kicker{
-
-color:var(--mint);
-
-font-size:11px;
-
-font-weight:850;
-
-letter-spacing:.22em;
-
-text-transform:uppercase;
+  color: transparent;
 
 }
 
-h2{
+.hero p {
 
-font-size:clamp(33px,4.6vw,59px);
+  font-size: 17px;
 
-line-height:1.13;
+  max-width: 570px;
 
-letter-spacing:-.055em;
-
-margin:14px 0 20px;
+  color: var(--muted);
 
 }
 
-.lead{
+.actions {
 
-font-size:17px;
+  display: flex;
 
-color:var(--muted);
+  gap: 13px;
 
-max-width:780px;
+  flex-wrap: wrap;
 
-}
-
-.grid{
-
-display:grid;
-
-grid-template-columns:repeat(3,1fr);
-
-gap:18px;
+  margin-top: 32px;
 
 }
 
-.glass{
+.btn {
 
-background:linear-gradient(145deg,rgba(20,39,65,.83),rgba(8,19,35,.78));
+  display: inline-flex;
 
-border:1px solid var(--border);
+  align-items: center;
 
-border-radius:20px;
+  justify-content: center;
 
-backdrop-filter:blur(15px);
+  padding: 14px 22px;
 
-box-shadow:0 15px 55px rgba(0,0,0,.15);
+  border-radius: 12px;
 
-transition:transform .3s,border-color .3s,box-shadow .3s;
+  font-size: 13px;
 
-}
+  font-weight: 800;
 
-.glass:hover{
+  text-decoration: none;
 
-transform:translateY(-6px);
-
-border-color:rgba(112,242,207,.5);
-
-box-shadow:0 20px 65px rgba(26,142,186,.13);
+  transition: transform .3s;
 
 }
 
-.card{padding:28px}
+.btn:hover {
 
-.icon{
-
-display:grid;
-
-place-items:center;
-
-width:52px;
-
-height:52px;
-
-border-radius:15px;
-
-background:rgba(84,216,255,.09);
-
-border:1px solid rgba(84,216,255,.2);
-
-font-size:23px;
-
-margin-bottom:22px;
+  transform: translateY(-3px);
 
 }
 
-.card h3{
+.btn-primary {
 
-font-size:20px;
+  background: linear-gradient(110deg, var(--cyan), var(--mint));
 
-line-height:1.3;
+  color: #061322;
 
-margin:0 0 12px;
-
-}
-
-.card p{
-
-font-size:14px;
-
-color:var(--muted);
-
-margin:0;
+  box-shadow: 0 8px 35px rgba(84,216,255,.17);
 
 }
 
-.card .number{
+.btn-outline {
 
-font-size:11px;
+  border: 1px solid rgba(121,205,255,.35);
 
-font-weight:800;
-
-color:var(--mint);
-
-letter-spacing:.15em;
-
-margin-bottom:12px;
+  background: rgba(15,33,55,.6);
 
 }
 
-.vision-quote{
+/* SINGLE SLOW ORBIT */
 
-padding:36px;
+.hero-visual {
 
-border-left:3px solid var(--mint);
+  position: relative;
 
-font-size:clamp(22px,3vw,34px);
+  display: grid;
 
-font-weight:700;
+  place-items: center;
 
-line-height:1.45;
+  min-height: 440px;
 
-background:linear-gradient(90deg,rgba(40,164,152,.11),transparent);
-
-border-radius:0 20px 20px 0;
+  isolation: isolate;
 
 }
 
-.tiers{
+.orbit {
 
-display:grid;
+  position: absolute;
 
-grid-template-columns:repeat(3,1fr);
+  width: min(100%, 430px);
 
-gap:20px;
+  aspect-ratio: 1;
 
-}
+  border: 1px solid rgba(84,216,255,.3);
 
-.tier{
+  border-radius: 50%;
 
-padding:32px;
+  box-shadow:
 
-position:relative;
+    0 0 100px rgba(38,170,221,.1),
 
-overflow:hidden;
+    inset 0 0 70px rgba(38,170,221,.08);
 
-}
-
-.tier:before{
-
-content:"";
-
-position:absolute;
-
-width:180px;
-
-height:180px;
-
-border-radius:50%;
-
-background:rgba(84,216,255,.07);
-
-filter:blur(40px);
-
-top:-90px;
-
-right:-80px;
+  animation: none !important;
 
 }
 
-.tier .symbol{
+.orbit:before {
 
-font-size:34px;
+  content: "";
 
-margin-bottom:20px;
+  position: absolute;
 
-}
+  inset: 38px;
 
-.tier h3{
+  border: 1px dashed rgba(112,242,207,.3);
 
-font-size:27px;
-
-margin:0;
+  border-radius: 50%;
 
 }
 
-.tier .subtitle{
+/* Only one ball moves */
 
-font-size:11px;
+.orbit-ball {
 
-font-weight:800;
+  position: absolute;
 
-color:var(--mint);
+  inset: 0;
 
-letter-spacing:.14em;
+  border-radius: 50%;
 
-text-transform:uppercase;
+  animation: slowOrbit 600s linear infinite;
 
-margin:5px 0 20px;
+  transform-origin: center center;
 
-}
-
-.tier p{
-
-color:var(--muted);
-
-font-size:14px;
+  will-change: transform;
 
 }
 
-.ecosystem{
+.orbit-ball:after {
 
-position:relative;
+  content: "";
 
-padding:45px;
+  position: absolute;
 
-overflow:hidden;
+  top: -6px;
 
-}
+  left: calc(50% - 6px);
 
-.eco-core{
+  width: 12px;
 
-width:160px;
+  height: 12px;
 
-height:160px;
+  border-radius: 50%;
 
-border-radius:50%;
+  background: var(--cyan);
 
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-flex-direction:column;
-
-margin:10px auto 38px;
-
-background:radial-gradient(circle,rgba(42,167,205,.35),rgba(8,25,43,.9));
-
-border:1px solid var(--cyan);
-
-box-shadow:
-
-0 0 0 18px rgba(84,216,255,.035),
-
-0 0 70px rgba(84,216,255,.22);
-
-text-align:center;
+  box-shadow: 0 0 25px var(--cyan);
 
 }
 
-.eco-core strong{
+@keyframes slowOrbit {
 
-font-size:21px;
+  from {
 
-letter-spacing:-.04em;
+    transform: rotate(0deg);
 
-}
+  }
 
-.eco-core span{
+  to {
 
-font-size:10px;
+    transform: rotate(360deg);
 
-color:var(--mint);
-
-letter-spacing:.13em;
+  }
 
 }
 
-.eco-grid{
+/* Logo stays completely still */
 
-display:grid;
+.hero-logo {
 
-grid-template-columns:repeat(3,1fr);
+  width: min(78%, 305px);
 
-gap:12px;
+  border-radius: 25px;
+
+  border: 1px solid rgba(84,216,255,.5);
+
+  box-shadow:
+
+    0 0 75px rgba(43,169,222,.22),
+
+    0 25px 75px #0009;
+
+  position: relative;
+
+  z-index: 2;
+
+  animation: none !important;
+
+  transform: none !important;
 
 }
 
-.eco-item{
+.micro {
 
-background:rgba(11,31,51,.8);
+  margin-top: 24px;
 
-border:1px solid rgba(84,216,255,.17);
+  font-size: 12px !important;
 
-padding:18px;
+  letter-spacing: .04em;
 
-border-radius:13px;
+}
 
-text-align:left;
+/* CONTENT */
 
-color:#e3f4ff;
+section.content {
 
-cursor:pointer;
+  padding: 110px 0;
 
-transition:.25s;
+  border-top: 1px solid rgba(112,186,255,.09);
 
-font-size:13px;
+  scroll-margin-top: 80px;
+
+}
+
+.section-head {
+
+  max-width: 780px;
+
+  margin-bottom: 40px;
+
+}
+
+.kicker {
+
+  color: var(--mint);
+
+  font-size: 11px;
+
+  font-weight: 850;
+
+  letter-spacing: .22em;
+
+  text-transform: uppercase;
+
+}
+
+h2 {
+
+  font-size: clamp(33px, 4.6vw, 59px);
+
+  line-height: 1.13;
+
+  letter-spacing: -.055em;
+
+  margin: 14px 0 20px;
+
+}
+
+.lead {
+
+  font-size: 17px;
+
+  color: var(--muted);
+
+  max-width: 780px;
+
+}
+
+.grid {
+
+  display: grid;
+
+  grid-template-columns: repeat(3,1fr);
+
+  gap: 18px;
+
+}
+
+.glass {
+
+  background: linear-gradient(145deg, rgba(20,39,65,.83), rgba(8,19,35,.78));
+
+  border: 1px solid var(--border);
+
+  border-radius: 20px;
+
+  backdrop-filter: blur(15px);
+
+  box-shadow: 0 15px 55px rgba(0,0,0,.15);
+
+  transition: transform .3s, border-color .3s, box-shadow .3s;
+
+}
+
+.glass:hover {
+
+  transform: translateY(-6px);
+
+  border-color: rgba(112,242,207,.5);
+
+  box-shadow: 0 20px 65px rgba(26,142,186,.13);
+
+}
+
+.card {
+
+  padding: 28px;
+
+}
+
+.icon {
+
+  display: grid;
+
+  place-items: center;
+
+  width: 52px;
+
+  height: 52px;
+
+  border-radius: 15px;
+
+  background: rgba(84,216,255,.09);
+
+  border: 1px solid rgba(84,216,255,.2);
+
+  font-size: 23px;
+
+  margin-bottom: 22px;
+
+}
+
+.card h3 {
+
+  font-size: 20px;
+
+  line-height: 1.3;
+
+  margin: 0 0 12px;
+
+}
+
+.card p {
+
+  font-size: 14px;
+
+  color: var(--muted);
+
+  margin: 0;
+
+}
+
+.card .number {
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  color: var(--mint);
+
+  letter-spacing: .15em;
+
+  margin-bottom: 12px;
+
+}
+
+.vision-quote {
+
+  padding: 36px;
+
+  border-left: 3px solid var(--mint);
+
+  font-size: clamp(22px,3vw,34px);
+
+  font-weight: 700;
+
+  line-height: 1.45;
+
+  background: linear-gradient(90deg,rgba(40,164,152,.11),transparent);
+
+  border-radius: 0 20px 20px 0;
+
+}
+
+.tiers {
+
+  display: grid;
+
+  grid-template-columns: repeat(3,1fr);
+
+  gap: 20px;
+
+}
+
+.tier {
+
+  padding: 32px;
+
+  position: relative;
+
+  overflow: hidden;
+
+}
+
+.tier:before {
+
+  content: "";
+
+  position: absolute;
+
+  width: 180px;
+
+  height: 180px;
+
+  border-radius: 50%;
+
+  background: rgba(84,216,255,.07);
+
+  filter: blur(40px);
+
+  top: -90px;
+
+  right: -80px;
+
+}
+
+.tier .symbol {
+
+  font-size: 34px;
+
+  margin-bottom: 20px;
+
+}
+
+.tier h3 {
+
+  font-size: 27px;
+
+  margin: 0;
+
+}
+
+.tier .subtitle {
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  color: var(--mint);
+
+  letter-spacing: .14em;
+
+  text-transform: uppercase;
+
+  margin: 5px 0 20px;
+
+}
+
+.tier p {
+
+  color: var(--muted);
+
+  font-size: 14px;
+
+}
+
+/* ECOSYSTEM */
+
+.ecosystem {
+
+  position: relative;
+
+  padding: 45px;
+
+  overflow: hidden;
+
+}
+
+.eco-core {
+
+  width: 160px;
+
+  height: 160px;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  flex-direction: column;
+
+  margin: 10px auto 38px;
+
+  background: radial-gradient(circle,rgba(42,167,205,.35),rgba(8,25,43,.9));
+
+  border: 1px solid var(--cyan);
+
+  box-shadow:
+
+    0 0 0 18px rgba(84,216,255,.035),
+
+    0 0 70px rgba(84,216,255,.22);
+
+  text-align: center;
+
+}
+
+.eco-core strong {
+
+  font-size: 21px;
+
+  letter-spacing: -.04em;
+
+}
+
+.eco-core span {
+
+  font-size: 10px;
+
+  color: var(--mint);
+
+  letter-spacing: .13em;
+
+}
+
+.eco-grid {
+
+  display: grid;
+
+  grid-template-columns: repeat(3,1fr);
+
+  gap: 12px;
+
+}
+
+.eco-item {
+
+  background: rgba(11,31,51,.8);
+
+  border: 1px solid rgba(84,216,255,.17);
+
+  padding: 18px;
+
+  border-radius: 13px;
+
+  text-align: left;
+
+  color: #e3f4ff;
+
+  cursor: pointer;
+
+  transition: .25s;
+
+  font-size: 13px;
 
 }
 
 .eco-item:hover,
 
-.eco-item.active{
+.eco-item.active {
 
-border-color:var(--mint);
+  border-color: var(--mint);
 
-background:rgba(34,111,119,.24);
-
-}
-
-.eco-item span{
-
-display:block;
-
-color:var(--mint);
-
-font-size:11px;
-
-margin-bottom:5px;
+  background: rgba(34,111,119,.24);
 
 }
 
-.eco-detail{
+.eco-item span {
 
-margin-top:22px;
+  display: block;
 
-padding:22px;
+  color: var(--mint);
 
-border:1px solid rgba(112,242,207,.25);
+  font-size: 11px;
 
-border-radius:14px;
-
-background:rgba(5,18,31,.75);
-
-min-height:100px;
+  margin-bottom: 5px;
 
 }
 
-.eco-detail h3{
+.eco-detail {
 
-margin:0 0 6px;
+  margin-top: 22px;
 
-font-size:19px;
+  padding: 22px;
 
-}
+  border: 1px solid rgba(112,242,207,.25);
 
-.eco-detail p{
+  border-radius: 14px;
 
-margin:0;
+  background: rgba(5,18,31,.75);
 
-color:var(--muted);
-
-font-size:14px;
+  min-height: 100px;
 
 }
 
-.timeline{
+.eco-detail h3 {
 
-position:relative;
+  margin: 0 0 6px;
 
-border-left:1px solid rgba(112,242,207,.4);
-
-margin-left:12px;
-
-padding-left:32px;
+  font-size: 19px;
 
 }
 
-.milestone{
+.eco-detail p {
 
-position:relative;
+  margin: 0;
 
-margin:0 0 38px;
+  color: var(--muted);
 
-}
-
-.milestone:before{
-
-content:"";
-
-position:absolute;
-
-left:-39px;
-
-top:6px;
-
-width:12px;
-
-height:12px;
-
-border-radius:50%;
-
-background:var(--mint);
-
-box-shadow:0 0 18px var(--mint);
+  font-size: 14px;
 
 }
 
-.milestone small{
+/* TIMELINE */
 
-color:var(--mint);
+.timeline {
 
-font-weight:800;
+  position: relative;
 
-letter-spacing:.13em;
+  border-left: 1px solid rgba(112,242,207,.4);
 
-}
+  margin-left: 12px;
 
-.milestone h3{
-
-margin:8px 0;
-
-font-size:23px;
+  padding-left: 32px;
 
 }
 
-.milestone p{
+.milestone {
 
-color:var(--muted);
+  position: relative;
 
-margin:0;
-
-max-width:720px;
+  margin: 0 0 38px;
 
 }
 
-.feature{
+.milestone:before {
 
-display:grid;
+  content: "";
 
-grid-template-columns:1fr 1fr;
+  position: absolute;
 
-overflow:hidden;
+  left: -39px;
 
-}
+  top: 6px;
 
-.feature img{
+  width: 12px;
 
-width:100%;
+  height: 12px;
 
-height:100%;
+  border-radius: 50%;
 
-min-height:340px;
+  background: var(--mint);
 
-object-fit:cover;
-
-}
-
-.feature-copy{padding:42px}
-
-.feature-copy h3{
-
-font-size:clamp(27px,3vw,42px);
-
-line-height:1.18;
-
-letter-spacing:-.04em;
+  box-shadow: 0 0 18px var(--mint);
 
 }
 
-.feature-copy p{color:var(--muted)}
+.milestone small {
 
-.feature-copy a{
+  color: var(--mint);
 
-color:var(--mint);
+  font-weight: 800;
 
-font-weight:800;
-
-text-underline-offset:5px;
+  letter-spacing: .13em;
 
 }
 
-.publications{
+.milestone h3 {
 
-display:grid;
+  margin: 8px 0;
 
-grid-template-columns:repeat(2,1fr);
-
-gap:18px;
-
-margin-top:22px;
+  font-size: 23px;
 
 }
 
-.publication{padding:27px}
+.milestone p {
 
-.publication h3{
+  color: var(--muted);
 
-font-size:21px;
+  margin: 0;
 
-line-height:1.3;
-
-}
-
-.publication p{
-
-color:var(--muted);
-
-font-size:14px;
+  max-width: 720px;
 
 }
 
-.publication a{
+/* PUBLICATIONS */
 
-color:var(--cyan);
+.feature {
 
-font-weight:750;
+  display: grid;
 
-}
+  grid-template-columns: 1fr 1fr;
 
-.creator{
-
-display:grid;
-
-grid-template-columns:1.2fr .8fr;
-
-gap:25px;
-
-align-items:center;
+  overflow: hidden;
 
 }
 
-.creator p{color:var(--muted)}
+.feature img {
 
-.notice{
+  width: 100%;
 
-font-size:13px;
+  height: 100%;
 
-color:#b7c7da;
+  min-height: 340px;
 
-border:1px solid rgba(138,167,208,.23);
-
-border-radius:14px;
-
-background:rgba(23,35,55,.65);
-
-padding:20px;
-
-margin-top:25px;
+  object-fit: cover;
 
 }
 
-footer{
+.feature-copy {
 
-padding:45px 0;
-
-border-top:1px solid var(--border);
-
-color:var(--muted);
-
-font-size:12px;
+  padding: 42px;
 
 }
 
-.footer-inner{
+.feature-copy h3 {
 
-display:flex;
+  font-size: clamp(27px,3vw,42px);
 
-justify-content:space-between;
+  line-height: 1.18;
 
-gap:20px;
-
-flex-wrap:wrap;
+  letter-spacing: -.04em;
 
 }
 
-.reveal{
+.feature-copy p {
 
-opacity:0;
-
-transform:translateY(25px);
-
-transition:opacity .8s,transform .8s;
+  color: var(--muted);
 
 }
 
-.reveal.visible{
+.feature-copy a {
 
-opacity:1;
+  color: var(--mint);
 
-transform:none;
+  font-weight: 800;
 
-}
-
-.research-panel{
-
-padding:38px;
+  text-underline-offset: 5px;
 
 }
 
-.research-panel h3{
+.publications {
 
-font-size:27px;
+  display: grid;
 
-margin:0 0 14px;
+  grid-template-columns: repeat(2,1fr);
 
-}
+  gap: 18px;
 
-.research-panel p{
-
-color:var(--muted);
-
-max-width:800px;
+  margin-top: 22px;
 
 }
 
-.research-points{
+.publication {
 
-display:grid;
-
-grid-template-columns:repeat(2,1fr);
-
-gap:12px;
-
-margin:25px 0;
+  padding: 27px;
 
 }
 
-.research-point{
+.publication h3 {
 
-padding:18px;
+  font-size: 21px;
 
-border:1px solid var(--border);
-
-border-radius:12px;
-
-background:rgba(84,216,255,.045);
-
-font-size:14px;
+  line-height: 1.3;
 
 }
 
-.research-point strong{
+.publication p {
 
-display:block;
+  color: var(--muted);
 
-color:var(--mint);
-
-margin-bottom:5px;
+  font-size: 14px;
 
 }
 
-@media(max-width:1050px){
+.publication a {
 
-.links{gap:12px}
+  color: var(--cyan);
 
-.links a{font-size:11px}
-
-}
-
-@media(max-width:900px){
-
-.hero-grid,.creator{grid-template-columns:1fr}
-
-.hero-visual{min-height:330px}
-
-.hero-logo{width:240px}
-
-.orbit{width:320px}
-
-.grid,.tiers{grid-template-columns:repeat(2,1fr)}
-
-.feature{grid-template-columns:1fr}
-
-.feature img{height:auto;min-height:0}
+  font-weight: 750;
 
 }
 
-@media(max-width:650px){
+/* CREATOR */
 
-.nav{min-height:72px}
+.creator {
 
-.brand{font-size:11px}
+  display: grid;
 
-.brand img{width:43px;height:43px}
+  grid-template-columns: 1.2fr .8fr;
 
-.menu{display:block}
+  gap: 25px;
 
-.links{
-
-display:none;
-
-position:absolute;
-
-top:72px;
-
-left:0;
-
-right:0;
-
-padding:22px 5%;
-
-background:rgba(5,12,26,.98);
-
-border-bottom:1px solid var(--border);
-
-flex-direction:column;
-
-align-items:flex-start;
-
-gap:18px;
+  align-items: center;
 
 }
 
-.links.open{display:flex}
+.creator p {
 
-.links a{font-size:14px}
-
-.hero{
-
-padding:65px 0 70px;
-
-min-height:auto;
+  color: var(--muted);
 
 }
 
-.hero-grid{gap:10px}
+.notice {
 
-.hero-visual{order:-1;min-height:265px}
+  font-size: 13px;
 
-.hero-logo{width:190px}
+  color: #b7c7da;
 
-.orbit{width:260px}
+  border: 1px solid rgba(138,167,208,.23);
 
-h1{
+  border-radius: 14px;
 
-font-size:clamp(43px,10vw,60px);
+  background: rgba(23,35,55,.65);
 
-letter-spacing:-.065em;
+  padding: 20px;
 
-}
-
-.hero p{font-size:15px}
-
-section.content{padding:75px 0;scroll-margin-top:72px}
-
-h2{font-size:36px}
-
-.grid,
-
-.tiers,
-
-.eco-grid,
-
-.publications,
-
-.research-points{
-
-grid-template-columns:1fr;
+  margin-top: 25px;
 
 }
 
-.ecosystem{padding:25px 18px}
+/* RESEARCH */
 
-.eco-core{width:130px;height:130px}
+.research-panel {
 
-.eco-item{padding:15px}
-
-.feature-copy{padding:25px}
-
-.card,.tier{padding:24px}
-
-.vision-quote{padding:24px}
-
-.research-panel{padding:24px}
+  padding: 38px;
 
 }
 
-@media(prefers-reduced-motion:reduce){
+.research-panel h3 {
 
-*,*:before,*:after{
+  font-size: 27px;
 
-animation-duration:.01ms!important;
-
-transition-duration:.01ms!important;
-
-scroll-behavior:auto!important;
+  margin: 0 0 14px;
 
 }
 
-.reveal{opacity:1;transform:none}
+.research-panel p {
+
+  color: var(--muted);
+
+  max-width: 800px;
+
+}
+
+.research-points {
+
+  display: grid;
+
+  grid-template-columns: repeat(2,1fr);
+
+  gap: 12px;
+
+  margin: 25px 0;
+
+}
+
+.research-point {
+
+  padding: 18px;
+
+  border: 1px solid var(--border);
+
+  border-radius: 12px;
+
+  background: rgba(84,216,255,.045);
+
+  font-size: 14px;
+
+}
+
+.research-point strong {
+
+  display: block;
+
+  color: var(--mint);
+
+  margin-bottom: 5px;
+
+}
+
+/* FOOTER */
+
+footer {
+
+  padding: 45px 0;
+
+  border-top: 1px solid var(--border);
+
+  color: var(--muted);
+
+  font-size: 12px;
+
+}
+
+.footer-inner {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  flex-wrap: wrap;
+
+}
+
+/* SECTION REVEALS */
+
+.reveal {
+
+  opacity: 0;
+
+  transform: translateY(25px);
+
+  transition: opacity .8s, transform .8s;
+
+}
+
+.reveal.visible {
+
+  opacity: 1;
+
+  transform: none;
+
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1050px) {
+
+  .links {
+
+    gap: 12px;
+
+  }
+
+  .links a {
+
+    font-size: 11px;
+
+  }
+
+}
+
+@media(max-width:900px) {
+
+  .hero-grid,
+
+  .creator {
+
+    grid-template-columns: 1fr;
+
+  }
+
+  .hero-visual {
+
+    min-height: 330px;
+
+  }
+
+  .hero-logo {
+
+    width: 240px;
+
+  }
+
+  .orbit {
+
+    width: 320px;
+
+  }
+
+  .grid,
+
+  .tiers {
+
+    grid-template-columns: repeat(2,1fr);
+
+  }
+
+  .feature {
+
+    grid-template-columns: 1fr;
+
+  }
+
+  .feature img {
+
+    height: auto;
+
+    min-height: 0;
+
+  }
+
+}
+
+@media(max-width:650px) {
+
+  .nav {
+
+    min-height: 72px;
+
+  }
+
+  .brand {
+
+    font-size: 11px;
+
+  }
+
+  .brand img {
+
+    width: 43px;
+
+    height: 43px;
+
+  }
+
+  .menu {
+
+    display: block;
+
+  }
+
+  .links {
+
+    display: none;
+
+    position: absolute;
+
+    top: 72px;
+
+    left: 0;
+
+    right: 0;
+
+    padding: 22px 5%;
+
+    background: rgba(5,12,26,.98);
+
+    border-bottom: 1px solid var(--border);
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 18px;
+
+  }
+
+  .links.open {
+
+    display: flex;
+
+  }
+
+  .links a {
+
+    font-size: 14px;
+
+  }
+
+  .hero {
+
+    padding: 65px 0 70px;
+
+    min-height: auto;
+
+  }
+
+  .hero-grid {
+
+    gap: 10px;
+
+  }
+
+  .hero-visual {
+
+    order: -1;
+
+    min-height: 265px;
+
+  }
+
+  .hero-logo {
+
+    width: 190px;
+
+  }
+
+  .orbit {
+
+    width: 260px;
+
+  }
+
+  h1 {
+
+    font-size: clamp(43px,10vw,60px);
+
+    letter-spacing: -.065em;
+
+  }
+
+  .hero p {
+
+    font-size: 15px;
+
+  }
+
+  section.content {
+
+    padding: 75px 0;
+
+    scroll-margin-top: 72px;
+
+  }
+
+  h2 {
+
+    font-size: 36px;
+
+  }
+
+  .grid,
+
+  .tiers,
+
+  .eco-grid,
+
+  .publications,
+
+  .research-points {
+
+    grid-template-columns: 1fr;
+
+  }
+
+  .ecosystem {
+
+    padding: 25px 18px;
+
+  }
+
+  .eco-core {
+
+    width: 130px;
+
+    height: 130px;
+
+  }
+
+  .eco-item {
+
+    padding: 15px;
+
+  }
+
+  .feature-copy {
+
+    padding: 25px;
+
+  }
+
+  .card,
+
+  .tier {
+
+    padding: 24px;
+
+  }
+
+  .vision-quote {
+
+    padding: 24px;
+
+  }
+
+  .research-panel {
+
+    padding: 24px;
+
+  }
+
+}
+
+/* ACCESSIBILITY */
+
+@media(prefers-reduced-motion:reduce) {
+
+  *,
+
+  *:before,
+
+  *:after {
+
+    animation-duration: .01ms !important;
+
+    transition-duration: .01ms !important;
+
+    scroll-behavior: auto !important;
+
+  }
+
+  .reveal {
+
+    opacity: 1;
+
+    transform: none;
+
+  }
 
 }
 
@@ -1378,81 +1576,81 @@ scroll-behavior:auto!important;
 
 {
 
-"@context":"https://schema.org",
+  "@context": "https://schema.org",
 
-"@graph":[
+  "@graph": [
 
-{
+    {
 
-"@type":"WebSite",
+      "@type": "WebSite",
 
-"name":"Jeremy Blueprint",
+      "name": "Jeremy Blueprint",
 
-"url":"https://jeremy26111.github.io/jeremy-blueprint/",
+      "url": "https://jeremy26111.github.io/jeremy-blueprint/",
 
-"description":"Independent human-first AI companion ecosystem vision created by Kyle Dolby",
+      "description": "Independent human-first AI companion ecosystem vision created by Kyle Dolby",
 
-"author":{
+      "author": {
 
-"@type":"Person",
+        "@type": "Person",
 
-"name":"Kyle Dolby"
+        "name": "Kyle Dolby"
 
-}
+      }
 
-},
+    },
 
-{
+    {
 
-"@type":"WebPage",
+      "@type": "WebPage",
 
-"name":"Jeremy Blueprint — Human-First AI Vision",
+      "name": "Jeremy Blueprint — Human-First AI Vision",
 
-"url":"https://jeremy26111.github.io/jeremy-blueprint/",
+      "url": "https://jeremy26111.github.io/jeremy-blueprint/",
 
-"isPartOf":{
+      "isPartOf": {
 
-"@type":"WebSite",
+        "@type": "WebSite",
 
-"url":"https://jeremy26111.github.io/jeremy-blueprint/"
+        "url": "https://jeremy26111.github.io/jeremy-blueprint/"
 
-},
+      },
 
-"hasPart":{
+      "hasPart": {
 
-"@type":"WebPage",
+        "@type": "WebPage",
 
-"name":"Jeremy Blueprint Research & Evidence",
+        "name": "Jeremy Blueprint Research & Evidence",
 
-"url":"https://jeremy26111.github.io/jeremy-blueprint/research.html"
+        "url": "https://jeremy26111.github.io/jeremy-blueprint/research.html"
 
-}
+      }
 
-},
+    },
 
-{
+    {
 
-"@type":"CreativeWork",
+      "@type": "CreativeWork",
 
-"name":"Jeremy Blueprint",
+      "name": "Jeremy Blueprint",
 
-"description":"An independent conceptual framework for a human-first AI life companion ecosystem integrating safeguarding, memory, wellbeing, accessibility, learning and human independence.",
+      "description": "An independent conceptual framework for a human-first AI life companion ecosystem integrating safeguarding, memory, wellbeing, accessibility, learning and human independence.",
 
-"creator":{
+      "creator": {
 
-"@type":"Person",
+        "@type": "Person",
 
-"name":"Kyle Dolby"
+        "name": "Kyle Dolby"
 
-},
+      },
 
-"url":"https://jeremy26111.github.io/jeremy-blueprint/research.html",
+      "url": "https://jeremy26111.github.io/jeremy-blueprint/research.html",
 
-"inLanguage":"en-GB"
+      "inLanguage": "en-GB"
 
-}
+    }
 
-]
+  ]
 
 }
 
@@ -1466,41 +1664,41 @@ scroll-behavior:auto!important;
 
 <header>
 
-<div class="container nav">
+  <div class="container nav">
 
-<a class="brand" href="#home">
+    <a class="brand" href="#home">
 
-<img src="logo1.jpg" alt="Jeremy Blueprint logo">
+      <img src="logo1.jpg" alt="Jeremy Blueprint logo">
 
-<span>JEREMY<br>BLUEPRINT</span>
+      <span>JEREMY<br>BLUEPRINT</span>
 
-</a>
+    </a>
 
-<button class="menu" id="menuButton" aria-expanded="false" aria-controls="navigation">
+    <button class="menu" id="menuButton" aria-expanded="false" aria-controls="navigation">
 
-Menu ☰
+      Menu ☰
 
-</button>
+    </button>
 
-<nav class="links" id="navigation">
+    <nav class="links" id="navigation">
 
-<a href="#vision">Vision</a>
+      <a href="#vision">Vision</a>
 
-<a href="#ecosystem">Ecosystem</a>
+      <a href="#ecosystem">Ecosystem</a>
 
-<a href="#experience">Experience</a>
+      <a href="#experience">Experience</a>
 
-<a href="#origins">Origins</a>
+      <a href="#origins">Origins</a>
 
-<a href="#research">Research & Evidence</a>
+      <a href="#research">Research & Evidence</a>
 
-<a href="#publications">Publications</a>
+      <a href="#publications">Publications</a>
 
-<a href="#creator">Creator</a>
+      <a href="#creator">Creator</a>
 
-</nav>
+    </nav>
 
-</div>
+  </div>
 
 </header>
 
@@ -1510,63 +1708,63 @@ Menu ☰
 
 <section class="hero" id="home">
 
-<div class="container hero-grid">
+  <div class="container hero-grid">
 
-<div>
+    <div>
 
-<div class="eyebrow">Independent human-first AI vision</div>
+      <div class="eyebrow">Independent human-first AI vision</div>
 
-<h1>
+      <h1>
 
-The future of AI
+        The future of AI
 
-<span class="gradient">should be human.</span>
+        <span class="gradient">should be human.</span>
 
-</h1>
+      </h1>
 
-<p>
+      <p>
 
-Intelligence is advancing. Humanity must remain at its centre.
+        Intelligence is advancing. Humanity must remain at its centre.
 
-Discover Jeremy Blueprint — an independent vision for a connected
+        Discover Jeremy Blueprint — an independent vision for a connected
 
-AI life companion ecosystem designed around safeguarding,
+        AI life companion ecosystem designed around safeguarding,
 
-wellbeing, accessibility and human independence.
+        wellbeing, accessibility and human independence.
 
-</p>
+      </p>
 
-<div class="actions">
+      <div class="actions">
 
-<a class="btn btn-primary" href="#ecosystem">Explore the ecosystem ↗</a>
+        <a class="btn btn-primary" href="#ecosystem">Explore the ecosystem ↗</a>
 
-<a class="btn btn-outline" href="research.html">Explore Research ↗</a>
+        <a class="btn btn-outline" href="research.html">Explore Research ↗</a>
 
-<a class="btn btn-outline" href="#publications">Read the vision</a>
+        <a class="btn btn-outline" href="#publications">Read the vision</a>
 
-</div>
+      </div>
 
-<p class="micro">
+      <p class="micro">
 
-Concept and vision by <strong>Kyle Dolby</strong> · United Kingdom
+        Concept and vision by <strong>Kyle Dolby</strong> · United Kingdom
 
-</p>
+      </p>
 
-</div>
+    </div>
 
-<div class="hero-visual">
+    <div class="hero-visual">
 
-<div class="orbit" aria-hidden="true">
+      <div class="orbit" aria-hidden="true">
 
-<div class="orbit-ball"></div>
+        <div class="orbit-ball"></div>
 
-</div>
+      </div>
 
-<img class="hero-logo" src="logo1.jpg" alt="Jeremy in a Bottle Blueprint emblem">
+      <img class="hero-logo" src="logo1.jpg" alt="Jeremy in a Bottle Blueprint emblem">
 
-</div>
+    </div>
 
-</div>
+  </div>
 
 </section>
 
@@ -1574,99 +1772,99 @@ Concept and vision by <strong>Kyle Dolby</strong> · United Kingdom
 
 <section class="content" id="vision">
 
-<div class="container">
+  <div class="container">
 
-<div class="section-head reveal">
+    <div class="section-head reveal">
 
-<div class="kicker">01 / The vision</div>
+      <div class="kicker">01 / The vision</div>
 
-<h2>
+      <h2>
 
-Technology should understand human needs.
+        Technology should understand human needs.
 
-<span class="gradient">Not just human instructions.</span>
+        <span class="gradient">Not just human instructions.</span>
 
-</h2>
+      </h2>
 
-<p class="lead">
+      <p class="lead">
 
-Jeremy Blueprint explores a future in which artificial intelligence
+        Jeremy Blueprint explores a future in which artificial intelligence
 
-helps people navigate life, pursue opportunities, remain independent
+        helps people navigate life, pursue opportunities, remain independent
 
-and access meaningful support.
+        and access meaningful support.
 
-</p>
+      </p>
 
-</div>
+    </div>
 
-<div class="vision-quote reveal">
+    <div class="vision-quote reveal">
 
-“The measure of better AI is not simply what technology can achieve —
+      “The measure of better AI is not simply what technology can achieve —
 
-but how much better it helps humanity live.”
+      but how much better it helps humanity live.”
 
-</div>
+    </div>
 
-<div class="grid" style="margin-top:28px">
+    <div class="grid" style="margin-top:28px">
 
-<div class="glass card reveal">
+      <div class="glass card reveal">
 
-<div class="icon">◇</div>
+        <div class="icon">◇</div>
 
-<div class="number">01 / HUMANITY</div>
+        <div class="number">01 / HUMANITY</div>
 
-<h3>Human autonomy</h3>
+        <h3>Human autonomy</h3>
 
-<p>
+        <p>
 
-Support individual decisions, confidence and independence
+          Support individual decisions, confidence and independence
 
-rather than replacing human judgment.
+          rather than replacing human judgment.
 
-</p>
+        </p>
 
-</div>
+      </div>
 
-<div class="glass card reveal">
+      <div class="glass card reveal">
 
-<div class="icon">✧</div>
+        <div class="icon">✧</div>
 
-<div class="number">02 / SAFETY</div>
+        <div class="number">02 / SAFETY</div>
 
-<h3>Safeguarding first</h3>
+        <h3>Safeguarding first</h3>
 
-<p>
+        <p>
 
-Explore responsible protective assistance, appropriate alerts
+          Explore responsible protective assistance, appropriate alerts
 
-and supportive pathways for vulnerable people.
+          and supportive pathways for vulnerable people.
 
-</p>
+        </p>
 
-</div>
+      </div>
 
-<div class="glass card reveal">
+      <div class="glass card reveal">
 
-<div class="icon">◎</div>
+        <div class="icon">◎</div>
 
-<div class="number">03 / TRUST</div>
+        <div class="number">03 / TRUST</div>
 
-<h3>Meaningful transparency</h3>
+        <h3>Meaningful transparency</h3>
 
-<p>
+        <p>
 
-Privacy, understandable AI behaviour, user choice
+          Privacy, understandable AI behaviour, user choice
 
-and accountability should be foundational.
+          and accountability should be foundational.
 
-</p>
+        </p>
 
-</div>
+      </div>
 
-</div>
+    </div>
 
-</div>
+  </div>
 
 </section>
 
@@ -1674,137 +1872,137 @@ and accountability should be foundational.
 
 <section class="content" id="ecosystem">
 
-<div class="container">
+  <div class="container">
 
-<div class="section-head reveal">
+    <div class="section-head reveal">
 
-<div class="kicker">02 / Connected intelligence</div>
+      <div class="kicker">02 / Connected intelligence</div>
 
-<h2>
+      <h2>
 
-One vision.
+        One vision.
 
-<span class="gradient">An ecosystem of human possibilities.</span>
+        <span class="gradient">An ecosystem of human possibilities.</span>
 
-</h2>
+      </h2>
 
-<p class="lead">
+      <p class="lead">
 
-The proposed ecosystem brings together everyday assistance,
+        The proposed ecosystem brings together everyday assistance,
 
-personal development, protection and connected technology.
+        personal development, protection and connected technology.
 
-Select a capability to explore its purpose.
+        Select a capability to explore its purpose.
 
-</p>
+      </p>
 
-</div>
+    </div>
 
-<div class="glass ecosystem reveal">
+    <div class="glass ecosystem reveal">
 
-<div class="eco-core">
+      <div class="eco-core">
 
-<strong>JEREMY</strong>
+        <strong>JEREMY</strong>
 
-<span>HUMAN-FIRST AI</span>
+        <span>HUMAN-FIRST AI</span>
 
-</div>
+      </div>
 
-<div class="eco-grid">
+      <div class="eco-grid">
 
-<button class="eco-item active"
+        <button class="eco-item active"
 
-data-title="Safety & Safeguarding"
+          data-title="Safety & Safeguarding"
 
-data-info="Exploring supportive safety alerts, emergency pathways and responsible future wearable-enabled protection, with privacy and appropriate human oversight.">
+          data-info="Exploring supportive safety alerts, emergency pathways and responsible future wearable-enabled protection, with privacy and appropriate human oversight.">
 
-<span>01 / PROTECTION</span>
+          <span>01 / PROTECTION</span>
 
-Safety & safeguarding
+          Safety & safeguarding
 
-</button>
+        </button>
 
-<button class="eco-item"
+        <button class="eco-item"
 
-data-title="Organisation & Memory"
+          data-title="Organisation & Memory"
 
-data-info="A personal companion concept for routines, reminders, important information and goals, designed around meaningful user control.">
+          data-info="A personal companion concept for routines, reminders, important information and goals, designed around meaningful user control.">
 
-<span>02 / DAILY LIFE</span>
+          <span>02 / DAILY LIFE</span>
 
-Organisation & memory
+          Organisation & memory
 
-</button>
+        </button>
 
-<button class="eco-item"
+        <button class="eco-item"
 
-data-title="Wellbeing & Support"
+          data-title="Wellbeing & Support"
 
-data-info="Reflective check-ins, encouragement and practical wellbeing support that complements rather than replaces qualified care and real-world relationships.">
+          data-info="Reflective check-ins, encouragement and practical wellbeing support that complements rather than replaces qualified care and real-world relationships.">
 
-<span>03 / WELLBEING</span>
+          <span>03 / WELLBEING</span>
 
-Personal wellbeing
+          Personal wellbeing
 
-</button>
+        </button>
 
-<button class="eco-item"
+        <button class="eco-item"
 
-data-title="Learning & Opportunity"
+          data-title="Learning & Opportunity"
 
-data-info="Exploring education, skill development, career navigation and informed decision-making across different stages of life.">
+          data-info="Exploring education, skill development, career navigation and informed decision-making across different stages of life.">
 
-<span>04 / GROWTH</span>
+          <span>04 / GROWTH</span>
 
-Learning & careers
+          Learning & careers
 
-</button>
+        </button>
 
-<button class="eco-item"
+        <button class="eco-item"
 
-data-title="Accessibility & Inclusion"
+          data-title="Accessibility & Inclusion"
 
-data-info="Reducing barriers to information, useful services and participation for people with different needs and abilities.">
+          data-info="Reducing barriers to information, useful services and participation for people with different needs and abilities.">
 
-<span>05 / INCLUSION</span>
+          <span>05 / INCLUSION</span>
 
-Accessibility
+          Accessibility
 
-</button>
+        </button>
 
-<button class="eco-item"
+        <button class="eco-item"
 
-data-title="Connected Technology"
+          data-title="Connected Technology"
 
-data-info="Longer-term conceptual possibilities include connected devices, wearables, transport and robotics. These are future ambitions, not deployed capabilities.">
+          data-info="Longer-term conceptual possibilities include connected devices, wearables, transport and robotics. These are future ambitions, not deployed capabilities.">
 
-<span>06 / FUTURE</span>
+          <span>06 / FUTURE</span>
 
-Devices & robotics
+          Devices & robotics
 
-</button>
+        </button>
 
-</div>
+      </div>
 
-<div class="eco-detail" aria-live="polite">
+      <div class="eco-detail" aria-live="polite">
 
-<h3 id="ecoTitle">Safety & Safeguarding</h3>
+        <h3 id="ecoTitle">Safety & Safeguarding</h3>
 
-<p id="ecoInfo">
+        <p id="ecoInfo">
 
-Exploring supportive safety alerts, emergency pathways
+          Exploring supportive safety alerts, emergency pathways
 
-and responsible future wearable-enabled protection,
+          and responsible future wearable-enabled protection,
 
-with privacy and appropriate human oversight.
+          with privacy and appropriate human oversight.
 
-</p>
+        </p>
 
-</div>
+      </div>
 
-</div>
+    </div>
 
-</div>
+  </div>
 
 </section>
 
@@ -1812,99 +2010,99 @@ with privacy and appropriate human oversight.
 
 <section class="content" id="experience">
 
-<div class="container">
+  <div class="container">
 
-<div class="section-head reveal">
+    <div class="section-head reveal">
 
-<div class="kicker">03 / The companion experience</div>
+      <div class="kicker">03 / The companion experience</div>
 
-<h2>
+      <h2>
 
-Guidance. Breakthrough.
+        Guidance. Breakthrough.
 
-<span class="gradient">Direction.</span>
+        <span class="gradient">Direction.</span>
 
-</h2>
+      </h2>
 
-<p class="lead">
+      <p class="lead">
 
-Three proposed layers of the Jeremy experience,
+        Three proposed layers of the Jeremy experience,
 
-designed to help people move from everyday questions
+        designed to help people move from everyday questions
 
-towards meaningful progress.
+        towards meaningful progress.
 
-</p>
+      </p>
 
-</div>
+    </div>
 
-<div class="tiers">
+    <div class="tiers">
 
-<div class="glass tier reveal">
+      <div class="glass tier reveal">
 
-<div class="symbol">✦</div>
+        <div class="symbol">✦</div>
 
-<h3>Lantern</h3>
+        <h3>Lantern</h3>
 
-<div class="subtitle">Free core guidance</div>
+        <div class="subtitle">Free core guidance</div>
 
-<p>
+        <p>
 
-A welcoming starting point for everyday questions,
+          A welcoming starting point for everyday questions,
 
-practical guidance, reflection and finding a way forward.
+          practical guidance, reflection and finding a way forward.
 
-</p>
+        </p>
 
-</div>
+      </div>
 
-<div class="glass tier reveal">
+      <div class="glass tier reveal">
 
-<div class="symbol">⚿</div>
+        <div class="symbol">⚿</div>
 
-<h3>Key</h3>
+        <h3>Key</h3>
 
-<div class="subtitle">Breakthrough tier</div>
+        <div class="subtitle">Breakthrough tier</div>
 
-<p>
+        <p>
 
-Deeper support for overcoming obstacles,
+          Deeper support for overcoming obstacles,
 
-exploring opportunities and turning ambitions into practical steps.
+          exploring opportunities and turning ambitions into practical steps.
 
-</p>
+        </p>
 
-</div>
+      </div>
 
-<div class="glass tier reveal">
+      <div class="glass tier reveal">
 
-<div class="symbol">◎</div>
+        <div class="symbol">◎</div>
 
-<h3>Compass</h3>
+        <h3>Compass</h3>
 
-<div class="subtitle">Strategic navigation</div>
+        <div class="subtitle">Strategic navigation</div>
 
-<p>
+        <p>
 
-A proposed experience for longer-term planning,
+          A proposed experience for longer-term planning,
 
-priorities and more complex personal or professional goals.
+          priorities and more complex personal or professional goals.
 
-</p>
+        </p>
 
-</div>
+      </div>
 
-</div>
+    </div>
 
-<div class="notice reveal">
+    <div class="notice reveal">
 
-Lantern, Key and Compass describe proposed product concepts.
+      Lantern, Key and Compass describe proposed product concepts.
 
-They are not currently available services or verified technical implementations.
+      They are not currently available services or verified technical implementations.
 
-</div>
+    </div>
 
-</div>
+  </div>
 
 </section>
 
@@ -1912,107 +2110,107 @@ They are not currently available services or verified technical implementations.
 
 <section class="content" id="origins">
 
-<div class="container">
+  <div class="container">
 
-<div class="section-head reveal">
+    <div class="section-head reveal">
 
-<div class="kicker">04 / Origins & evolution</div>
+      <div class="kicker">04 / Origins & evolution</div>
 
-<h2>
+      <h2>
 
-From an idea to a
+        From an idea to a
 
-<span class="gradient">human-first blueprint.</span>
+        <span class="gradient">human-first blueprint.</span>
 
-</h2>
+      </h2>
 
-<p class="lead">
+      <p class="lead">
 
-Jeremy Blueprint evolved through iterative conceptual development,
+        Jeremy Blueprint evolved through iterative conceptual development,
 
-exploring how AI might become more supportive,
+        exploring how AI might become more supportive,
 
-responsible and useful in everyday life.
+        responsible and useful in everyday life.
 
-</p>
+      </p>
 
-</div>
+    </div>
 
-<div class="timeline">
+    <div class="timeline">
 
-<div class="milestone reveal">
+      <div class="milestone reveal">
 
-<small>EARLY EXPLORATION</small>
+        <small>EARLY EXPLORATION</small>
 
-<h3>Buddy</h3>
+        <h3>Buddy</h3>
 
-<p>
+        <p>
 
-An early companion concept centred on personal assistance,
+          An early companion concept centred on personal assistance,
 
-encouragement, goals and practical daily support.
+          encouragement, goals and practical daily support.
 
-</p>
+        </p>
 
-</div>
+      </div>
 
-<div class="milestone reveal">
+      <div class="milestone reveal">
 
-<small>EARLY 2025 DEVELOPMENT</small>
+        <small>EARLY 2025 DEVELOPMENT</small>
 
-<h3>Jeremy in a Bottle</h3>
+        <h3>Jeremy in a Bottle</h3>
 
-<p>
+        <p>
 
-“Helping dreams become reality.”
+          “Helping dreams become reality.”
 
-A broader personal AI life companion vision
+          A broader personal AI life companion vision
 
-developed through iterative exploration.
+          developed through iterative exploration.
 
-</p>
+        </p>
 
-</div>
+      </div>
 
-<div class="milestone reveal">
+      <div class="milestone reveal">
 
-<small>ECOSYSTEM VISION</small>
+        <small>ECOSYSTEM VISION</small>
 
-<h3>Jeremy Blueprint</h3>
+        <h3>Jeremy Blueprint</h3>
 
-<p>
+        <p>
 
-The concept expanded into a connected vision spanning
+          The concept expanded into a connected vision spanning
 
-safeguarding, wellbeing, accessibility, learning,
+          safeguarding, wellbeing, accessibility, learning,
 
-organisation and responsible AI design.
+          organisation and responsible AI design.
 
-</p>
+        </p>
 
-</div>
+      </div>
 
-<div class="milestone reveal">
+      <div class="milestone reveal">
 
-<small>NOVEMBER 2026</small>
+        <small>NOVEMBER 2026</small>
 
-<h3>Independent public publication</h3>
+        <h3>Independent public publication</h3>
 
-<p>
+        <p>
 
-A public-facing website and article presenting
+          A public-facing website and article presenting
 
-the human-first vision while keeping detailed
+          the human-first vision while keeping detailed
 
-private development materials separate.
+          private development materials separate.
 
-</p>
+        </p>
 
-</div>
+      </div>
 
-</div>
+    </div>
 
-</div>
+  </div>
 
 </section>
 
@@ -2020,119 +2218,119 @@ private development materials separate.
 
 <section class="content" id="research">
 
-<div class="container">
+  <div class="container">
 
-<div class="section-head reveal">
+    <div class="section-head reveal">
 
-<div class="kicker">05 / Research & evidence</div>
+      <div class="kicker">05 / Research & evidence</div>
 
-<h2>
+      <h2>
 
-Explore the framework.
+        Explore the framework.
 
-<span class="gradient">Examine the vision.</span>
+        <span class="gradient">Examine the vision.</span>
 
-</h2>
+      </h2>
 
-<p class="lead">
+      <p class="lead">
 
-Jeremy Blueprint includes a dedicated research page
+        Jeremy Blueprint includes a dedicated research page
 
-explaining its origins, guiding principles, proposed ecosystem,
+        explaining its origins, guiding principles, proposed ecosystem,
 
-safeguarding priorities and future development requirements.
+        safeguarding priorities and future development requirements.
 
-</p>
+      </p>
 
-</div>
+    </div>
 
-<div class="glass research-panel reveal">
+    <div class="glass research-panel reveal">
 
-<h3>Jeremy Blueprint — Human-First AI Companion Research</h3>
+      <h3>Jeremy Blueprint — Human-First AI Companion Research</h3>
 
-<p>
+      <p>
 
-The research publication provides a structured overview
+        The research publication provides a structured overview
 
-of the independent concept developed by Kyle Dolby,
+        of the independent concept developed by Kyle Dolby,
 
-including its proposed applications across everyday life.
+        including its proposed applications across everyday life.
 
-</p>
+      </p>
 
-<div class="research-points">
+      <div class="research-points">
 
-<div class="research-point">
+        <div class="research-point">
 
-<strong>Origins & development</strong>
+          <strong>Origins & development</strong>
 
-The evolution from Buddy and Jeremy in a Bottle
+          The evolution from Buddy and Jeremy in a Bottle
 
-to the wider Jeremy Blueprint vision.
+          to the wider Jeremy Blueprint vision.
 
-</div>
+        </div>
 
-<div class="research-point">
+        <div class="research-point">
 
-<strong>Human-first principles</strong>
+          <strong>Human-first principles</strong>
 
-Safeguarding, autonomy, privacy,
+          Safeguarding, autonomy, privacy,
 
-accessibility and transparency.
+          accessibility and transparency.
 
-</div>
+        </div>
 
-<div class="research-point">
+        <div class="research-point">
 
-<strong>Connected ecosystem</strong>
+          <strong>Connected ecosystem</strong>
 
-Personal memory, organisation, wellbeing,
+          Personal memory, organisation, wellbeing,
 
-education, opportunity and future integrations.
+          education, opportunity and future integrations.
 
-</div>
+        </div>
 
-<div class="research-point">
+        <div class="research-point">
 
-<strong>Research priorities</strong>
+          <strong>Research priorities</strong>
 
-Technical feasibility, independent evaluation,
+          Technical feasibility, independent evaluation,
 
-responsible implementation and long-term human benefit.
+          responsible implementation and long-term human benefit.
 
-</div>
+        </div>
 
-</div>
+      </div>
 
-<p>
+      <p>
 
-This is a conceptual research overview.
+        This is a conceptual research overview.
 
-It does not claim that the complete ecosystem
+        It does not claim that the complete ecosystem
 
-has been technically implemented or independently validated.
+        has been technically implemented or independently validated.
 
-</p>
+      </p>
 
-<div class="actions">
+      <div class="actions">
 
-<a class="btn btn-primary" href="research.html">
+        <a class="btn btn-primary" href="research.html">
 
-Read the Full Research Page ↗
+          Read the Full Research Page ↗
 
-</a>
+        </a>
 
-<a class="btn btn-outline" href="#origins">
+        <a class="btn btn-outline" href="#origins">
 
-Explore the Origins
+          Explore the Origins
 
-</a>
+        </a>
 
-</div>
+      </div>
 
-</div>
+    </div>
 
-</div>
+  </div>
 
 </section>
 
@@ -2140,145 +2338,145 @@ Explore the Origins
 
 <section class="content" id="publications">
 
-<div class="container">
+  <div class="container">
 
-<div class="section-head reveal">
+    <div class="section-head reveal">
 
-<div class="kicker">06 / Publications & perspectives</div>
+      <div class="kicker">06 / Publications & perspectives</div>
 
-<h2>
+      <h2>
 
-Ideas that challenge
+        Ideas that challenge
 
-<span class="gradient">the direction of AI.</span>
+        <span class="gradient">the direction of AI.</span>
 
-</h2>
+      </h2>
 
-<p class="lead">
+      <p class="lead">
 
-Independent writing exploring how increasingly powerful
+        Independent writing exploring how increasingly powerful
 
-artificial intelligence should serve people and society.
+        artificial intelligence should serve people and society.
 
-</p>
+      </p>
 
-</div>
+    </div>
 
-<article class="glass feature reveal">
+    <article class="glass feature reveal">
 
-<img
+      <img
 
-src="jeremy-cover.jpg"
+        src="jeremy-cover.jpg"
 
-alt="Jeremy Blueprint human-first AI vision article cover"
+        alt="Jeremy Blueprint human-first AI vision article cover"
 
-loading="lazy">
+        loading="lazy">
 
-<div class="feature-copy">
+      <div class="feature-copy">
 
-<div class="kicker">Featured article · November 2026</div>
+        <div class="kicker">Featured article · November 2026</div>
 
-<h3>
+        <h3>
 
-The Future of AI Needs More Than Intelligence —
+          The Future of AI Needs More Than Intelligence —
 
-It Needs Humanity
+          It Needs Humanity
 
-</h3>
+        </h3>
 
-<p>
+        <p>
 
-A human-first perspective on safeguarding,
+          A human-first perspective on safeguarding,
 
-autonomy, wellbeing, connected assistance,
+          autonomy, wellbeing, connected assistance,
 
-accountability and the future of AI.
+          accountability and the future of AI.
 
-</p>
+        </p>
 
-<a href="jeremy-blueprint-article.html">
+        <a href="jeremy-blueprint-article.html">
 
-Read the full Jeremy Blueprint article ↗
+          Read the full Jeremy Blueprint article ↗
 
-</a>
+        </a>
 
-</div>
+      </div>
 
-</article>
+    </article>
 
-<div class="publications">
+    <div class="publications">
 
-<div class="glass publication reveal">
+      <div class="glass publication reveal">
 
-<div class="kicker">AI psychology & accountability</div>
+        <div class="kicker">AI psychology & accountability</div>
 
-<h3>
+        <h3>
 
-AI Is Learning to Understand You.
+          AI Is Learning to Understand You.
 
-But Who Is Teaching It How to Influence You?
+          But Who Is Teaching It How to Influence You?
 
-</h3>
+        </h3>
 
-<p>
+        <p>
 
-Questions surrounding conversational influence,
+          Questions surrounding conversational influence,
 
-emotional adaptation, transparency and meaningful oversight.
+          emotional adaptation, transparency and meaningful oversight.
 
-</p>
+        </p>
 
-<a
+        <a
 
-href="https://www.linkedin.com/in/kyle-dolby-1989-ksd"
+          href="https://www.linkedin.com/in/kyle-dolby-1989-ksd"
 
-target="_blank"
+          target="_blank"
 
-rel="noopener noreferrer">
+          rel="noopener noreferrer">
 
-Explore Kyle's writing ↗
+          Explore Kyle's writing ↗
 
-</a>
+        </a>
 
-</div>
+      </div>
 
-<div class="glass publication reveal">
+      <div class="glass publication reveal">
 
-<div class="kicker">Published perspective</div>
+        <div class="kicker">Published perspective</div>
 
-<h3>
+        <h3>
 
-AI Is Becoming More Powerful.
+          AI Is Becoming More Powerful.
 
-But Is It Becoming More Human?
+          But Is It Becoming More Human?
 
-</h3>
+        </h3>
 
-<p>
+        <p>
 
-Exploring the relationship between technological progress,
+          Exploring the relationship between technological progress,
 
-responsible design and human benefit.
+          responsible design and human benefit.
 
-</p>
+        </p>
 
-<a
+        <a
 
-href="https://www.aigovernancedesk.com/ai-becoming-more-powerful-more-human/"
+          href="https://www.aigovernancedesk.com/ai-becoming-more-powerful-more-human/"
 
-target="_blank"
+          target="_blank"
 
-rel="noopener noreferrer">
+          rel="noopener noreferrer">
 
-Read at AI Governance Desk ↗
+          Read at AI Governance Desk ↗
 
-</a>
+        </a>
 
-</div>
+      </div>
 
-</div>
+    </div>
 
-</div>
+  </div>
 
 </section>
 
@@ -2286,119 +2484,119 @@ Read at AI Governance Desk ↗
 
 <section class="content" id="creator">
 
-<div class="container creator">
+  <div class="container creator">
 
-<div class="reveal">
+    <div class="reveal">
 
-<div class="kicker">07 / The creator</div>
+      <div class="kicker">07 / The creator</div>
 
-<h2>Kyle Dolby</h2>
+      <h2>Kyle Dolby</h2>
 
-<p class="lead">
+      <p class="lead">
 
-Independent creator of Jeremy Blueprint.
+        Independent creator of Jeremy Blueprint.
 
-</p>
+      </p>
 
-<p>
+      <p>
 
-Jeremy Blueprint represents an evolving vision
+        Jeremy Blueprint represents an evolving vision
 
-for artificial intelligence that prioritises
+        for artificial intelligence that prioritises
 
-human wellbeing, safety, independence
+        human wellbeing, safety, independence
 
-and meaningful progress.
+        and meaningful progress.
 
-</p>
+      </p>
 
-<p>
+      <p>
 
-The public website introduces the vision
+        The public website introduces the vision
 
-and its principles without disclosing
+        and its principles without disclosing
 
-private technical specifications
+        private technical specifications
 
-or asserting unverified affiliations.
+        or asserting unverified affiliations.
 
-</p>
+      </p>
 
-<div class="actions">
+      <div class="actions">
 
-<a
+        <a
 
-class="btn btn-primary"
+          class="btn btn-primary"
 
-href="https://www.linkedin.com/in/kyle-dolby-1989-ksd"
+          href="https://www.linkedin.com/in/kyle-dolby-1989-ksd"
 
-target="_blank"
+          target="_blank"
 
-rel="noopener noreferrer">
+          rel="noopener noreferrer">
 
-Connect on LinkedIn ↗
+          Connect on LinkedIn ↗
 
-</a>
+        </a>
 
-<a class="btn btn-outline" href="research.html">
+        <a class="btn btn-outline" href="research.html">
 
-Research & Evidence ↗
+          Research & Evidence ↗
 
-</a>
+        </a>
 
-</div>
+      </div>
 
-</div>
+    </div>
 
-<div class="glass card reveal">
+    <div class="glass card reveal">
 
-<div class="kicker">The mission</div>
+      <div class="kicker">The mission</div>
 
-<h3 style="font-size:30px;margin-top:18px">
+      <h3 style="font-size:30px;margin-top:18px">
 
-Helping dreams become reality.
+        Helping dreams become reality.
 
-</h3>
+      </h3>
 
-<p>
+      <p>
 
-A future in which greater intelligence creates
+        A future in which greater intelligence creates
 
-greater human opportunity, independence,
+        greater human opportunity, independence,
 
-confidence and connection.
+        confidence and connection.
 
-</p>
+      </p>
 
-<div style="height:2px;background:linear-gradient(90deg,var(--cyan),var(--mint),transparent);margin-top:30px"></div>
+      <div style="height:2px;background:linear-gradient(90deg,var(--cyan),var(--mint),transparent);margin-top:30px"></div>
 
-<p style="margin-top:20px">
+      <p style="margin-top:20px">
 
-Jeremy in a Bottle · Blueprint · United Kingdom
+        Jeremy in a Bottle · Blueprint · United Kingdom
 
-</p>
+      </p>
 
-</div>
+    </div>
 
-</div>
+  </div>
 
-<div class="container">
+  <div class="container">
 
-<div class="notice reveal">
+    <div class="notice reveal">
 
-<strong>Independent concept notice:</strong>
+      <strong>Independent concept notice:</strong>
 
-Jeremy Blueprint is a proposed vision and design concept.
+      Jeremy Blueprint is a proposed vision and design concept.
 
-Descriptions of future capabilities are conceptual and do not
+      Descriptions of future capabilities are conceptual and do not
 
-imply a working product, independent technical validation,
+      imply a working product, independent technical validation,
 
-endorsement or affiliation with an AI company or regulator.
+      endorsement or affiliation with an AI company or regulator.
 
-</div>
+    </div>
 
-</div>
+  </div>
 
 </section>
 
@@ -2406,23 +2604,23 @@ endorsement or affiliation with an AI company or regulator.
 
 <footer>
 
-<div class="container footer-inner">
+  <div class="container footer-inner">
 
-<span>
+    <span>
 
-© <span id="year">2026</span>
+      © <span id="year">2026</span>
 
-Kyle Dolby · Jeremy Blueprint. All rights reserved.
+      Kyle Dolby · Jeremy Blueprint. All rights reserved.
 
-</span>
+    </span>
 
-<span>
+    <span>
 
-Independent vision · Human-first by design
+      Independent vision · Human-first by design
 
-</span>
+    </span>
 
-</div>
+  </div>
 
 </footer>
 
@@ -2430,179 +2628,179 @@ Independent vision · Human-first by design
 
 /* MOBILE MENU */
 
-const menuButton=document.getElementById("menuButton");
+const menuButton = document.getElementById("menuButton");
 
-const navigation=document.getElementById("navigation");
+const navigation = document.getElementById("navigation");
 
-menuButton.addEventListener("click",()=>{
+menuButton.addEventListener("click", () => {
 
-const open=navigation.classList.toggle("open");
+  const open = navigation.classList.toggle("open");
 
-menuButton.setAttribute("aria-expanded",String(open));
-
-});
-
-navigation.querySelectorAll("a").forEach(link=>{
-
-link.addEventListener("click",()=>{
-
-navigation.classList.remove("open");
-
-menuButton.setAttribute("aria-expanded","false");
+  menuButton.setAttribute("aria-expanded", String(open));
 
 });
+
+navigation.querySelectorAll("a").forEach(link => {
+
+  link.addEventListener("click", () => {
+
+    navigation.classList.remove("open");
+
+    menuButton.setAttribute("aria-expanded", "false");
+
+  });
 
 });
 
 /* COPYRIGHT YEAR */
 
-document.getElementById("year").textContent=new Date().getFullYear();
+document.getElementById("year").textContent = new Date().getFullYear();
 
 /* INTERACTIVE ECOSYSTEM */
 
-const ecoButtons=document.querySelectorAll(".eco-item");
+const ecoButtons = document.querySelectorAll(".eco-item");
 
-const ecoTitle=document.getElementById("ecoTitle");
+const ecoTitle = document.getElementById("ecoTitle");
 
-const ecoInfo=document.getElementById("ecoInfo");
+const ecoInfo = document.getElementById("ecoInfo");
 
-ecoButtons.forEach(button=>{
+ecoButtons.forEach(button => {
 
-button.addEventListener("click",()=>{
+  button.addEventListener("click", () => {
 
-ecoButtons.forEach(item=>item.classList.remove("active"));
+    ecoButtons.forEach(item => item.classList.remove("active"));
 
-button.classList.add("active");
+    button.classList.add("active");
 
-ecoTitle.textContent=button.dataset.title;
+    ecoTitle.textContent = button.dataset.title;
 
-ecoInfo.textContent=button.dataset.info;
+    ecoInfo.textContent = button.dataset.info;
 
-});
+  });
 
 });
 
 /* SECTION REVEAL */
 
-if("IntersectionObserver" in window){
+if ("IntersectionObserver" in window) {
 
-const observer=new IntersectionObserver(entries=>{
+  const observer = new IntersectionObserver(entries => {
 
-entries.forEach(entry=>{
+    entries.forEach(entry => {
 
-if(entry.isIntersecting){
+      if (entry.isIntersecting) {
 
-entry.target.classList.add("visible");
+        entry.target.classList.add("visible");
 
-observer.unobserve(entry.target);
+        observer.unobserve(entry.target);
 
-}
+      }
 
-});
+    });
 
-},{threshold:.08});
+  }, { threshold: .08 });
 
-document.querySelectorAll(".reveal").forEach(el=>observer.observe(el));
+  document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
 
-}else{
+} else {
 
-document.querySelectorAll(".reveal").forEach(el=>el.classList.add("visible"));
-
-}
-
-/* STATIC BACKGROUND NETWORK - NO MOVING PARTICLES */
-
-const canvas=document.getElementById("network");
-
-const ctx=canvas.getContext("2d");
-
-let particles=[];
-
-let width=0;
-
-let height=0;
-
-function resizeNetwork(){
-
-const ratio=Math.min(window.devicePixelRatio||1,2);
-
-width=window.innerWidth;
-
-height=window.innerHeight;
-
-canvas.width=Math.floor(width*ratio);
-
-canvas.height=Math.floor(height*ratio);
-
-ctx.setTransform(ratio,0,0,ratio,0,0);
-
-const count=Math.min(
-
-65,
-
-Math.max(22,Math.floor(width*height/19000))
-
-);
-
-particles=Array.from({length:count},()=>({
-
-x:Math.random()*width,
-
-y:Math.random()*height,
-
-r:Math.random()*1.5+.5
-
-}));
-
-drawNetwork();
+  document.querySelectorAll(".reveal").forEach(el => el.classList.add("visible"));
 
 }
 
-function drawNetwork(){
+/* STATIC BACKGROUND NETWORK */
 
-ctx.clearRect(0,0,width,height);
+const canvas = document.getElementById("network");
 
-for(let i=0;i<particles.length;i++){
+const ctx = canvas.getContext("2d");
 
-const p=particles[i];
+let particles = [];
 
-ctx.beginPath();
+let width = 0;
 
-ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+let height = 0;
 
-ctx.fillStyle="rgba(105,216,255,.48)";
+function resizeNetwork() {
 
-ctx.fill();
+  const ratio = Math.min(window.devicePixelRatio || 1, 2);
 
-for(let j=i+1;j<particles.length;j++){
+  width = window.innerWidth;
 
-const q=particles[j];
+  height = window.innerHeight;
 
-const dx=p.x-q.x;
+  canvas.width = Math.floor(width * ratio);
 
-const dy=p.y-q.y;
+  canvas.height = Math.floor(height * ratio);
 
-const distance=Math.sqrt(dx*dx+dy*dy);
+  ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
 
-if(distance<135){
+  const count = Math.min(
 
-ctx.beginPath();
+    65,
 
-ctx.moveTo(p.x,p.y);
+    Math.max(22, Math.floor(width * height / 19000))
 
-ctx.lineTo(q.x,q.y);
+  );
 
-ctx.strokeStyle="rgba(74,192,232,"+((1-distance/135)*.13)+")";
+  particles = Array.from({ length: count }, () => ({
 
-ctx.lineWidth=.6;
+    x: Math.random() * width,
 
-ctx.stroke();
+    y: Math.random() * height,
+
+    r: Math.random() * 1.5 + .5
+
+  }));
+
+  drawNetwork();
 
 }
 
-}
+function drawNetwork() {
 
-}
+  ctx.clearRect(0, 0, width, height);
+
+  for (let i = 0; i < particles.length; i++) {
+
+    const p = particles[i];
+
+    ctx.beginPath();
+
+    ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+
+    ctx.fillStyle = "rgba(105,216,255,.48)";
+
+    ctx.fill();
+
+    for (let j = i + 1; j < particles.length; j++) {
+
+      const q = particles[j];
+
+      const dx = p.x - q.x;
+
+      const dy = p.y - q.y;
+
+      const distance = Math.sqrt(dx * dx + dy * dy);
+
+      if (distance < 135) {
+
+        ctx.beginPath();
+
+        ctx.moveTo(p.x, p.y);
+
+        ctx.lineTo(q.x, q.y);
+
+        ctx.strokeStyle = "rgba(74,192,232," + ((1 - distance / 135) * .13) + ")";
+
+        ctx.lineWidth = .6;
+
+        ctx.stroke();
+
+      }
+
+    }
+
+  }
 
 }
 
@@ -2610,11 +2808,11 @@ resizeNetwork();
 
 let resizeTimer;
 
-window.addEventListener("resize",()=>{
+window.addEventListener("resize", () => {
 
-clearTimeout(resizeTimer);
+  clearTimeout(resizeTimer);
 
-resizeTimer=setTimeout(resizeNetwork,250);
+  resizeTimer = setTimeout(resizeNetwork, 250);
 
 });
 
