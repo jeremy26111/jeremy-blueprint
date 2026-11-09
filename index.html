@@ -14,7 +14,7 @@
 
 <meta name="robots" content="index, follow, max-image-preview:large">
 
-<meta name="description" content="Jeremy Blueprint by Kyle Dolby. An independent human-first AI companion ecosystem vision exploring safeguarding, wellbeing, accessibility, personal memory, learning, decision support and human independence.">
+<meta name="description" content="Jeremy Blueprint by Kyle Dolby. An independent human-first AI companion ecosystem exploring safeguarding, wellbeing, accessibility, personal memory, learning, human independence and documented development history.">
 
 <title>Jeremy Blueprint | Human-First AI Vision by Kyle Dolby</title>
 
@@ -98,8 +98,6 @@ button {
 
 }
 
-/* BACKGROUND */
-
 canvas#network {
 
   position:fixed;
@@ -154,7 +152,7 @@ header {
 
   z-index:100;
 
-  background:rgba(5,10,22,.83);
+  background:rgba(5,10,22,.88);
 
   backdrop-filter:blur(24px);
 
@@ -218,7 +216,7 @@ header {
 
   align-items:center;
 
-  gap:15px;
+  gap:14px;
 
   flex-wrap:wrap;
 
@@ -422,8 +420,6 @@ h1 {
 
 }
 
-/* SLOW ORBIT */
-
 .hero-visual {
 
   position:relative;
@@ -456,8 +452,6 @@ h1 {
 
     inset 0 0 70px rgba(38,170,221,.08);
 
-  animation:none !important;
-
 }
 
 .orbit:before {
@@ -483,10 +477,6 @@ h1 {
   border-radius:50%;
 
   animation:slowOrbit 600s linear infinite;
-
-  transform-origin:center center;
-
-  will-change:transform;
 
 }
 
@@ -514,17 +504,9 @@ h1 {
 
 @keyframes slowOrbit {
 
-  from {
+  from {transform:rotate(0deg);}
 
-    transform:rotate(0deg);
-
-  }
-
-  to {
-
-    transform:rotate(360deg);
-
-  }
+  to {transform:rotate(360deg);}
 
 }
 
@@ -546,17 +528,13 @@ h1 {
 
   z-index:2;
 
-  animation:none !important;
-
-  transform:none !important;
-
 }
 
 .micro {
 
   margin-top:24px;
 
-  font-size:12px !important;
+  font-size:12px!important;
 
   letter-spacing:.04em;
 
@@ -646,7 +624,7 @@ h2 {
 
 .glass:hover {
 
-  transform:translateY(-6px);
+  transform:translateY(-5px);
 
   border-color:rgba(112,242,207,.5);
 
@@ -702,7 +680,7 @@ h2 {
 
 }
 
-.card .number {
+.number {
 
   font-size:11px;
 
@@ -731,90 +709,6 @@ h2 {
   background:linear-gradient(90deg,rgba(40,164,152,.11),transparent);
 
   border-radius:0 20px 20px 0;
-
-}
-
-/* EXPERIENCE */
-
-.tiers {
-
-  display:grid;
-
-  grid-template-columns:repeat(3,1fr);
-
-  gap:20px;
-
-}
-
-.tier {
-
-  padding:32px;
-
-  position:relative;
-
-  overflow:hidden;
-
-}
-
-.tier:before {
-
-  content:"";
-
-  position:absolute;
-
-  width:180px;
-
-  height:180px;
-
-  border-radius:50%;
-
-  background:rgba(84,216,255,.07);
-
-  filter:blur(40px);
-
-  top:-90px;
-
-  right:-80px;
-
-}
-
-.tier .symbol {
-
-  font-size:34px;
-
-  margin-bottom:20px;
-
-}
-
-.tier h3 {
-
-  font-size:27px;
-
-  margin:0;
-
-}
-
-.tier .subtitle {
-
-  font-size:11px;
-
-  font-weight:800;
-
-  color:var(--mint);
-
-  letter-spacing:.14em;
-
-  text-transform:uppercase;
-
-  margin:5px 0 20px;
-
-}
-
-.tier p {
-
-  color:var(--muted);
-
-  font-size:14px;
 
 }
 
@@ -865,8 +759,6 @@ h2 {
 .eco-core strong {
 
   font-size:21px;
-
-  letter-spacing:-.04em;
 
 }
 
@@ -970,6 +862,68 @@ h2 {
 
 }
 
+/* EXPERIENCE */
+
+.tiers {
+
+  display:grid;
+
+  grid-template-columns:repeat(3,1fr);
+
+  gap:20px;
+
+}
+
+.tier {
+
+  padding:32px;
+
+  position:relative;
+
+  overflow:hidden;
+
+}
+
+.tier .symbol {
+
+  font-size:34px;
+
+  margin-bottom:20px;
+
+}
+
+.tier h3 {
+
+  font-size:27px;
+
+  margin:0;
+
+}
+
+.tier .subtitle {
+
+  font-size:11px;
+
+  font-weight:800;
+
+  color:var(--mint);
+
+  letter-spacing:.14em;
+
+  text-transform:uppercase;
+
+  margin:5px 0 20px;
+
+}
+
+.tier p {
+
+  color:var(--muted);
+
+  font-size:14px;
+
+}
+
 /* TIMELINE */
 
 .timeline {
@@ -1042,6 +996,190 @@ h2 {
 
 }
 
+/* RESEARCH */
+
+.research-panel {
+
+  padding:38px;
+
+}
+
+.research-panel h3 {
+
+  font-size:27px;
+
+  margin:0 0 14px;
+
+}
+
+.research-panel p {
+
+  color:var(--muted);
+
+}
+
+.research-points {
+
+  display:grid;
+
+  grid-template-columns:repeat(2,1fr);
+
+  gap:12px;
+
+  margin:25px 0;
+
+}
+
+.research-point {
+
+  padding:18px;
+
+  border:1px solid var(--border);
+
+  border-radius:12px;
+
+  background:rgba(84,216,255,.045);
+
+  font-size:14px;
+
+}
+
+.research-point strong {
+
+  display:block;
+
+  color:var(--mint);
+
+  margin-bottom:5px;
+
+}
+
+/* DOCUMENTATION GALLERY */
+
+.document-gallery {
+
+  display:grid;
+
+  grid-template-columns:repeat(3,minmax(0,1fr));
+
+  gap:22px;
+
+  margin-top:35px;
+
+}
+
+.document-card {
+
+  overflow:hidden;
+
+  display:flex;
+
+  flex-direction:column;
+
+}
+
+.document-card a {
+
+  display:block;
+
+  background:#081120;
+
+  text-decoration:none;
+
+}
+
+.document-card img {
+
+  display:block;
+
+  width:100%;
+
+  height:320px;
+
+  object-fit:contain;
+
+  background:#081120;
+
+  transition:transform .3s;
+
+}
+
+.document-card:hover img {
+
+  transform:scale(1.025);
+
+}
+
+.document-info {
+
+  padding:20px;
+
+  flex:1;
+
+}
+
+.document-info h3 {
+
+  margin:0 0 8px;
+
+  font-size:17px;
+
+}
+
+.document-info p {
+
+  margin:0 0 12px;
+
+  font-size:13px;
+
+  color:var(--muted);
+
+}
+
+.document-info a {
+
+  color:var(--mint);
+
+  font-size:13px;
+
+  font-weight:750;
+
+  text-decoration:underline;
+
+  text-underline-offset:4px;
+
+}
+
+.document-warning {
+
+  padding:24px;
+
+  margin-top:30px;
+
+  border:1px solid rgba(244,211,139,.3);
+
+  background:rgba(244,211,139,.055);
+
+  border-radius:16px;
+
+}
+
+.document-warning strong {
+
+  color:var(--gold);
+
+}
+
+.document-warning p {
+
+  color:var(--muted);
+
+  font-size:14px;
+
+  margin-bottom:0;
+
+}
+
 /* PUBLICATIONS */
 
 .feature {
@@ -1093,8 +1231,6 @@ h2 {
   color:var(--mint);
 
   font-weight:800;
-
-  text-underline-offset:5px;
 
 }
 
@@ -1178,66 +1314,6 @@ h2 {
 
 }
 
-/* RESEARCH */
-
-.research-panel {
-
-  padding:38px;
-
-}
-
-.research-panel h3 {
-
-  font-size:27px;
-
-  margin:0 0 14px;
-
-}
-
-.research-panel p {
-
-  color:var(--muted);
-
-  max-width:800px;
-
-}
-
-.research-points {
-
-  display:grid;
-
-  grid-template-columns:repeat(2,1fr);
-
-  gap:12px;
-
-  margin:25px 0;
-
-}
-
-.research-point {
-
-  padding:18px;
-
-  border:1px solid var(--border);
-
-  border-radius:12px;
-
-  background:rgba(84,216,255,.045);
-
-  font-size:14px;
-
-}
-
-.research-point strong {
-
-  display:block;
-
-  color:var(--mint);
-
-  margin-bottom:5px;
-
-}
-
 /* FOOTER */
 
 footer {
@@ -1286,11 +1362,11 @@ footer {
 
 /* RESPONSIVE */
 
-@media(max-width:1050px) {
+@media(max-width:1100px) {
 
   .links {
 
-    gap:12px;
+    gap:10px;
 
   }
 
@@ -1302,7 +1378,51 @@ footer {
 
 }
 
-@media(max-width:900px) {
+@media(max-width:950px) {
+
+  .menu {
+
+    display:block;
+
+  }
+
+  .links {
+
+    display:none;
+
+    position:absolute;
+
+    top:100%;
+
+    left:0;
+
+    right:0;
+
+    padding:22px 5%;
+
+    background:rgba(5,12,26,.98);
+
+    border-bottom:1px solid var(--border);
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    gap:18px;
+
+  }
+
+  .links.open {
+
+    display:flex;
+
+  }
+
+  .links a {
+
+    font-size:14px;
+
+  }
 
   .hero-grid,
 
@@ -1332,9 +1452,11 @@ footer {
 
   .grid,
 
-  .tiers {
+  .tiers,
 
-    grid-template-columns:repeat(2,1fr);
+  .document-gallery {
+
+    grid-template-columns:repeat(2,minmax(0,1fr));
 
   }
 
@@ -1376,50 +1498,6 @@ footer {
 
   }
 
-  .menu {
-
-    display:block;
-
-  }
-
-  .links {
-
-    display:none;
-
-    position:absolute;
-
-    top:72px;
-
-    left:0;
-
-    right:0;
-
-    padding:22px 5%;
-
-    background:rgba(5,12,26,.98);
-
-    border-bottom:1px solid var(--border);
-
-    flex-direction:column;
-
-    align-items:flex-start;
-
-    gap:18px;
-
-  }
-
-  .links.open {
-
-    display:flex;
-
-  }
-
-  .links a {
-
-    font-size:14px;
-
-  }
-
   .hero {
 
     padding:65px 0 70px;
@@ -1458,8 +1536,6 @@ footer {
 
     font-size:clamp(43px,10vw,60px);
 
-    letter-spacing:-.065em;
-
   }
 
   .hero p {
@@ -1490,7 +1566,9 @@ footer {
 
   .publications,
 
-  .research-points {
+  .research-points,
+
+  .document-gallery {
 
     grid-template-columns:1fr;
 
@@ -1516,7 +1594,9 @@ footer {
 
   }
 
-  .feature-copy {
+  .feature-copy,
+
+  .research-panel {
 
     padding:25px;
 
@@ -1536,9 +1616,9 @@ footer {
 
   }
 
-  .research-panel {
+  .document-card img {
 
-    padding:24px;
+    height:380px;
 
   }
 
@@ -1552,11 +1632,11 @@ footer {
 
   *:after {
 
-    animation-duration:.01ms !important;
+    animation-duration:.01ms!important;
 
-    transition-duration:.01ms !important;
+    transition-duration:.01ms!important;
 
-    scroll-behavior:auto !important;
+    scroll-behavior:auto!important;
 
   }
 
@@ -1576,23 +1656,21 @@ footer {
 
 {
 
-  "@context": "https://schema.org",
+  "@context":"https://schema.org",
 
-  "@graph": [
+  "@graph":[
 
     {
 
-      "@type": "Person",
+      "@type":"Person",
 
-      "@id": "https://jeremy26111.github.io/jeremy-blueprint/#creator",
+      "@id":"https://jeremy26111.github.io/jeremy-blueprint/#creator",
 
-      "name": "Kyle Dolby",
+      "name":"Kyle Dolby",
 
-      "url": "https://jeremy26111.github.io/jeremy-blueprint/about.html",
+      "description":"Independent UK creator and concept developer of Jeremy Blueprint.",
 
-      "description": "Independent UK creator and concept developer of Jeremy Blueprint.",
-
-      "sameAs": [
+      "sameAs":[
 
         "https://www.linkedin.com/in/kyle-dolby-1989-ksd"
 
@@ -1602,19 +1680,19 @@ footer {
 
     {
 
-      "@type": "WebSite",
+      "@type":"WebSite",
 
-      "@id": "https://jeremy26111.github.io/jeremy-blueprint/#website",
+      "@id":"https://jeremy26111.github.io/jeremy-blueprint/#website",
 
-      "name": "Jeremy Blueprint",
+      "name":"Jeremy Blueprint",
 
-      "url": "https://jeremy26111.github.io/jeremy-blueprint/",
+      "url":"https://jeremy26111.github.io/jeremy-blueprint/",
 
-      "description": "Independent human-first AI companion ecosystem vision created by Kyle Dolby.",
+      "description":"Independent human-first AI companion ecosystem vision created by Kyle Dolby.",
 
-      "author": {
+      "author":{
 
-        "@id": "https://jeremy26111.github.io/jeremy-blueprint/#creator"
+        "@id":"https://jeremy26111.github.io/jeremy-blueprint/#creator"
 
       }
 
@@ -1622,67 +1700,25 @@ footer {
 
     {
 
-      "@type": "WebPage",
+      "@type":"CreativeWork",
 
-      "@id": "https://jeremy26111.github.io/jeremy-blueprint/#homepage",
+      "@id":"https://jeremy26111.github.io/jeremy-blueprint/#blueprint",
 
-      "name": "Jeremy Blueprint — Human-First AI Vision",
+      "name":"Jeremy Blueprint",
 
-      "url": "https://jeremy26111.github.io/jeremy-blueprint/",
+      "creator":{
 
-      "isPartOf": {
-
-        "@id": "https://jeremy26111.github.io/jeremy-blueprint/#website"
+        "@id":"https://jeremy26111.github.io/jeremy-blueprint/#creator"
 
       },
 
-      "hasPart": [
+      "description":"An independent conceptual framework for a human-first AI companion ecosystem integrating safeguarding, memory, wellbeing, accessibility, learning and human independence.",
 
-        {
+      "url":"https://jeremy26111.github.io/jeremy-blueprint/",
 
-          "@type": "AboutPage",
+      "inLanguage":"en-GB",
 
-          "name": "About Kyle Dolby and Jeremy Blueprint",
-
-          "url": "https://jeremy26111.github.io/jeremy-blueprint/about.html"
-
-        },
-
-        {
-
-          "@type": "WebPage",
-
-          "name": "Jeremy Blueprint Research & Evidence",
-
-          "url": "https://jeremy26111.github.io/jeremy-blueprint/research.html"
-
-        }
-
-      ]
-
-    },
-
-    {
-
-      "@type": "CreativeWork",
-
-      "@id": "https://jeremy26111.github.io/jeremy-blueprint/#blueprint",
-
-      "name": "Jeremy Blueprint",
-
-      "description": "An independent conceptual framework for a human-first AI life companion ecosystem integrating safeguarding, personal memory, wellbeing, accessibility, learning, contextual decision support and human independence.",
-
-      "creator": {
-
-        "@id": "https://jeremy26111.github.io/jeremy-blueprint/#creator"
-
-      },
-
-      "url": "https://jeremy26111.github.io/jeremy-blueprint/",
-
-      "inLanguage": "en-GB",
-
-      "keywords": [
+      "keywords":[
 
         "Jeremy Blueprint",
 
@@ -1756,11 +1792,13 @@ footer {
 
       <a href="#research">Research</a>
 
+      <a href="#documents">Documents</a>
+
       <a href="#publications">Publications</a>
 
       <a href="#creator">Creator</a>
 
-      <a href="about.html">About Kyle Dolby</a>
+      <a href="about.html">About</a>
 
     </nav>
 
@@ -1794,13 +1832,17 @@ footer {
 
       <p>
 
-        Intelligence is advancing. Humanity must remain at its centre.
+        Intelligence is advancing. Humanity must remain
 
-        Discover Jeremy Blueprint — an independent vision for a connected
+        at its centre.
 
-        AI life companion ecosystem designed around safeguarding,
+        Discover Jeremy Blueprint — an independent vision
 
-        wellbeing, accessibility and human independence.
+        for a connected AI life companion ecosystem
+
+        designed around safeguarding, wellbeing,
+
+        accessibility and human independence.
 
       </p>
 
@@ -1818,15 +1860,15 @@ footer {
 
         </a>
 
-        <a class="btn btn-outline" href="about.html">
+        <a class="btn btn-outline" href="#documents">
 
-          Meet the Creator ↗
+          View Documentation ↗
 
         </a>
 
-        <a class="btn btn-outline" href="#publications">
+        <a class="btn btn-outline" href="about.html">
 
-          Read the vision
+          Meet the Creator ↗
 
         </a>
 
@@ -1878,15 +1920,21 @@ footer {
 
         Technology should understand human needs.
 
-        <span class="gradient">Not just human instructions.</span>
+        <span class="gradient">
+
+          Not just human instructions.
+
+        </span>
 
       </h2>
 
       <p class="lead">
 
-        Jeremy Blueprint explores a future in which artificial intelligence
+        Jeremy Blueprint explores a future in which
 
-        helps people navigate life, pursue opportunities, remain independent
+        artificial intelligence helps people navigate
+
+        life, pursue opportunities, remain independent
 
         and access meaningful support.
 
@@ -1896,9 +1944,11 @@ footer {
 
     <div class="vision-quote reveal">
 
-      “The measure of better AI is not simply what technology can achieve —
+      “The measure of better AI is not simply what
 
-      but how much better it helps humanity live.”
+      technology can achieve — but how much better
+
+      it helps humanity live.”
 
     </div>
 
@@ -1914,9 +1964,11 @@ footer {
 
         <p>
 
-          Support individual decisions, confidence and independence
+          Support individual decisions, confidence
 
-          rather than replacing human judgment.
+          and independence rather than replacing
+
+          human judgment.
 
         </p>
 
@@ -1932,9 +1984,11 @@ footer {
 
         <p>
 
-          Explore responsible protective assistance, appropriate alerts
+          Explore responsible protective assistance,
 
-          and supportive pathways for vulnerable people.
+          appropriate alerts and supportive pathways
+
+          for vulnerable people.
 
         </p>
 
@@ -1950,9 +2004,11 @@ footer {
 
         <p>
 
-          Privacy, understandable AI behaviour, user choice
+          Privacy, understandable AI behaviour,
 
-          and accountability should be foundational.
+          user choice and accountability
+
+          should be foundational.
 
         </p>
 
@@ -1972,7 +2028,11 @@ footer {
 
     <div class="section-head reveal">
 
-      <div class="kicker">02 / Connected intelligence</div>
+      <div class="kicker">
+
+        02 / Connected intelligence
+
+      </div>
 
       <h2>
 
@@ -1988,9 +2048,11 @@ footer {
 
       <p class="lead">
 
-        The proposed ecosystem brings together everyday assistance,
+        The proposed ecosystem brings together
 
-        personal development, protection and connected technology.
+        everyday assistance, personal development,
+
+        protection and connected technology.
 
         Select a capability to explore its purpose.
 
@@ -2122,13 +2184,19 @@ footer {
 
       <div class="eco-detail" aria-live="polite">
 
-        <h3 id="ecoTitle">Safety & Safeguarding</h3>
+        <h3 id="ecoTitle">
+
+          Safety & Safeguarding
+
+        </h3>
 
         <p id="ecoInfo">
 
-          Exploring supportive safety alerts, emergency pathways
+          Exploring supportive safety alerts,
 
-          and responsible future wearable-enabled protection,
+          emergency pathways and responsible
+
+          future wearable-enabled protection,
 
           with privacy and appropriate human oversight.
 
@@ -2138,11 +2206,11 @@ footer {
 
     </div>
 
-    <div class="actions" style="justify-content:center;margin-top:30px">
+    <div class="actions" style="justify-content:center">
 
       <a class="btn btn-outline" href="about.html#ecosystem">
 
-        Explore the Wider Jeremy Blueprint Ecosystem ↗
+        Explore the Wider Ecosystem ↗
 
       </a>
 
@@ -2150,13 +2218,15 @@ footer {
 
     <div class="notice reveal">
 
-      The six interactive areas above are an introduction, not a complete
+      The six interactive areas above introduce
 
-      inventory of Jeremy Blueprint. The wider public overview describes
+      Jeremy Blueprint's wider ecosystem.
 
-      additional proposed areas. Detailed technical designs and unpublished
+      Detailed technical designs and unpublished
 
-      development materials remain separate from this website.
+      development materials remain separate
+
+      from this website.
 
     </div>
 
@@ -2172,7 +2242,11 @@ footer {
 
     <div class="section-head reveal">
 
-      <div class="kicker">03 / The companion experience</div>
+      <div class="kicker">
+
+        03 / The companion experience
+
+      </div>
 
       <h2>
 
@@ -2186,9 +2260,9 @@ footer {
 
         Three proposed layers of the Jeremy experience,
 
-        designed to help people move from everyday questions
+        designed to help people move from everyday
 
-        towards meaningful progress.
+        questions towards meaningful progress.
 
       </p>
 
@@ -2202,13 +2276,19 @@ footer {
 
         <h3>Lantern</h3>
 
-        <div class="subtitle">Free core guidance</div>
+        <div class="subtitle">
+
+          Free core guidance
+
+        </div>
 
         <p>
 
-          A welcoming starting point for everyday questions,
+          A welcoming starting point for everyday
 
-          practical guidance, reflection and finding a way forward.
+          questions, practical guidance, reflection
+
+          and finding a way forward.
 
         </p>
 
@@ -2220,13 +2300,19 @@ footer {
 
         <h3>Key</h3>
 
-        <div class="subtitle">Breakthrough tier</div>
+        <div class="subtitle">
+
+          Breakthrough tier
+
+        </div>
 
         <p>
 
           Deeper support for overcoming obstacles,
 
-          exploring opportunities and turning ambitions into practical steps.
+          exploring opportunities and turning
+
+          ambitions into practical steps.
 
         </p>
 
@@ -2238,13 +2324,19 @@ footer {
 
         <h3>Compass</h3>
 
-        <div class="subtitle">Strategic navigation</div>
+        <div class="subtitle">
+
+          Strategic navigation
+
+        </div>
 
         <p>
 
-          A proposed experience for longer-term planning,
+          A proposed experience for longer-term
 
-          priorities and more complex personal or professional goals.
+          planning, priorities and more complex
+
+          personal or professional goals.
 
         </p>
 
@@ -2254,9 +2346,13 @@ footer {
 
     <div class="notice reveal">
 
-      Lantern, Key and Compass describe proposed product concepts.
+      Lantern, Key and Compass describe proposed
 
-      They are not currently available services or verified technical implementations.
+      product concepts. They are not currently
+
+      available services or verified technical
+
+      implementations.
 
     </div>
 
@@ -2272,23 +2368,33 @@ footer {
 
     <div class="section-head reveal">
 
-      <div class="kicker">04 / Origins & evolution</div>
+      <div class="kicker">
+
+        04 / Origins & evolution
+
+      </div>
 
       <h2>
 
         From an idea to a
 
-        <span class="gradient">human-first blueprint.</span>
+        <span class="gradient">
+
+          human-first blueprint.
+
+        </span>
 
       </h2>
 
       <p class="lead">
 
-        Jeremy Blueprint evolved through iterative conceptual development,
+        Jeremy Blueprint evolved through iterative
 
-        exploring how AI might become more supportive,
+        conceptual development, exploring how AI
 
-        responsible and useful in everyday life.
+        might become more supportive, responsible
+
+        and useful in everyday life.
 
       </p>
 
@@ -2304,9 +2410,11 @@ footer {
 
         <p>
 
-          An early companion concept centred on personal assistance,
+          An early companion concept centred on
 
-          encouragement, goals and practical daily support.
+          personal assistance, encouragement,
+
+          goals and practical daily support.
 
         </p>
 
@@ -2322,9 +2430,9 @@ footer {
 
           “Helping dreams become reality.”
 
-          A broader personal AI life companion vision
+          A broader personal AI life companion
 
-          developed through iterative exploration.
+          vision developed through iterative exploration.
 
         </p>
 
@@ -2338,11 +2446,13 @@ footer {
 
         <p>
 
-          The concept expanded into a connected vision spanning
+          The concept expanded into a connected
 
-          safeguarding, wellbeing, accessibility, learning,
+          vision spanning safeguarding, wellbeing,
 
-          organisation and responsible AI design.
+          accessibility, learning, organisation
+
+          and responsible AI design.
 
         </p>
 
@@ -2356,11 +2466,13 @@ footer {
 
         <p>
 
-          A public-facing website and articles presenting
+          A public-facing website and articles
 
-          the human-first vision while keeping detailed
+          presenting the human-first vision while
 
-          private development materials separate.
+          keeping detailed private development
+
+          materials separate.
 
         </p>
 
@@ -2372,13 +2484,15 @@ footer {
 
       <strong>Development record:</strong>
 
-      The creator reports concept development in early 2025,
+      The creator reports concept development
 
-      building on earlier exploration, with proposal activity
+      in early 2025, building on earlier exploration,
 
-      during June 2025. Precise historical dates and versions
+      with proposal activity during June 2025.
 
-      should be assessed against the underlying original records.
+      Precise historical dates and versions
+
+      should be assessed against underlying records.
 
     </div>
 
@@ -2404,23 +2518,35 @@ footer {
 
     <div class="section-head reveal">
 
-      <div class="kicker">05 / Research & evidence</div>
+      <div class="kicker">
+
+        05 / Research & evidence
+
+      </div>
 
       <h2>
 
         Explore the framework.
 
-        <span class="gradient">Examine the vision.</span>
+        <span class="gradient">
+
+          Examine the vision.
+
+        </span>
 
       </h2>
 
       <p class="lead">
 
-        Jeremy Blueprint includes a dedicated research page
+        Jeremy Blueprint includes a dedicated
 
-        explaining its origins, guiding principles, proposed ecosystem,
+        research page explaining its origins,
 
-        safeguarding priorities and future development requirements.
+        guiding principles, proposed ecosystem,
+
+        safeguarding priorities and future
+
+        development requirements.
 
       </p>
 
@@ -2430,17 +2556,23 @@ footer {
 
       <h3>
 
-        Jeremy Blueprint — Human-First AI Companion Research
+        Jeremy Blueprint —
+
+        Human-First AI Companion Research
 
       </h3>
 
       <p>
 
-        The research publication provides a structured overview
+        The research publication provides a
 
-        of the independent concept developed by Kyle Dolby,
+        structured overview of the independent
 
-        including its proposed applications across everyday life.
+        concept developed by Kyle Dolby,
+
+        including its proposed applications
+
+        across everyday life.
 
       </p>
 
@@ -2450,9 +2582,9 @@ footer {
 
           <strong>Origins & development</strong>
 
-          The evolution from Buddy and Jeremy in a Bottle
+          The evolution from Buddy and Jeremy
 
-          to the wider Jeremy Blueprint vision.
+          in a Bottle to the wider Jeremy Blueprint vision.
 
         </div>
 
@@ -2482,7 +2614,7 @@ footer {
 
           Technical feasibility, independent evaluation,
 
-          responsible implementation and long-term human benefit.
+          responsible implementation and human benefit.
 
         </div>
 
@@ -2494,7 +2626,9 @@ footer {
 
         It does not claim that the complete ecosystem
 
-        has been technically implemented or independently validated.
+        has been technically implemented
+
+        or independently validated.
 
       </p>
 
@@ -2520,6 +2654,542 @@ footer {
 
 </section>
 
+<!-- PUBLIC DOCUMENTATION -->
+
+<section class="content" id="documents">
+
+  <div class="container">
+
+    <div class="section-head reveal">
+
+      <div class="kicker">
+
+        06 / Public documentation
+
+      </div>
+
+      <h2>
+
+        A documented journey.
+
+        <span class="gradient">
+
+          A commitment to transparency.
+
+        </span>
+
+      </h2>
+
+      <p class="lead">
+
+        Jeremy Blueprint was developed through
+
+        independent exploration and documented
+
+        correspondence.
+
+        This gallery provides access to selected
+
+        public records relating to the creator's
+
+        correspondence, data access requests,
+
+        copyright enquiries and development history.
+
+      </p>
+
+      <p class="lead">
+
+        The records are presented as supporting
+
+        documentation and historical context.
+
+        Their publication does not independently
+
+        establish wrongdoing, intellectual property
+
+        infringement or the accuracy of every
+
+        statement contained within them.
+
+      </p>
+
+    </div>
+
+    <div class="document-gallery">
+
+      <!-- DOCUMENT 1 -->
+
+      <article class="glass document-card reveal">
+
+        <a href="IMG_0365.png"
+
+           target="_blank"
+
+           rel="noopener noreferrer">
+
+          <img
+
+            src="IMG_0365.png"
+
+            alt="Jeremy Blueprint public documentation image 1"
+
+            loading="lazy">
+
+        </a>
+
+        <div class="document-info">
+
+          <h3>Document 01</h3>
+
+          <p>
+
+            Selected public correspondence
+
+            and supporting documentation.
+
+          </p>
+
+          <a href="IMG_0365.png"
+
+             target="_blank"
+
+             rel="noopener noreferrer">
+
+            View full document ↗
+
+          </a>
+
+        </div>
+
+      </article>
+
+      <!-- DOCUMENT 2 -->
+
+      <article class="glass document-card reveal">
+
+        <a href="IMG_0367.png"
+
+           target="_blank"
+
+           rel="noopener noreferrer">
+
+          <img
+
+            src="IMG_0367.png"
+
+            alt="Jeremy Blueprint public documentation image 2"
+
+            loading="lazy">
+
+        </a>
+
+        <div class="document-info">
+
+          <h3>Document 02</h3>
+
+          <p>
+
+            Selected public correspondence
+
+            and supporting documentation.
+
+          </p>
+
+          <a href="IMG_0367.png"
+
+             target="_blank"
+
+             rel="noopener noreferrer">
+
+            View full document ↗
+
+          </a>
+
+        </div>
+
+      </article>
+
+      <!-- DOCUMENT 3 -->
+
+      <article class="glass document-card reveal">
+
+        <a href="IMG_0366.png"
+
+           target="_blank"
+
+           rel="noopener noreferrer">
+
+          <img
+
+            src="IMG_0366.png"
+
+            alt="Jeremy Blueprint public documentation image 3"
+
+            loading="lazy">
+
+        </a>
+
+        <div class="document-info">
+
+          <h3>Document 03</h3>
+
+          <p>
+
+            Selected public correspondence
+
+            and supporting documentation.
+
+          </p>
+
+          <a href="IMG_0366.png"
+
+             target="_blank"
+
+             rel="noopener noreferrer">
+
+            View full document ↗
+
+          </a>
+
+        </div>
+
+      </article>
+
+      <!-- DOCUMENT 4 -->
+
+      <article class="glass document-card reveal">
+
+        <a href="IMG_0347.png"
+
+           target="_blank"
+
+           rel="noopener noreferrer">
+
+          <img
+
+            src="IMG_0347.png"
+
+            alt="Jeremy Blueprint public documentation image 4"
+
+            loading="lazy">
+
+        </a>
+
+        <div class="document-info">
+
+          <h3>Document 04</h3>
+
+          <p>
+
+            Selected public correspondence
+
+            and supporting documentation.
+
+          </p>
+
+          <a href="IMG_0347.png"
+
+             target="_blank"
+
+             rel="noopener noreferrer">
+
+            View full document ↗
+
+          </a>
+
+        </div>
+
+      </article>
+
+      <!-- DOCUMENT 5 -->
+
+      <article class="glass document-card reveal">
+
+        <a href="IMG_0341.png"
+
+           target="_blank"
+
+           rel="noopener noreferrer">
+
+          <img
+
+            src="IMG_0341.png"
+
+            alt="Jeremy Blueprint public documentation image 5"
+
+            loading="lazy">
+
+        </a>
+
+        <div class="document-info">
+
+          <h3>Document 05</h3>
+
+          <p>
+
+            Selected public correspondence
+
+            and supporting documentation.
+
+          </p>
+
+          <a href="IMG_0341.png"
+
+             target="_blank"
+
+             rel="noopener noreferrer">
+
+            View full document ↗
+
+          </a>
+
+        </div>
+
+      </article>
+
+      <!-- DOCUMENT 6 -->
+
+      <article class="glass document-card reveal">
+
+        <a href="IMG_9099.png"
+
+           target="_blank"
+
+           rel="noopener noreferrer">
+
+          <img
+
+            src="IMG_9099.png"
+
+            alt="Jeremy Blueprint public documentation image 6"
+
+            loading="lazy">
+
+        </a>
+
+        <div class="document-info">
+
+          <h3>Document 06</h3>
+
+          <p>
+
+            Selected public correspondence
+
+            and supporting documentation.
+
+          </p>
+
+          <a href="IMG_9099.png"
+
+             target="_blank"
+
+             rel="noopener noreferrer">
+
+            View full document ↗
+
+          </a>
+
+        </div>
+
+      </article>
+
+      <!-- DOCUMENT 7 -->
+
+      <article class="glass document-card reveal">
+
+        <a href="IMG_9058.png"
+
+           target="_blank"
+
+           rel="noopener noreferrer">
+
+          <img
+
+            src="IMG_9058.png"
+
+            alt="Jeremy Blueprint public documentation image 7"
+
+            loading="lazy">
+
+        </a>
+
+        <div class="document-info">
+
+          <h3>Document 07</h3>
+
+          <p>
+
+            Selected public correspondence
+
+            and supporting documentation.
+
+          </p>
+
+          <a href="IMG_9058.png"
+
+             target="_blank"
+
+             rel="noopener noreferrer">
+
+            View full document ↗
+
+          </a>
+
+        </div>
+
+      </article>
+
+      <!-- DOCUMENT 8 -->
+
+      <article class="glass document-card reveal">
+
+        <a href="IMG_8879.png"
+
+           target="_blank"
+
+           rel="noopener noreferrer">
+
+          <img
+
+            src="IMG_8879.png"
+
+            alt="Jeremy Blueprint public documentation image 8"
+
+            loading="lazy">
+
+        </a>
+
+        <div class="document-info">
+
+          <h3>Document 08</h3>
+
+          <p>
+
+            Selected public correspondence
+
+            and supporting documentation.
+
+          </p>
+
+          <a href="IMG_8879.png"
+
+             target="_blank"
+
+             rel="noopener noreferrer">
+
+            View full document ↗
+
+          </a>
+
+        </div>
+
+      </article>
+
+      <!-- DOCUMENT 9 -->
+
+      <article class="glass document-card reveal">
+
+        <a href="IMG_7592.png"
+
+           target="_blank"
+
+           rel="noopener noreferrer">
+
+          <img
+
+            src="IMG_7592.png"
+
+            alt="Jeremy Blueprint public documentation image 9"
+
+            loading="lazy">
+
+        </a>
+
+        <div class="document-info">
+
+          <h3>Document 09</h3>
+
+          <p>
+
+            Selected public correspondence
+
+            and supporting documentation.
+
+          </p>
+
+          <a href="IMG_7592.png"
+
+             target="_blank"
+
+             rel="noopener noreferrer">
+
+            View full document ↗
+
+          </a>
+
+        </div>
+
+      </article>
+
+    </div>
+
+    <div class="document-warning reveal">
+
+      <strong>
+
+        Documentation and interpretation notice
+
+      </strong>
+
+      <p>
+
+        These materials are presented for
+
+        transparency and historical reference.
+
+        Original correspondence, dates, file
+
+        provenance and underlying records should
+
+        be examined when assessing their significance.
+
+        The presence of correspondence does not
+
+        constitute an independent legal finding,
+
+        admission of liability or proof of
+
+        intellectual property infringement.
+
+        Personal and confidential information
+
+        should be redacted before publication.
+
+      </p>
+
+    </div>
+
+    <div class="actions">
+
+      <a class="btn btn-primary" href="research.html">
+
+        Explore Research & Evidence ↗
+
+      </a>
+
+      <a class="btn btn-outline" href="#origins">
+
+        View Development Timeline ↗
+
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
 <!-- PUBLICATIONS -->
 
 <section class="content" id="publications">
@@ -2528,21 +3198,33 @@ footer {
 
     <div class="section-head reveal">
 
-      <div class="kicker">06 / Publications & perspectives</div>
+      <div class="kicker">
+
+        07 / Publications & perspectives
+
+      </div>
 
       <h2>
 
         Ideas that challenge
 
-        <span class="gradient">the direction of AI.</span>
+        <span class="gradient">
+
+          the direction of AI.
+
+        </span>
 
       </h2>
 
       <p class="lead">
 
-        Independent writing exploring how increasingly powerful
+        Independent writing exploring how
 
-        artificial intelligence should serve people and society.
+        increasingly powerful artificial
+
+        intelligence should serve people
+
+        and society.
 
       </p>
 
@@ -2568,19 +3250,21 @@ footer {
 
         <h3>
 
-          The Future of AI Needs More Than Intelligence —
+          The Future of AI Needs More Than
 
-          It Needs Humanity
+          Intelligence — It Needs Humanity
 
         </h3>
 
         <p>
 
-          A human-first perspective on safeguarding,
+          A human-first perspective on
 
-          autonomy, wellbeing, connected assistance,
+          safeguarding, autonomy, wellbeing,
 
-          accountability and the future of AI.
+          connected assistance, accountability
+
+          and the future of AI.
 
         </p>
 
@@ -2614,11 +3298,11 @@ footer {
 
         <p>
 
-          Questions surrounding conversational influence,
+          Questions surrounding conversational
 
-          emotional adaptation, transparency
+          influence, emotional adaptation,
 
-          and meaningful oversight.
+          transparency and meaningful oversight.
 
         </p>
 
@@ -2654,9 +3338,11 @@ footer {
 
         <p>
 
-          Exploring the relationship between technological progress,
+          Exploring the relationship between
 
-          responsible design and human benefit.
+          technological progress, responsible
+
+          design and human benefit.
 
         </p>
 
@@ -2690,7 +3376,7 @@ footer {
 
       <div class="kicker">
 
-        07 / The creator
+        08 / The creator
 
       </div>
 
@@ -2698,11 +3384,13 @@ footer {
 
       <p class="lead">
 
-        Independent UK creator and concept developer of
+        Independent UK creator and concept
 
-        Jeremy Blueprint — a human-first AI companion
+        developer of Jeremy Blueprint —
 
-        ecosystem developed through earlier concepts
+        a human-first AI companion ecosystem
+
+        developed through earlier concepts
 
         including Buddy and Jeremy in a Bottle.
 
@@ -2710,23 +3398,23 @@ footer {
 
       <p>
 
-        Jeremy Blueprint represents an evolving vision
+        Jeremy Blueprint represents an evolving
 
-        for artificial intelligence that prioritises
+        vision for artificial intelligence
 
-        human wellbeing, safety, independence
+        that prioritises human wellbeing,
 
-        and meaningful progress.
+        safety, independence and meaningful progress.
 
       </p>
 
       <p>
 
-        The public website introduces the vision
+        The public website introduces the
 
-        and its principles without disclosing
+        vision and its principles without
 
-        private technical specifications
+        disclosing private technical specifications
 
         or asserting unverified affiliations.
 
@@ -2750,7 +3438,7 @@ footer {
 
         <a class="btn btn-outline" href="about.html">
 
-          About Kyle Dolby & Jeremy Blueprint ↗
+          About Kyle Dolby ↗
 
         </a>
 
@@ -2780,19 +3468,15 @@ footer {
 
       <p>
 
-        A future in which greater intelligence creates
+        A future in which greater intelligence
 
-        greater human opportunity, independence,
+        creates greater human opportunity,
 
-        confidence and connection.
+        independence, confidence and connection.
 
       </p>
 
-      <div
-
-        style="height:2px;background:linear-gradient(90deg,var(--cyan),var(--mint),transparent);margin-top:30px">
-
-      </div>
+      <div style="height:2px;background:linear-gradient(90deg,var(--cyan),var(--mint),transparent);margin-top:30px"></div>
 
       <p style="margin-top:20px">
 
@@ -2810,19 +3494,27 @@ footer {
 
       <strong>Independent concept notice:</strong>
 
-      Jeremy Blueprint is a proposed vision and design concept.
+      Jeremy Blueprint is a proposed vision
 
-      Descriptions of future capabilities are conceptual and do not
+      and design concept.
 
-      imply a working product, independent technical validation,
+      Descriptions of future capabilities are
 
-      endorsement or affiliation with an AI company or regulator.
+      conceptual and do not imply a working
 
-      This website presents a selective public overview.
+      product, independent technical validation,
 
-      It does not reproduce the complete historical development
+      endorsement or affiliation with an
 
-      archive or unpublished technical specifications.
+      AI company or regulator.
+
+      This website presents a selective public
+
+      overview and does not reproduce the complete
+
+      historical development archive or unpublished
+
+      technical specifications.
 
     </div>
 
@@ -2832,6 +3524,8 @@ footer {
 
 </main>
 
+<!-- FOOTER -->
+
 <footer>
 
   <div class="container footer-inner">
@@ -2840,7 +3534,9 @@ footer {
 
       © <span id="year">2026</span>
 
-      Kyle Dolby · Jeremy Blueprint. All rights reserved.
+      Kyle Dolby · Jeremy Blueprint.
+
+      All rights reserved.
 
     </span>
 
@@ -2855,6 +3551,8 @@ footer {
       <a href="about.html">About</a> ·
 
       <a href="research.html">Research</a> ·
+
+      <a href="#documents">Documents</a> ·
 
       <a href="https://www.linkedin.com/in/kyle-dolby-1989-ksd"
 
@@ -2880,7 +3578,13 @@ menuButton.addEventListener("click", () => {
 
   const open = navigation.classList.toggle("open");
 
-  menuButton.setAttribute("aria-expanded", String(open));
+  menuButton.setAttribute(
+
+    "aria-expanded",
+
+    String(open)
+
+  );
 
 });
 
@@ -2890,7 +3594,13 @@ navigation.querySelectorAll("a").forEach(link => {
 
     navigation.classList.remove("open");
 
-    menuButton.setAttribute("aria-expanded", "false");
+    menuButton.setAttribute(
+
+      "aria-expanded",
+
+      "false"
+
+    );
 
   });
 
@@ -2904,11 +3614,17 @@ document.getElementById("year").textContent =
 
 /* INTERACTIVE ECOSYSTEM */
 
-const ecoButtons = document.querySelectorAll(".eco-item");
+const ecoButtons =
 
-const ecoTitle = document.getElementById("ecoTitle");
+  document.querySelectorAll(".eco-item");
 
-const ecoInfo = document.getElementById("ecoInfo");
+const ecoTitle =
+
+  document.getElementById("ecoTitle");
+
+const ecoInfo =
+
+  document.getElementById("ecoInfo");
 
 ecoButtons.forEach(button => {
 
@@ -2918,17 +3634,33 @@ ecoButtons.forEach(button => {
 
       item.classList.remove("active");
 
-      item.setAttribute("aria-pressed", "false");
+      item.setAttribute(
+
+        "aria-pressed",
+
+        "false"
+
+      );
 
     });
 
     button.classList.add("active");
 
-    button.setAttribute("aria-pressed", "true");
+    button.setAttribute(
 
-    ecoTitle.textContent = button.dataset.title;
+      "aria-pressed",
 
-    ecoInfo.textContent = button.dataset.info;
+      "true"
+
+    );
+
+    ecoTitle.textContent =
+
+      button.dataset.title;
+
+    ecoInfo.textContent =
+
+      button.dataset.info;
 
   });
 
@@ -2938,43 +3670,53 @@ ecoButtons.forEach(button => {
 
 if ("IntersectionObserver" in window) {
 
-  const observer = new IntersectionObserver(entries => {
+  const observer =
 
-    entries.forEach(entry => {
+    new IntersectionObserver(entries => {
 
-      if (entry.isIntersecting) {
+      entries.forEach(entry => {
 
-        entry.target.classList.add("visible");
+        if (entry.isIntersecting) {
 
-        observer.unobserve(entry.target);
+          entry.target.classList.add("visible");
 
-      }
+          observer.unobserve(entry.target);
+
+        }
+
+      });
+
+    }, {threshold:.08});
+
+  document.querySelectorAll(".reveal")
+
+    .forEach(el => {
+
+      observer.observe(el);
 
     });
 
-  }, { threshold:.08 });
-
-  document.querySelectorAll(".reveal").forEach(el => {
-
-    observer.observe(el);
-
-  });
-
 } else {
 
-  document.querySelectorAll(".reveal").forEach(el => {
+  document.querySelectorAll(".reveal")
 
-    el.classList.add("visible");
+    .forEach(el => {
 
-  });
+      el.classList.add("visible");
+
+    });
 
 }
 
-/* STATIC BACKGROUND NETWORK */
+/* BACKGROUND NETWORK */
 
-const canvas = document.getElementById("network");
+const canvas =
 
-const ctx = canvas.getContext("2d");
+  document.getElementById("network");
+
+const ctx =
+
+  canvas.getContext("2d");
 
 let particles = [];
 
@@ -2986,35 +3728,53 @@ function resizeNetwork() {
 
   if (!ctx) return;
 
-  const ratio = Math.min(window.devicePixelRatio || 1, 2);
+  const ratio =
+
+    Math.min(window.devicePixelRatio || 1, 2);
 
   width = window.innerWidth;
 
   height = window.innerHeight;
 
-  canvas.width = Math.floor(width * ratio);
+  canvas.width =
 
-  canvas.height = Math.floor(height * ratio);
+    Math.floor(width * ratio);
 
-  ctx.setTransform(ratio,0,0,ratio,0,0);
+  canvas.height =
+
+    Math.floor(height * ratio);
+
+  ctx.setTransform(
+
+    ratio,0,0,ratio,0,0
+
+  );
 
   const count = Math.min(
 
     65,
 
-    Math.max(22,Math.floor(width * height / 19000))
+    Math.max(
+
+      22,
+
+      Math.floor(width * height / 19000)
+
+    )
 
   );
 
-  particles = Array.from({ length:count }, () => ({
+  particles =
 
-    x:Math.random() * width,
+    Array.from({length:count}, () => ({
 
-    y:Math.random() * height,
+      x:Math.random() * width,
 
-    r:Math.random() * 1.5 + .5
+      y:Math.random() * height,
 
-  }));
+      r:Math.random() * 1.5 + .5
+
+    }));
 
   drawNetwork();
 
@@ -3024,21 +3784,47 @@ function drawNetwork() {
 
   if (!ctx) return;
 
-  ctx.clearRect(0,0,width,height);
+  ctx.clearRect(
 
-  for (let i = 0; i < particles.length; i++) {
+    0,0,width,height
+
+  );
+
+  for (
+
+    let i = 0;
+
+    i < particles.length;
+
+    i++
+
+  ) {
 
     const p = particles[i];
 
     ctx.beginPath();
 
-    ctx.arc(p.x,p.y,p.r,0,Math.PI * 2);
+    ctx.arc(
 
-    ctx.fillStyle = "rgba(105,216,255,.48)";
+      p.x,p.y,p.r,0,Math.PI * 2
+
+    );
+
+    ctx.fillStyle =
+
+      "rgba(105,216,255,.48)";
 
     ctx.fill();
 
-    for (let j = i + 1; j < particles.length; j++) {
+    for (
+
+      let j = i + 1;
+
+      j < particles.length;
+
+      j++
+
+    ) {
 
       const q = particles[j];
 
@@ -3046,7 +3832,9 @@ function drawNetwork() {
 
       const dy = p.y - q.y;
 
-      const distance = Math.sqrt(dx * dx + dy * dy);
+      const distance =
+
+        Math.sqrt(dx * dx + dy * dy);
 
       if (distance < 135) {
 
@@ -3084,7 +3872,9 @@ window.addEventListener("resize", () => {
 
   clearTimeout(resizeTimer);
 
-  resizeTimer = setTimeout(resizeNetwork,250);
+  resizeTimer =
+
+    setTimeout(resizeNetwork,250);
 
 });
 
